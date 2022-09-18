@@ -1,0 +1,16 @@
+{
+  "item.enhancedend.tanzanite": "Tanzanite",
+  "item.enhancedend.raw_tanzanite": "Raw Tanzanite",
+  "item.enhancedend.clitanium": "Clitanium",
+
+  "block.enhancedend.end_tanzanite_ore": "End Tanzanite Ore",
+  "block.enhancedend.tanzanite_block": "Block of Tanzanite",
+  "block.enhancedend.raw_tanzanite_block": "Block of Raw Tanzanite",
+
+  "block.enhancedend.end_clitanium_ore": "End Clitanium Ore",
+  "block.enhancedend.clitanium_block": "Block of Clitanium",
+
+  "itemGroup.enhancedend.end_tanzanite_ore": "Enhanced End Blocks",
+  "itemGroup.enhancedend.tanzanite": "Enhanced End Items"
+
+}

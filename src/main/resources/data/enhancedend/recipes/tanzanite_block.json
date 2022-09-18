@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "enhancedend:tanzanite"
+    }
+  },
+  "result": {
+    "item": "enhancedend:tanzanite_block"
+  }
+}

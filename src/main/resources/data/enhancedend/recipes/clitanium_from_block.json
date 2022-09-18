@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "enhancedend:clitanium_block"
+    }
+  ],
+  "result": {
+    "item": "enhancedend:clitanium",
+    "count": 4
+  }
+}
