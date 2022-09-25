@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "enhancedend:block/kimberlite_pillar_top",
+    "side": "enhancedend:block/kimberlite_pillar"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "enhancedend:block/midnight_slab"
+    },
+    "type=double": {
+      "model": "enhancedend:block/midnight_planks"
+    },
+    "type=top": {
+      "model": "enhancedend:block/midnight_slab_top"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "enhanced_end_items",
+  "ingredient": {
+    "item": "enhancedend:cobbled_silstone"
+  },
+  "result": "enhancedend:silstone"
+}

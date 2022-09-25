@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "enhancedend:block/midnight_end_stone_bottom",
+    "up": "enhancedend:block/midnight_end_stone_top",
+    "north": "enhancedend:block/midnight_end_stone_sides",
+    "east": "enhancedend:block/midnight_end_stone_sides",
+    "south": "enhancedend:block/midnight_end_stone_sides",
+    "west": "enhancedend:block/midnight_end_stone_sides",
+    "particle": "enhancedend:block/midnight_end_stone_sides"
+  }
+}

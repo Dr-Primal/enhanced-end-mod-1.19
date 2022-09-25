@@ -15,6 +15,10 @@ public class ModItems {
 
     public static final Item CLITANIUM = registerItem("clitanium",
             new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
+    public static final Item ENDIMINTIUM = registerItem("endimintium_ingot",
+            new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
+    public static final Item DIAMOND_FRAGMENT = registerItem("diamond_fragment",
+            new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(EnhancedEnd.MOD_ID, name), item);
     }

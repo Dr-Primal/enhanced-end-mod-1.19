@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "enhancedend:silstone_bricks"
+    }
+  },
+  "result": {
+    "item": "enhancedend:silstone_brick_stairs",
+    "count": 4
+  }
+}

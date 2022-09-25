@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "enhancedend:block/polished_kimberlite_slab"
+    },
+    "type=double": {
+      "model": "enhancedend:block/polished_kimberlite"
+    },
+    "type=top": {
+      "model": "enhancedend:block/polished_kimberlite_slab_top"
+    }
+  }
+}

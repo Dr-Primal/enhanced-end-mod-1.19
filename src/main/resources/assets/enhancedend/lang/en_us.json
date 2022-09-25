@@ -2,6 +2,8 @@
   "item.enhancedend.tanzanite": "Tanzanite",
   "item.enhancedend.raw_tanzanite": "Raw Tanzanite",
   "item.enhancedend.clitanium": "Clitanium",
+  "item.enhancedend.endimintium_ingot": "Endimintium Ingot",
+  "item.enhancedend.diamond_fragment": "Diamond Fragment",
 
   "block.enhancedend.end_tanzanite_ore": "End Tanzanite Ore",
   "block.enhancedend.tanzanite_block": "Block of Tanzanite",
@@ -9,6 +11,51 @@
 
   "block.enhancedend.end_clitanium_ore": "End Clitanium Ore",
   "block.enhancedend.clitanium_block": "Block of Clitanium",
+
+  "block.enhancedend.silstone": "Silstone",
+  "block.enhancedend.silstone_button": "Silstone Button",
+  "block.enhancedend.silstone_pressure_plate": "Silstone Pressure Plate",
+  "block.enhancedend.silstone_stairs": "Silstone Stairs",
+  "block.enhancedend.silstone_slab": "Silstone Slab",
+
+  "block.enhancedend.cobbled_silstone": "Cobbled Silstone",
+  "block.enhancedend.cobbled_silstone_stairs": "Cobbled Silstone Stairs",
+  "block.enhancedend.cobbled_silstone_slab": "Cobbled Silstone Slab",
+  "block.enhancedend.cobbled_silstone_wall": "Cobbled Silstone Wall",
+
+  "block.enhancedend.silstone_bricks": "Silstone Bricks",
+  "block.enhancedend.silstone_brick_stairs": "Cobbled Silstone Stairs",
+  "block.enhancedend.silstone_brick_slab": "Silstone Brick Slab",
+  "block.enhancedend.silstone_brick_wall": "Silstone Brick Wall",
+  "block.enhancedend.chiseled_silstone": "Chiseled Silstone",
+
+  "block.enhancedend.kimberlite": "Kimberlite",
+  "block.enhancedend.kimberlite_stairs": "Kimberlite Stairs",
+  "block.enhancedend.kimberlite_slab": "Kimberlite Slab",
+  "block.enhancedend.kimberlite_pillar": "Kimberlite Pillar",
+  "block.enhancedend.infused_kimberlite": "Infused Kimberlite",
+
+  "block.enhancedend.polished_kimberlite": "Polished Kimberlite",
+  "block.enhancedend.polished_kimberlite_stairs": "Polished Kimberlite Stairs",
+  "block.enhancedend.polished_kimberlite_slab": "Polished Kimberlite Slab",
+  "block.enhancedend.polished_kimberlite_wall": "Polished Kimberlite Wall",
+
+  "block.enhancedend.midnight_end_stone": "Midnight End Stone",
+  "block.enhancedend.corlite_end_stone": "Corlite End Stone",
+
+  "block.enhancedend.midnight_log": "Midnight Log",
+  "block.enhancedend.stripped_midnight_log": "Stripped Midnight Log",
+  "block.enhancedend.midnight_wood": "Midnight Wood",
+  "block.enhancedend.stripped_midnight_wood": "Stripped Midnight Wood",
+  "block.enhancedend.midnight_planks": "Midnight Planks",
+  "block.enhancedend.midnight_fence": "Midnight Fence",
+  "block.enhancedend.midnight_fence_gate": "Midnight Fence Gate",
+  "block.enhancedend.midnight_button": "Midnight Button",
+  "block.enhancedend.midnight_pressure_plate": "Midnight Pressure Plate",
+  "block.enhancedend.midnight_stairs": "Midnight Stairs",
+  "block.enhancedend.midnight_slab": "Midnight Slab",
+
+
 
   "itemGroup.enhancedend.end_tanzanite_ore": "Enhanced End Blocks",
   "itemGroup.enhancedend.tanzanite": "Enhanced End Items"

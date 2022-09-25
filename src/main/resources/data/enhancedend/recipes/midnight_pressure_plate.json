@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "enhancedend:midnight_planks"
+    }
+  },
+  "result": {
+    "item": "enhancedend:midnight_pressure_plate"
+  }
+}

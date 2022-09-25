@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "enhancedend:block/silstone_slab"
+    },
+    "type=double": {
+      "model": "enhancedend:block/silstone"
+    },
+    "type=top": {
+      "model": "enhancedend:block/silstone_slab_top"
+    }
+  }
+}

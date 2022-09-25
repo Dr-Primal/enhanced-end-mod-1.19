@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "enhancedend:kimberlite"
+  },
+  "result": "enhancedend:polished_kimberlite_stairs"
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "enhancedend:cobbled_silstone"
+  },
+  "result": "enhancedend:cobbled_silstone_slab"
+}

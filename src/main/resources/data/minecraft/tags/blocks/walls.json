@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "enhancedend:cobbled_silstone_wall",
+    "enhancedend:silstone_brick_wall",
+    "enhancedend:polished_kimberlite_wall"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "enhancedend:silstone_bricks"
+  },
+  "result": "enhancedend:silstone_brick_stairs"
+}

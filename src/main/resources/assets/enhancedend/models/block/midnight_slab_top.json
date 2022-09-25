@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "enhancedend:block/midnight_planks",
+    "top": "enhancedend:block/midnight_planks",
+    "side": "enhancedend:block/midnight_planks"
+  }
+}

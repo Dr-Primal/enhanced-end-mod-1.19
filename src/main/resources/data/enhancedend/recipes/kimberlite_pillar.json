@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "enhancedend:polished_kimberlite"
+    }
+  },
+  "result": {
+    "item": "enhancedend:kimberlite_pillar",
+    "count": 2
+  }
+}
