@@ -55,6 +55,18 @@
   "block.enhancedend.midnight_stairs": "Midnight Stairs",
   "block.enhancedend.midnight_slab": "Midnight Slab",
 
+  "block.enhancedend.corlite_log": "Corlite Log",
+  "block.enhancedend.stripped_corlite_log": "Stripped Corlite Log",
+  "block.enhancedend.corlite_wood": "Corlite Wood",
+  "block.enhancedend.stripped_corlite_wood": "Stripped Corlite Wood",
+  "block.enhancedend.corlite_planks": "Corlite Planks",
+  "block.enhancedend.corlite_fence": "Corlite Fence",
+  "block.enhancedend.corlite_fence_gate": "Corlite Fence Gate",
+  "block.enhancedend.corlite_button": "Corlite Button",
+  "block.enhancedend.corlite_pressure_plate": "Corlite Pressure Plate",
+  "block.enhancedend.corlite_stairs": "Corlite Stairs",
+  "block.enhancedend.corlite_slab": "Corlite Slab",
+
 
 
   "itemGroup.enhancedend.end_tanzanite_ore": "Enhanced End Blocks",

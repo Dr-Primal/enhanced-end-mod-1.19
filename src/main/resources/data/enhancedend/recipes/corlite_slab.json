@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "enhancedend:corlite_planks"
+    }
+  },
+  "result": {
+    "item": "enhancedend:corlite_slab",
+    "count": 6
+  }
+}

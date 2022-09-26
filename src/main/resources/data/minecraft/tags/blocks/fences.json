@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "enhancedend:midnight_fence"
+    "enhancedend:midnight_fence",
+    "enhancedend:corlite_fence"
   ]
 }

@@ -154,6 +154,40 @@ public class ModBlocks {
     public static final Block MIDNIGHT_PRESSURE_PLATE = registerBlock("midnight_pressure_plate",
             new ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of(Material.NETHER_WOOD).strength(0.5f, 1f).sounds(BlockSoundGroup.WOOD)),
             ModItemGroup.ENHANCED_END_BLOCKS);
+//Corlite Wood Variants
+    public static final Block CORLITE_LOG = registerBlock("corlite_log",
+        new PillarBlock(FabricBlockSettings.copy(Blocks.CRIMSON_STEM).strength(2.0F, 3.0F).sounds(BlockSoundGroup.NETHER_STEM)),
+        ModItemGroup.ENHANCED_END_BLOCKS);
+    public static final Block STRIPPED_CORLITE_LOG = registerBlock("stripped_corlite_log",
+            new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_CRIMSON_STEM).strength(2.0F, 3.0F).breakInstantly().sounds(BlockSoundGroup.NETHER_STEM)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+    public static final Block CORLITE_WOOD = registerBlock("corlite_wood",
+            new PillarBlock(FabricBlockSettings.copy(Blocks.CRIMSON_HYPHAE).strength(2F, 3F).sounds(BlockSoundGroup.NETHER_STEM)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+    public static final Block STRIPPED_CORLITE_WOOD = registerBlock("stripped_corlite_wood",
+            new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_CRIMSON_HYPHAE).strength(2F, 3F).sounds(BlockSoundGroup.NETHER_STEM)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+    public static final Block CORLITE_PLANKS = registerBlock("corlite_planks",
+            new Block(FabricBlockSettings.copy(Blocks.CRIMSON_PLANKS).strength(2F, 3F).sounds(BlockSoundGroup.WOOD)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+    public static final Block CORLITE_FENCE = registerBlock("corlite_fence",
+            new FenceBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(2f, 3f).sounds(BlockSoundGroup.WOOD)), ModItemGroup.ENHANCED_END_BLOCKS);
+
+    public static final Block CORLITE_FENCE_GATE = registerBlock("corlite_fence_gate",
+            new FenceGateBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(2f,3f).sounds(BlockSoundGroup.WOOD)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+    public static final Block CORLITE_STAIRS = registerBlock("corlite_stairs",
+            new ModStairsBlock(ModBlocks.MIDNIGHT_PLANKS.getDefaultState(), FabricBlockSettings.of(Material.NETHER_WOOD).strength(2f, 3f).sounds(BlockSoundGroup.WOOD)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+    public static final Block CORLITE_SLAB = registerBlock("corlite_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(2f, 3f).sounds(BlockSoundGroup.WOOD)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+    public static final Block CORLITE_BUTTON = registerBlock("corlite_button",
+            new ModWoodenButtonBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(0.5f, 1f).noCollision().sounds(BlockSoundGroup.WOOD)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+    public static final Block CORLITE_PRESSURE_PLATE = registerBlock("corlite_pressure_plate",
+            new ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of(Material.NETHER_WOOD).strength(0.5f, 1f).sounds(BlockSoundGroup.WOOD)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
 
 
     private static Block registerBlock(String name, Block block, ItemGroup tab) {

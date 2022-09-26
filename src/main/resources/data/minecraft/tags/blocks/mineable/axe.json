@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#enhancedend:midnight_logs",
-    "#enhancedend:modded_woods"
+    "#enhancedend:modded_logs",
+    "#enhancedend:modded_planks"
   ]
 }
