@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    " @ "
+  ],
+  "key": {
+    "#": {
+      "item": "enhancedend:midnight_planks"
+    },
+    "@": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "enhancedend:midnight_sign",
+    "count": 3
+  }
+}

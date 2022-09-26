@@ -16,6 +16,7 @@ import net.primal.enhancedend.block.custom.ModPressurePlateBlock;
 import net.primal.enhancedend.block.custom.ModStairsBlock;
 import net.primal.enhancedend.block.custom.ModStoneButtonBlock;
 import net.primal.enhancedend.block.custom.ModWoodenButtonBlock;
+import net.primal.enhancedend.block.entity.ModSignTypes;
 
 public class ModBlocks {
     //Ores
@@ -188,8 +189,22 @@ public class ModBlocks {
     public static final Block CORLITE_PRESSURE_PLATE = registerBlock("corlite_pressure_plate",
             new ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of(Material.NETHER_WOOD).strength(0.5f, 1f).sounds(BlockSoundGroup.WOOD)),
             ModItemGroup.ENHANCED_END_BLOCKS);
+    //Sign Variants
+    public static final Block MIDNIGHT_WALL_SIGN_BLOCK = registerBlockWithoutBlockItem("midnight_wall_sign",
+            new WallSignBlock(FabricBlockSettings.copy(Blocks.OAK_WALL_SIGN), ModSignTypes.MIDNIGHT), ModItemGroup.ENHANCED_END_BLOCKS);
+
+    public static final Block MIDNIGHT_SIGN_BLOCK = registerBlockWithoutBlockItem("midnight_sign",
+            new SignBlock(FabricBlockSettings.copy(Blocks.OAK_SIGN), ModSignTypes.MIDNIGHT), ModItemGroup.ENHANCED_END_BLOCKS);
+    public static final Block CORLITE_WALL_SIGN_BLOCK = registerBlockWithoutBlockItem("corlite_wall_sign",
+            new WallSignBlock(FabricBlockSettings.copy(Blocks.OAK_WALL_SIGN), ModSignTypes.CORLITE), ModItemGroup.ENHANCED_END_BLOCKS);
+
+    public static final Block CORLITE_SIGN_BLOCK = registerBlockWithoutBlockItem("corlite_sign",
+            new SignBlock(FabricBlockSettings.copy(Blocks.OAK_SIGN), ModSignTypes.CORLITE), ModItemGroup.ENHANCED_END_BLOCKS);
 
 
+    private static Block registerBlockWithoutBlockItem(String name, Block block, ItemGroup group) {
+        return Registry.register(Registry.BLOCK, new Identifier(EnhancedEnd.MOD_ID, name), block);
+    }
     private static Block registerBlock(String name, Block block, ItemGroup tab) {
         registerBlockItem(name, block, tab);
         return Registry.register(Registry.BLOCK, new Identifier(EnhancedEnd.MOD_ID, name), block);
