@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "@@",
+    "##",
+    "@@"
+  ],
+  "key": {
+    "#": {
+      "item": "enhancedend:clitanium_block"
+    },
+    "@": {
+      "item": "enhancedend:clitanium"
+}
+  },
+  "result": {
+    "item": "enhancedend:clitanium_door",
+    "count": 3
+  }
+}

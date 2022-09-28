@@ -70,6 +70,15 @@
   "block.enhancedend.midnight_sign": "Midnight Sign",
   "block.enhancedend.corlite_sign": "Corlite Sign",
 
+  "block.enhancedend.midnight_door": "Midnight Door",
+  "block.enhancedend.midnight_trapdoor": "Midnight Trapdoor",
+
+  "block.enhancedend.corlite_door": "Corlite Door",
+  "block.enhancedend.corlite_trapdoor": "Corlite Trapdoor",
+
+  "block.enhancedend.clitanium_door": "Clitanium Door",
+  "block.enhancedend.clitanium_trapdoor": "Clitanium Trapdoor",
+
 
 
   "itemGroup.enhancedend.end_tanzanite_ore": "Enhanced End Blocks",

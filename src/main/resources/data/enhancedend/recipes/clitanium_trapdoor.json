@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#@#",
+    "#@#"
+  ],
+  "key": {
+    "#": {
+      "item": "enhancedend:clitanium"
+    },
+    "@": {
+      "item": "enhancedend:clitanium_block"
+    }
+  },
+  "result": {
+    "item": "enhancedend:clitanium_trapdoor",
+    "count": 2
+  }
+}

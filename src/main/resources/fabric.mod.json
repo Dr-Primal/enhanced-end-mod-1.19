@@ -21,8 +21,8 @@
     "main": [
       "net.primal.enhancedend.EnhancedEnd"
     ],
-    "Client": [
-      "net.primal.enhancedend.EnhancedEndClient"
+    "client": [
+      "net.primal.enhancedend.EnhancedEndClientMod"
     ]
   },
   "mixins": [

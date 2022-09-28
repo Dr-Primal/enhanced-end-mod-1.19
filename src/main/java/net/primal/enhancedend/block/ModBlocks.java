@@ -12,10 +12,7 @@ import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
 import net.primal.enhancedend.EnhancedEnd;
 import net.primal.enhancedend.Item.ModItemGroup;
-import net.primal.enhancedend.block.custom.ModPressurePlateBlock;
-import net.primal.enhancedend.block.custom.ModStairsBlock;
-import net.primal.enhancedend.block.custom.ModStoneButtonBlock;
-import net.primal.enhancedend.block.custom.ModWoodenButtonBlock;
+import net.primal.enhancedend.block.custom.*;
 import net.primal.enhancedend.block.entity.ModSignTypes;
 
 public class ModBlocks {
@@ -200,6 +197,27 @@ public class ModBlocks {
 
     public static final Block CORLITE_SIGN_BLOCK = registerBlockWithoutBlockItem("corlite_sign",
             new SignBlock(FabricBlockSettings.copy(Blocks.OAK_SIGN), ModSignTypes.CORLITE), ModItemGroup.ENHANCED_END_BLOCKS);
+    //Midnight Doors
+    public static final Block MIDNIGHT_DOOR = registerBlock("midnight_door",
+            new DoorBlock(FabricBlockSettings.of(Material.WOOD)
+                    .strength(2f,3f).nonOpaque().sounds(BlockSoundGroup.WOOD)), ModItemGroup.ENHANCED_END_BLOCKS);
+    public static final Block MIDNIGHT_TRAPDOOR = registerBlock("midnight_trapdoor",
+            new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD)
+                    .strength(2f,3f).nonOpaque().sounds(BlockSoundGroup.WOOD)), ModItemGroup.ENHANCED_END_BLOCKS);
+    //Corlite Doors
+    public static final Block CORLITE_DOOR = registerBlock("corlite_door",
+            new DoorBlock(FabricBlockSettings.of(Material.WOOD)
+                    .strength(2f,3f).nonOpaque().sounds(BlockSoundGroup.WOOD)), ModItemGroup.ENHANCED_END_BLOCKS);
+    public static final Block CORLITE_TRAPDOOR = registerBlock("corlite_trapdoor",
+            new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD)
+                    .strength(2f,3f).nonOpaque().sounds(BlockSoundGroup.WOOD)), ModItemGroup.ENHANCED_END_BLOCKS);
+    //Clitanium Doors
+    public static final Block CLITANIUM_DOOR = registerBlock("clitanium_door",
+            new DoorBlock(FabricBlockSettings.of(Material.METAL)
+                    .strength(3.5f).requiresTool().nonOpaque().sounds(BlockSoundGroup.COPPER)), ModItemGroup.ENHANCED_END_BLOCKS);
+    public static final Block CLITANIUM_TRAPDOOR = registerBlock("clitanium_trapdoor",
+            new TrapdoorBlock(FabricBlockSettings.of(Material.METAL)
+                    .strength(3.5f).requiresTool().nonOpaque().sounds(BlockSoundGroup.COPPER)), ModItemGroup.ENHANCED_END_BLOCKS);
 
 
     private static Block registerBlockWithoutBlockItem(String name, Block block, ItemGroup group) {

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_right",
+  "textures": {
+    "bottom": "enhancedend:block/clitanium_door_bottom",
+    "top": "enhancedend:block/clitanium_door_top"
+  }
+}
