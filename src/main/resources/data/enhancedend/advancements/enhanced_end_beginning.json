@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "enhancedend:tanzanite"
+    },
+    "title": "The Enhanced End",
+    "description": "The Journey continues...",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "background": "enhancedend:textures/block/silstone.png"
+  },
+  "criteria": {
+    "entered_end_gateway": {
+      "conditions": {
+        "block": "minecraft:end_gateway"
+      },
+      "trigger": "minecraft:enter_block"
+    }
+  },
+  "requirements": [
+    [
+      "entered_end_gateway"
+    ]
+  ]
+}

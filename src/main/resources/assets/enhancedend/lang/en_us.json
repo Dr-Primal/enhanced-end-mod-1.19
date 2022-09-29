@@ -4,6 +4,7 @@
   "item.enhancedend.clitanium": "Clitanium",
   "item.enhancedend.endimintium_ingot": "Endimintium Ingot",
   "item.enhancedend.diamond_fragment": "Diamond Fragment",
+  "item.enhancedend.ender_matter_bucket": "Ender Matter in a Bucket",
 
   "block.enhancedend.end_tanzanite_ore": "End Tanzanite Ore",
   "block.enhancedend.tanzanite_block": "Block of Tanzanite",
@@ -11,6 +12,9 @@
 
   "block.enhancedend.end_clitanium_ore": "End Clitanium Ore",
   "block.enhancedend.clitanium_block": "Block of Clitanium",
+  "block.enhancedend.clitanium_door": "Clitanium Door",
+  "block.enhancedend.clitanium_trapdoor": "Clitanium Trapdoor",
+  "block.enhancedend.clitanium_bars": "Clitanium Bars",
 
   "block.enhancedend.silstone": "Silstone",
   "block.enhancedend.silstone_button": "Silstone Button",
@@ -54,6 +58,9 @@
   "block.enhancedend.midnight_pressure_plate": "Midnight Pressure Plate",
   "block.enhancedend.midnight_stairs": "Midnight Stairs",
   "block.enhancedend.midnight_slab": "Midnight Slab",
+  "block.enhancedend.midnight_door": "Midnight Door",
+  "block.enhancedend.midnight_trapdoor": "Midnight Trapdoor",
+  "block.enhancedend.midnight_sign": "Midnight Sign",
 
   "block.enhancedend.corlite_log": "Corlite Log",
   "block.enhancedend.stripped_corlite_log": "Stripped Corlite Log",
@@ -66,18 +73,9 @@
   "block.enhancedend.corlite_pressure_plate": "Corlite Pressure Plate",
   "block.enhancedend.corlite_stairs": "Corlite Stairs",
   "block.enhancedend.corlite_slab": "Corlite Slab",
-
-  "block.enhancedend.midnight_sign": "Midnight Sign",
-  "block.enhancedend.corlite_sign": "Corlite Sign",
-
-  "block.enhancedend.midnight_door": "Midnight Door",
-  "block.enhancedend.midnight_trapdoor": "Midnight Trapdoor",
-
   "block.enhancedend.corlite_door": "Corlite Door",
   "block.enhancedend.corlite_trapdoor": "Corlite Trapdoor",
-
-  "block.enhancedend.clitanium_door": "Clitanium Door",
-  "block.enhancedend.clitanium_trapdoor": "Clitanium Trapdoor",
+  "block.enhancedend.corlite_sign": "Corlite Sign",
 
 
 

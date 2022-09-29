@@ -23,17 +23,29 @@ public class ModBlocks {
     public static final Block END_CLITANIUM_ORE = registerBlock("end_clitanium_ore",
             new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool().sounds(BlockSoundGroup.STONE),
                     UniformIntProvider.create(3, 7)), ModItemGroup.ENHANCED_END_BLOCKS);
-//Ore Blocks
+
+//Tanzanite Variants
     public static final Block TANZANITE_BLOCK = registerBlock("tanzanite_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(3f).requiresTool().sounds(BlockSoundGroup.METAL)),
             ModItemGroup.ENHANCED_END_BLOCKS);
-    public static final Block CLITANIUM_BLOCK = registerBlock("clitanium_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(3f).requiresTool().sounds(BlockSoundGroup.COPPER)),
-            ModItemGroup.ENHANCED_END_BLOCKS);
-//Raw Blocks
     public static final Block RAW_TANZANITE_BLOCK = registerBlock("raw_tanzanite_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(3f).requiresTool().sounds(BlockSoundGroup.STONE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
+
+//Clitanium Variants
+    public static final Block CLITANIUM_BLOCK = registerBlock("clitanium_block",
+            new Block(FabricBlockSettings.of(Material.METAL).strength(3f).requiresTool().sounds(BlockSoundGroup.COPPER)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+    public static final Block CLITANIUM_DOOR = registerBlock("clitanium_door",
+            new DoorBlock(FabricBlockSettings.of(Material.METAL)
+                    .strength(3.5f).requiresTool().nonOpaque().sounds(BlockSoundGroup.COPPER)), ModItemGroup.ENHANCED_END_BLOCKS);
+    public static final Block CLITANIUM_TRAPDOOR = registerBlock("clitanium_trapdoor",
+            new TrapdoorBlock(FabricBlockSettings.of(Material.METAL)
+                    .strength(3.5f).requiresTool().nonOpaque().sounds(BlockSoundGroup.COPPER)), ModItemGroup.ENHANCED_END_BLOCKS);
+    public static final Block CLITANIUM_BARS = registerBlock("clitanium_bars",
+            new PaneBlock(FabricBlockSettings.of(Material.METAL)
+                    .strength(3.5f).requiresTool().nonOpaque().sounds(BlockSoundGroup.COPPER)), ModItemGroup.ENHANCED_END_BLOCKS);
+
 //Silstone Blocks
     public static final Block SILSTONE = registerBlock("silstone",
             new Block(FabricBlockSettings.of(Material.STONE).strength(2.5f).requiresTool().sounds(BlockSoundGroup.CALCITE)),
@@ -152,6 +164,18 @@ public class ModBlocks {
     public static final Block MIDNIGHT_PRESSURE_PLATE = registerBlock("midnight_pressure_plate",
             new ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of(Material.NETHER_WOOD).strength(0.5f, 1f).sounds(BlockSoundGroup.WOOD)),
             ModItemGroup.ENHANCED_END_BLOCKS);
+    public static final Block MIDNIGHT_DOOR = registerBlock("midnight_door",
+            new DoorBlock(FabricBlockSettings.of(Material.WOOD)
+                    .strength(2f,3f).nonOpaque().sounds(BlockSoundGroup.WOOD)), ModItemGroup.ENHANCED_END_BLOCKS);
+    public static final Block MIDNIGHT_TRAPDOOR = registerBlock("midnight_trapdoor",
+            new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD)
+                    .strength(2f,3f).nonOpaque().sounds(BlockSoundGroup.WOOD)), ModItemGroup.ENHANCED_END_BLOCKS);
+    public static final Block MIDNIGHT_WALL_SIGN_BLOCK = registerBlockWithoutBlockItem("midnight_wall_sign",
+            new WallSignBlock(FabricBlockSettings.copy(Blocks.OAK_WALL_SIGN), ModSignTypes.MIDNIGHT), ModItemGroup.ENHANCED_END_BLOCKS);
+
+    public static final Block MIDNIGHT_SIGN_BLOCK = registerBlockWithoutBlockItem("midnight_sign",
+            new SignBlock(FabricBlockSettings.copy(Blocks.OAK_SIGN), ModSignTypes.MIDNIGHT), ModItemGroup.ENHANCED_END_BLOCKS);
+
 //Corlite Wood Variants
     public static final Block CORLITE_LOG = registerBlock("corlite_log",
         new PillarBlock(FabricBlockSettings.copy(Blocks.CRIMSON_STEM).strength(2.0F, 3.0F).sounds(BlockSoundGroup.NETHER_STEM)),
@@ -186,38 +210,19 @@ public class ModBlocks {
     public static final Block CORLITE_PRESSURE_PLATE = registerBlock("corlite_pressure_plate",
             new ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of(Material.NETHER_WOOD).strength(0.5f, 1f).sounds(BlockSoundGroup.WOOD)),
             ModItemGroup.ENHANCED_END_BLOCKS);
-    //Sign Variants
-    public static final Block MIDNIGHT_WALL_SIGN_BLOCK = registerBlockWithoutBlockItem("midnight_wall_sign",
-            new WallSignBlock(FabricBlockSettings.copy(Blocks.OAK_WALL_SIGN), ModSignTypes.MIDNIGHT), ModItemGroup.ENHANCED_END_BLOCKS);
-
-    public static final Block MIDNIGHT_SIGN_BLOCK = registerBlockWithoutBlockItem("midnight_sign",
-            new SignBlock(FabricBlockSettings.copy(Blocks.OAK_SIGN), ModSignTypes.MIDNIGHT), ModItemGroup.ENHANCED_END_BLOCKS);
-    public static final Block CORLITE_WALL_SIGN_BLOCK = registerBlockWithoutBlockItem("corlite_wall_sign",
-            new WallSignBlock(FabricBlockSettings.copy(Blocks.OAK_WALL_SIGN), ModSignTypes.CORLITE), ModItemGroup.ENHANCED_END_BLOCKS);
-
-    public static final Block CORLITE_SIGN_BLOCK = registerBlockWithoutBlockItem("corlite_sign",
-            new SignBlock(FabricBlockSettings.copy(Blocks.OAK_SIGN), ModSignTypes.CORLITE), ModItemGroup.ENHANCED_END_BLOCKS);
-    //Midnight Doors
-    public static final Block MIDNIGHT_DOOR = registerBlock("midnight_door",
-            new DoorBlock(FabricBlockSettings.of(Material.WOOD)
-                    .strength(2f,3f).nonOpaque().sounds(BlockSoundGroup.WOOD)), ModItemGroup.ENHANCED_END_BLOCKS);
-    public static final Block MIDNIGHT_TRAPDOOR = registerBlock("midnight_trapdoor",
-            new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD)
-                    .strength(2f,3f).nonOpaque().sounds(BlockSoundGroup.WOOD)), ModItemGroup.ENHANCED_END_BLOCKS);
-    //Corlite Doors
     public static final Block CORLITE_DOOR = registerBlock("corlite_door",
             new DoorBlock(FabricBlockSettings.of(Material.WOOD)
                     .strength(2f,3f).nonOpaque().sounds(BlockSoundGroup.WOOD)), ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block CORLITE_TRAPDOOR = registerBlock("corlite_trapdoor",
             new TrapdoorBlock(FabricBlockSettings.of(Material.WOOD)
                     .strength(2f,3f).nonOpaque().sounds(BlockSoundGroup.WOOD)), ModItemGroup.ENHANCED_END_BLOCKS);
-    //Clitanium Doors
-    public static final Block CLITANIUM_DOOR = registerBlock("clitanium_door",
-            new DoorBlock(FabricBlockSettings.of(Material.METAL)
-                    .strength(3.5f).requiresTool().nonOpaque().sounds(BlockSoundGroup.COPPER)), ModItemGroup.ENHANCED_END_BLOCKS);
-    public static final Block CLITANIUM_TRAPDOOR = registerBlock("clitanium_trapdoor",
-            new TrapdoorBlock(FabricBlockSettings.of(Material.METAL)
-                    .strength(3.5f).requiresTool().nonOpaque().sounds(BlockSoundGroup.COPPER)), ModItemGroup.ENHANCED_END_BLOCKS);
+    public static final Block CORLITE_WALL_SIGN_BLOCK = registerBlockWithoutBlockItem("corlite_wall_sign",
+            new WallSignBlock(FabricBlockSettings.copy(Blocks.OAK_WALL_SIGN), ModSignTypes.CORLITE), ModItemGroup.ENHANCED_END_BLOCKS);
+
+    public static final Block CORLITE_SIGN_BLOCK = registerBlockWithoutBlockItem("corlite_sign",
+            new SignBlock(FabricBlockSettings.copy(Blocks.OAK_SIGN), ModSignTypes.CORLITE), ModItemGroup.ENHANCED_END_BLOCKS);
+
+
 
 
     private static Block registerBlockWithoutBlockItem(String name, Block block, ItemGroup group) {

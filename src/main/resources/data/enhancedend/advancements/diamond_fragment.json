@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "enhancedend:diamond_fragment"
+    },
+    "title": "Merely a Fragment",
+    "description": "Obtain Diamond Fragments from a Diamond or Infused Kimberlite",
+    "frame": "task",
+    "hidden": true,
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "enhancedend:enhanced_end_beginning",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhancedend:diamond_fragment"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

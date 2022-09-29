@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#@#",
+    "#@#"
+  ],
+  "key": {
+    "#": {
+      "item": "enhancedend:clitanium_block"
+    },
+    "@": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "enhancedend:clitanium_bars",
+    "count": 16
+  }
+}

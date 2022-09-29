@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "enhancedend:ender_matter_bucket"
+    },
+    "title": "Wait, this isn't water!",
+    "description": "Scoop up the substance of the void",
+    "frame": "task",
+    "hidden": true,
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "enhancedend:enhanced_end_beginning",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhancedend:ender_matter_bucket"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
