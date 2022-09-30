@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "enhancedend:block/stripped_corlite_hyphae",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "enhancedend:block/stripped_corlite_hyphae"
+    },
+    "axis=z": {
+      "model": "enhancedend:block/stripped_corlite_hyphae",
+      "x": 90
+    }
+  }
+}

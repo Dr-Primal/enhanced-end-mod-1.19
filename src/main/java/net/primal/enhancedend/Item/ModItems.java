@@ -1,11 +1,13 @@
 package net.primal.enhancedend.Item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.Item;
-import net.minecraft.item.SignItem;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.primal.enhancedend.EnhancedEnd;
+import net.primal.enhancedend.Item.custom.EndimintiumItem;
+import net.primal.enhancedend.Item.custom.ModBowItem;
 import net.primal.enhancedend.block.ModBlocks;
 
 public class ModItems {
@@ -17,8 +19,8 @@ public class ModItems {
 
     public static final Item CLITANIUM = registerItem("clitanium",
             new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
-    public static final Item ENDIMINTIUM = registerItem("endimintium_ingot",
-            new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
+    public static final Item ENDIMINTIUM_INGOT = registerItem("endimintium_ingot",
+            new EndimintiumItem(new FabricItemSettings().fireproof().group(ModItemGroup.ENHANCED_END_ITEMS)));
     public static final Item DIAMOND_FRAGMENT = registerItem("diamond_fragment",
             new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
     //Sign Variants
@@ -28,6 +30,24 @@ public class ModItems {
     public static final Item CORLITE_SIGN = registerItem("corlite_sign",
             new SignItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_BLOCKS).maxCount(16),
                     ModBlocks.CORLITE_SIGN_BLOCK, ModBlocks.CORLITE_WALL_SIGN_BLOCK));
+    //Bow
+    public static final Item ENDIMINTIUM_BOW = registerItem("endimintium_bow",
+            new ModBowItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS).maxDamage(500).fireproof()));
+
+    //Armor
+    public static final Item ENDIMINTIUM_HELMET = registerItem("endimintium_helmet",
+            new ArmorItem(ModArmorMaterials.ENDIMINTIUM, EquipmentSlot.HEAD,
+                    new FabricItemSettings().fireproof().group(ModItemGroup.ENHANCED_END_ITEMS)));
+    public static final Item ENDIMINTIUM_CHESTPLATE = registerItem("endimintium_chestplate",
+            new ArmorItem(ModArmorMaterials.ENDIMINTIUM, EquipmentSlot.CHEST,
+                    new FabricItemSettings().fireproof().group(ModItemGroup.ENHANCED_END_ITEMS)));
+    public static final Item ENDIMINTIUM_LEGGINGS = registerItem("endimintium_leggings",
+            new ArmorItem(ModArmorMaterials.ENDIMINTIUM, EquipmentSlot.LEGS,
+                    new FabricItemSettings().fireproof().group(ModItemGroup.ENHANCED_END_ITEMS)));
+    public static final Item ENDIMINTIUM_BOOTS = registerItem("endimintium_boots",
+            new ArmorItem(ModArmorMaterials.ENDIMINTIUM, EquipmentSlot.FEET,
+                    new FabricItemSettings().fireproof().group(ModItemGroup.ENHANCED_END_ITEMS)));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(EnhancedEnd.MOD_ID, name), item);
     }

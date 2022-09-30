@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "enhancedend:block/stripped_corlite_stem",
+    "side": "enhancedend:block/stripped_corlite_stem"
+  }
+}

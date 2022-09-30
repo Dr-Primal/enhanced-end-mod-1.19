@@ -8,6 +8,7 @@ import net.minecraft.util.Identifier;
 import net.primal.enhancedend.block.ModBlocks;
 import net.minecraft.client.render.RenderLayer;
 import net.primal.enhancedend.fluid.ModFluids;
+import net.primal.enhancedend.util.ModModelPredicateProvider;
 
 public class EnhancedEndClientMod implements ClientModInitializer {
     @Override
@@ -26,6 +27,8 @@ public class EnhancedEndClientMod implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),
                 ModFluids.STILL_ENDER_MATTER, ModFluids.FLOWING_ENDER_MATTER);
+
+        ModModelPredicateProvider.registerModModels();
     }
 
 }

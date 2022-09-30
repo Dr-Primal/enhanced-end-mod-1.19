@@ -1,0 +1,6 @@
+{
+    "parent": "enhancedend:item/endimintium_bow",
+    "textures": {
+        "layer0": "enhancedend:item/endimintium_bow_pulling_0"
+    }
+}

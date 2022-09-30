@@ -6,6 +6,13 @@
   "item.enhancedend.diamond_fragment": "Diamond Fragment",
   "item.enhancedend.ender_matter_bucket": "Ender Matter in a Bucket",
 
+  "item.enhancedend.endimintium_bow": "Endimintium Bow",
+
+  "item.enhancedend.endimintium_helmet": "Endimintium Helmet",
+  "item.enhancedend.endimintium_chestplate": "Endimintium Chestplate",
+  "item.enhancedend.endimintium_leggings": "Endimintium Leggings",
+  "item.enhancedend.endimintium_boots": "Endimintium Boots",
+
   "block.enhancedend.end_tanzanite_ore": "End Tanzanite Ore",
   "block.enhancedend.tanzanite_block": "Block of Tanzanite",
   "block.enhancedend.raw_tanzanite_block": "Block of Raw Tanzanite",
@@ -47,10 +54,10 @@
   "block.enhancedend.midnight_end_stone": "Midnight End Stone",
   "block.enhancedend.corlite_end_stone": "Corlite End Stone",
 
-  "block.enhancedend.midnight_log": "Midnight Log",
-  "block.enhancedend.stripped_midnight_log": "Stripped Midnight Log",
-  "block.enhancedend.midnight_wood": "Midnight Wood",
-  "block.enhancedend.stripped_midnight_wood": "Stripped Midnight Wood",
+  "block.enhancedend.midnight_stem": "Midnight Stem",
+  "block.enhancedend.stripped_midnight_stem": "Stripped Midnight Stem",
+  "block.enhancedend.midnight_hyphae": "Midnight Hyphae",
+  "block.enhancedend.stripped_midnight_hyphae": "Stripped Midnight Hyphae",
   "block.enhancedend.midnight_planks": "Midnight Planks",
   "block.enhancedend.midnight_fence": "Midnight Fence",
   "block.enhancedend.midnight_fence_gate": "Midnight Fence Gate",
@@ -62,10 +69,10 @@
   "block.enhancedend.midnight_trapdoor": "Midnight Trapdoor",
   "block.enhancedend.midnight_sign": "Midnight Sign",
 
-  "block.enhancedend.corlite_log": "Corlite Log",
-  "block.enhancedend.stripped_corlite_log": "Stripped Corlite Log",
-  "block.enhancedend.corlite_wood": "Corlite Wood",
-  "block.enhancedend.stripped_corlite_wood": "Stripped Corlite Wood",
+  "block.enhancedend.corlite_stem": "Corlite Stem",
+  "block.enhancedend.stripped_corlite_stem": "Stripped Corlite Stem",
+  "block.enhancedend.corlite_hyphae": "Corlite Hyphae",
+  "block.enhancedend.stripped_corlite_hyphae": "Stripped Corlite Hyphae",
   "block.enhancedend.corlite_planks": "Corlite Planks",
   "block.enhancedend.corlite_fence": "Corlite Fence",
   "block.enhancedend.corlite_fence_gate": "Corlite Fence Gate",

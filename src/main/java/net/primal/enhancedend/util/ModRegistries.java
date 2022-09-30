@@ -9,9 +9,9 @@ public class ModRegistries {
     }
 
     private static void registerStrippables() {
-        StrippableBlockRegistry.register(ModBlocks.MIDNIGHT_LOG, ModBlocks.STRIPPED_MIDNIGHT_LOG);
-        StrippableBlockRegistry.register(ModBlocks.MIDNIGHT_WOOD, ModBlocks.STRIPPED_MIDNIGHT_WOOD);
-        StrippableBlockRegistry.register(ModBlocks.CORLITE_LOG, ModBlocks.STRIPPED_CORLITE_LOG);
-        StrippableBlockRegistry.register(ModBlocks.CORLITE_WOOD, ModBlocks.STRIPPED_CORLITE_WOOD);
+        StrippableBlockRegistry.register(ModBlocks.MIDNIGHT_STEM, ModBlocks.STRIPPED_MIDNIGHT_STEM);
+        StrippableBlockRegistry.register(ModBlocks.MIDNIGHT_STEM, ModBlocks.STRIPPED_MIDNIGHT_STEM);
+        StrippableBlockRegistry.register(ModBlocks.CORLITE_STEM, ModBlocks.STRIPPED_CORLITE_STEM);
+        StrippableBlockRegistry.register(ModBlocks.CORLITE_HYPHAE, ModBlocks.STRIPPED_CORLITE_HYPHAE);
     }
 }

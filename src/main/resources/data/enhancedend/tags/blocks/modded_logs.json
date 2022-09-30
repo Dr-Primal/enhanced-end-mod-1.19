@@ -1,12 +1,6 @@
 {
   "values": [
-    "enhancedend:midnight_log",
-    "enhancedend:midnight_wood",
-    "enhancedend:stripped_midnight_log",
-    "enhancedend:stripped_midnight_wood",
-    "enhancedend:corlite_log",
-    "enhancedend:corlite_wood",
-    "enhancedend:stripped_corlite_log",
-    "enhancedend:stripped_corlite_wood"
+    "#enhancedend:corlite_stems",
+    "#enhancedend:midnight_stems"
   ]
 }

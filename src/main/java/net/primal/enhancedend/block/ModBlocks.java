@@ -131,16 +131,16 @@ public class ModBlocks {
             new Block(FabricBlockSettings.of(Material.STONE).strength(3.0f, 9.0f).requiresTool().sounds(BlockSoundGroup.STONE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     //Midnight Wood Variants
-    public static final Block MIDNIGHT_LOG = registerBlock("midnight_log",
+    public static final Block MIDNIGHT_STEM = registerBlock("midnight_stem",
             new PillarBlock(FabricBlockSettings.copy(Blocks.CRIMSON_STEM).strength(2.0F, 3.0F).sounds(BlockSoundGroup.NETHER_STEM)),
             ModItemGroup.ENHANCED_END_BLOCKS);
-    public static final Block STRIPPED_MIDNIGHT_LOG = registerBlock("stripped_midnight_log",
-            new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_CRIMSON_STEM).strength(2.0F, 3.0F).breakInstantly().sounds(BlockSoundGroup.NETHER_STEM)),
+    public static final Block STRIPPED_MIDNIGHT_STEM = registerBlock("stripped_midnight_stem",
+            new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_CRIMSON_STEM).strength(2.0F, 3.0F).sounds(BlockSoundGroup.NETHER_STEM)),
             ModItemGroup.ENHANCED_END_BLOCKS);
-    public static final Block MIDNIGHT_WOOD = registerBlock("midnight_wood",
+    public static final Block MIDNIGHT_HYPHAE = registerBlock("midnight_hyphae",
             new PillarBlock(FabricBlockSettings.copy(Blocks.CRIMSON_HYPHAE).strength(2F, 3F).sounds(BlockSoundGroup.NETHER_STEM)),
             ModItemGroup.ENHANCED_END_BLOCKS);
-    public static final Block STRIPPED_MIDNIGHT_WOOD = registerBlock("stripped_midnight_wood",
+    public static final Block STRIPPED_MIDNIGHT_HYPHAE = registerBlock("stripped_midnight_hyphae",
             new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_CRIMSON_HYPHAE).strength(2F, 3F).sounds(BlockSoundGroup.NETHER_STEM)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block MIDNIGHT_PLANKS = registerBlock("midnight_planks",
@@ -177,16 +177,16 @@ public class ModBlocks {
             new SignBlock(FabricBlockSettings.copy(Blocks.OAK_SIGN), ModSignTypes.MIDNIGHT), ModItemGroup.ENHANCED_END_BLOCKS);
 
 //Corlite Wood Variants
-    public static final Block CORLITE_LOG = registerBlock("corlite_log",
+    public static final Block CORLITE_STEM = registerBlock("corlite_stem",
         new PillarBlock(FabricBlockSettings.copy(Blocks.CRIMSON_STEM).strength(2.0F, 3.0F).sounds(BlockSoundGroup.NETHER_STEM)),
         ModItemGroup.ENHANCED_END_BLOCKS);
-    public static final Block STRIPPED_CORLITE_LOG = registerBlock("stripped_corlite_log",
-            new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_CRIMSON_STEM).strength(2.0F, 3.0F).breakInstantly().sounds(BlockSoundGroup.NETHER_STEM)),
+    public static final Block STRIPPED_CORLITE_STEM = registerBlock("stripped_corlite_stem",
+            new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_CRIMSON_STEM).strength(2.0F, 3.0F).sounds(BlockSoundGroup.NETHER_STEM)),
             ModItemGroup.ENHANCED_END_BLOCKS);
-    public static final Block CORLITE_WOOD = registerBlock("corlite_wood",
+    public static final Block CORLITE_HYPHAE = registerBlock("corlite_hyphae",
             new PillarBlock(FabricBlockSettings.copy(Blocks.CRIMSON_HYPHAE).strength(2F, 3F).sounds(BlockSoundGroup.NETHER_STEM)),
             ModItemGroup.ENHANCED_END_BLOCKS);
-    public static final Block STRIPPED_CORLITE_WOOD = registerBlock("stripped_corlite_wood",
+    public static final Block STRIPPED_CORLITE_HYPHAE = registerBlock("stripped_corlite_hyphae",
             new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_CRIMSON_HYPHAE).strength(2F, 3F).sounds(BlockSoundGroup.NETHER_STEM)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block CORLITE_PLANKS = registerBlock("corlite_planks",
@@ -202,7 +202,7 @@ public class ModBlocks {
             new ModStairsBlock(ModBlocks.MIDNIGHT_PLANKS.getDefaultState(), FabricBlockSettings.of(Material.NETHER_WOOD).strength(2f, 3f).sounds(BlockSoundGroup.WOOD)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block CORLITE_SLAB = registerBlock("corlite_slab",
-            new SlabBlock(FabricBlockSettings.of(Material.WOOD).strength(2f, 3f).sounds(BlockSoundGroup.WOOD)),
+            new SlabBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(2f, 3f).sounds(BlockSoundGroup.WOOD)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block CORLITE_BUTTON = registerBlock("corlite_button",
             new ModWoodenButtonBlock(FabricBlockSettings.of(Material.NETHER_WOOD).strength(0.5f, 1f).noCollision().sounds(BlockSoundGroup.WOOD)),
