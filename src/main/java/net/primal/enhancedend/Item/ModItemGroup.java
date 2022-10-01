@@ -13,4 +13,7 @@ public class ModItemGroup {
 
     public static final ItemGroup ENHANCED_END_ITEMS = FabricItemGroupBuilder.build(
             new Identifier(EnhancedEnd.MOD_ID, "tanzanite"), () -> new ItemStack(ModItems.TANZANITE));
+
+    public static final ItemGroup ENHANCED_END_DECORATIONS = FabricItemGroupBuilder.build(
+            new Identifier(EnhancedEnd.MOD_ID, "endium_mushroom"), () -> new ItemStack(ModBlocks.ENDIUM_MUSHROOM));
 }

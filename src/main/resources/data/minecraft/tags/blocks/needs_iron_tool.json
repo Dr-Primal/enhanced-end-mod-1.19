@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "enhancedend:infused_kimberlite"
+    "enhancedend:infused_kimberlite",
+    "enhancedend:hardened_ender_matter"
   ]
 }

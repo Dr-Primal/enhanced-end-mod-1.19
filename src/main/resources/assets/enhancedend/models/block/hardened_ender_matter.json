@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "enhancedend:block/hardened_ender_matter",
+    "side": "enhancedend:block/hardened_ender_matter"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "enhancedend:endimintium_scrap"
+    },
+    {
+      "item": "enhancedend:endimintium_scrap"
+    },
+    {
+      "item": "enhancedend:endimintium_scrap"
+    },
+    {
+      "item": "enhancedend:endimintium_scrap"
+    },
+    {
+      "item": "enhancedend:tanzanite"
+    },
+    {
+      "item": "enhancedend:tanzanite"
+    },
+    {
+      "item": "enhancedend:tanzanite"
+    },
+    {
+      "item": "enhancedend:tanzanite"
+    }
+  ],
+  "result": {
+    "item": "enhancedend:endimintium_ingot"
+  }
+}

@@ -6,6 +6,7 @@
   "item.enhancedend.endimintium_ingot": "Endimintium Ingot",
   "item.enhancedend.diamond_fragment": "Diamond Fragment",
   "item.enhancedend.ender_matter_bucket": "Ender Matter in a Bucket",
+  "block.enhancedend.hardened_ender_matter": "Hardened Ender Matter",
 
   "item.enhancedend.endimintium_bow": "Endimintium Bow",
   "item.enhancedend.endimintium_sword": "Endimintium Sword",
@@ -95,11 +96,15 @@
   "block.enhancedend.corlite_mushroom": "Corlite Mushroom",
   "block.enhancedend.midnight_blots": "Midnight Blots",
   "block.enhancedend.corlite_blots": "Corlite Blots",
+
   "block.enhancedend.endium_soil": "Endium Soil",
+  "block.enhancedend.endium_mushroom_block": "Endium Mushroom Block",
+  "block.enhancedend.endium_mushroom": "Endium Mushroom",
 
 
 
   "itemGroup.enhancedend.end_tanzanite_ore": "Enhanced End Blocks",
-  "itemGroup.enhancedend.tanzanite": "Enhanced End Items"
+  "itemGroup.enhancedend.tanzanite": "Enhanced End Items",
+  "itemGroup.enhancedend.endium_mushroom": "Enhanced End Decorations/Food"
 
 }

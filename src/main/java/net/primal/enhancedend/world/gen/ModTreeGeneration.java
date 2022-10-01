@@ -8,10 +8,19 @@ import net.minecraft.world.gen.GenerationStep;
 
 public class ModTreeGeneration {
     public static void generateTrees() {
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SMALL_END_ISLANDS),
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_HIGHLANDS),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.MIDNIGHT_PLACED.getKey().get());
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_MIDLANDS),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.MIDNIGHT_PLACED.getKey().get());
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_HIGHLANDS),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.CORLITE_PLACED.getKey().get());
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_MIDLANDS),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.CORLITE_PLACED.getKey().get());
+
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.END_BARRENS),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.ENDIUM_PLACED.getKey().get());
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.SMALL_END_ISLANDS),
+                GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.ENDIUM_PLACED.getKey().get());
     }
 }

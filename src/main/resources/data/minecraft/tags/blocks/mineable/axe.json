@@ -4,6 +4,7 @@
     "#enhancedend:modded_logs",
     "#enhancedend:modded_planks",
     "#enhancedend:modded_doors",
-    "#enhancedend:modded_trapdoors"
+    "#enhancedend:modded_trapdoors",
+    "enhancedend:endium_mushroom_block"
   ]
 }
