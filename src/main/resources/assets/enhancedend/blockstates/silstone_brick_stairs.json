@@ -161,7 +161,7 @@
       "uvlock": true
     },
     "facing=west,half=bottom,shape=outer_left": {
-      "model": "enhancedend:block/silstone_brick_tairs_outer",
+      "model": "enhancedend:block/silstone_brick_stairs_outer",
       "y": 90,
       "uvlock": true
     },
