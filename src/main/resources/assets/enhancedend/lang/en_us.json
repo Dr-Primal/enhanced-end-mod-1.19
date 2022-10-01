@@ -2,17 +2,24 @@
   "item.enhancedend.tanzanite": "Tanzanite",
   "item.enhancedend.raw_tanzanite": "Raw Tanzanite",
   "item.enhancedend.clitanium": "Clitanium",
+  "item.enhancedend.endimintium_scrap": "Endimintium Scrap",
   "item.enhancedend.endimintium_ingot": "Endimintium Ingot",
   "item.enhancedend.diamond_fragment": "Diamond Fragment",
   "item.enhancedend.ender_matter_bucket": "Ender Matter in a Bucket",
 
   "item.enhancedend.endimintium_bow": "Endimintium Bow",
+  "item.enhancedend.endimintium_sword": "Endimintium Sword",
+  "item.enhancedend.endimintium_axe": "Endimintium Axe",
+  "item.enhancedend.endimintium_pickaxe": "Endimintium Pickaxe",
+  "item.enhancedend.endimintium_shovel": "Endimintium Shovel",
+  "item.enhancedend.endimintium_hoe": "Endimintium Hoe",
 
   "item.enhancedend.endimintium_helmet": "Endimintium Helmet",
   "item.enhancedend.endimintium_chestplate": "Endimintium Chestplate",
   "item.enhancedend.endimintium_leggings": "Endimintium Leggings",
   "item.enhancedend.endimintium_boots": "Endimintium Boots",
 
+  "block.enhancedend.endimintium_block": "Block of Endimintium",
   "block.enhancedend.end_tanzanite_ore": "End Tanzanite Ore",
   "block.enhancedend.tanzanite_block": "Block of Tanzanite",
   "block.enhancedend.raw_tanzanite_block": "Block of Raw Tanzanite",
@@ -83,6 +90,12 @@
   "block.enhancedend.corlite_door": "Corlite Door",
   "block.enhancedend.corlite_trapdoor": "Corlite Trapdoor",
   "block.enhancedend.corlite_sign": "Corlite Sign",
+
+  "block.enhancedend.midnight_mushroom": "Midnight Mushroom",
+  "block.enhancedend.corlite_mushroom": "Corlite Mushroom",
+  "block.enhancedend.midnight_blots": "Midnight Blots",
+  "block.enhancedend.corlite_blots": "Corlite Blots",
+  "block.enhancedend.endium_soil": "Endium Soil",
 
 
 

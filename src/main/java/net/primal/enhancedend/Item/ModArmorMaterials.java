@@ -12,7 +12,7 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
     ENDIMINTIUM("endimintium", 45, new int[]{4, 7, 9, 4}, 20,
-            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 3.5f, 0.15f, () -> Ingredient.ofItems(ModItems.ENDIMINTIUM_INGOT));
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 4f, 0.15f, () -> Ingredient.ofItems(ModItems.ENDIMINTIUM_INGOT));
 
     private static final int[] BASE_DURABILITY;
     private final String name;
@@ -22,9 +22,9 @@ public enum ModArmorMaterials implements ArmorMaterial {
     private final SoundEvent equipSound;
     private final float toughness;
     private final float knockbackResistance;
-    private final Lazy<Ingredient> repairIngredientSupplier;
+    private final Supplier<Ingredient> repairIngredient;
 
-    private ModArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredientSupplier) {
+    ModArmorMaterials(String name, int durabilityMultiplier, int[] protectionAmounts, int enchantability, SoundEvent equipSound, float toughness, float knockbackResistance, Supplier<Ingredient> repairIngredient) {
         this.name = name;
         this.durabilityMultiplier = durabilityMultiplier;
         this.protectionAmounts = protectionAmounts;
@@ -32,7 +32,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
         this.equipSound = equipSound;
         this.toughness = toughness;
         this.knockbackResistance = knockbackResistance;
-        this.repairIngredientSupplier = new Lazy<Ingredient>(repairIngredientSupplier);
+        this.repairIngredient = repairIngredient;
     }
 
     @Override
@@ -57,7 +57,7 @@ public enum ModArmorMaterials implements ArmorMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return this.repairIngredientSupplier.get();
+        return this.repairIngredient.get();
     }
 
     @Override

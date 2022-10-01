@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-
+    "enhancedend:midnight_blots",
+    "enhancedend:corlite_blots"
   ]
 }

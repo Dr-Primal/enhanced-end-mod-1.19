@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "enhancedend:endimintium_block"
+    }
+  ],
+  "result": {
+    "item": "enhancedend:endimintium",
+    "count": 9
+  }
+}

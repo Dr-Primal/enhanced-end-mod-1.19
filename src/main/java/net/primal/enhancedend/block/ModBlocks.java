@@ -14,6 +14,8 @@ import net.primal.enhancedend.EnhancedEnd;
 import net.primal.enhancedend.Item.ModItemGroup;
 import net.primal.enhancedend.block.custom.*;
 import net.primal.enhancedend.block.entity.ModSignTypes;
+import net.primal.enhancedend.world.feature.tree.CorliteSaplingGenerator;
+import net.primal.enhancedend.world.feature.tree.MidnightSaplingGenerator;
 
 public class ModBlocks {
     //Ores
@@ -23,6 +25,10 @@ public class ModBlocks {
     public static final Block END_CLITANIUM_ORE = registerBlock("end_clitanium_ore",
             new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool().sounds(BlockSoundGroup.STONE),
                     UniformIntProvider.create(3, 7)), ModItemGroup.ENHANCED_END_BLOCKS);
+
+    public static final Block ENDIMINTIUM_BLOCK = registerBlock("endimintium_block",
+            new Block(FabricBlockSettings.of(Material.METAL).strength(80f, 1700f).requiresTool().sounds(BlockSoundGroup.NETHERITE)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
 
 //Tanzanite Variants
     public static final Block TANZANITE_BLOCK = registerBlock("tanzanite_block",
@@ -125,23 +131,23 @@ public class ModBlocks {
             ModItemGroup.ENHANCED_END_BLOCKS);
     //End stone Blocks
     public static final Block MIDNIGHT_END_STONE = registerBlock("midnight_end_stone",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(3.0f, 9.0f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            new NyliumBlock(FabricBlockSettings.of(Material.STONE).strength(3.0f, 9.0f).requiresTool().sounds(BlockSoundGroup.STONE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block CORLITE_END_STONE = registerBlock("corlite_end_stone",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(3.0f, 9.0f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            new NyliumBlock(FabricBlockSettings.of(Material.STONE).strength(3.0f, 9.0f).requiresTool().sounds(BlockSoundGroup.STONE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     //Midnight Wood Variants
     public static final Block MIDNIGHT_STEM = registerBlock("midnight_stem",
-            new PillarBlock(FabricBlockSettings.copy(Blocks.CRIMSON_STEM).strength(2.0F, 3.0F).sounds(BlockSoundGroup.NETHER_STEM)),
+            new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG).sounds(BlockSoundGroup.NETHER_STEM)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block STRIPPED_MIDNIGHT_STEM = registerBlock("stripped_midnight_stem",
-            new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_CRIMSON_STEM).strength(2.0F, 3.0F).sounds(BlockSoundGroup.NETHER_STEM)),
+            new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG).sounds(BlockSoundGroup.NETHER_STEM)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block MIDNIGHT_HYPHAE = registerBlock("midnight_hyphae",
-            new PillarBlock(FabricBlockSettings.copy(Blocks.CRIMSON_HYPHAE).strength(2F, 3F).sounds(BlockSoundGroup.NETHER_STEM)),
+            new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG).sounds(BlockSoundGroup.NETHER_STEM)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block STRIPPED_MIDNIGHT_HYPHAE = registerBlock("stripped_midnight_hyphae",
-            new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_CRIMSON_HYPHAE).strength(2F, 3F).sounds(BlockSoundGroup.NETHER_STEM)),
+            new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG).sounds(BlockSoundGroup.NETHER_STEM)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block MIDNIGHT_PLANKS = registerBlock("midnight_planks",
             new Block(FabricBlockSettings.copy(Blocks.CRIMSON_PLANKS).strength(2F, 3F).sounds(BlockSoundGroup.WOOD)),
@@ -178,17 +184,18 @@ public class ModBlocks {
 
 //Corlite Wood Variants
     public static final Block CORLITE_STEM = registerBlock("corlite_stem",
-        new PillarBlock(FabricBlockSettings.copy(Blocks.CRIMSON_STEM).strength(2.0F, 3.0F).sounds(BlockSoundGroup.NETHER_STEM)),
-        ModItemGroup.ENHANCED_END_BLOCKS);
+            new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG).sounds(BlockSoundGroup.NETHER_STEM)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block STRIPPED_CORLITE_STEM = registerBlock("stripped_corlite_stem",
-            new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_CRIMSON_STEM).strength(2.0F, 3.0F).sounds(BlockSoundGroup.NETHER_STEM)),
+            new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG).sounds(BlockSoundGroup.NETHER_STEM)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block CORLITE_HYPHAE = registerBlock("corlite_hyphae",
-            new PillarBlock(FabricBlockSettings.copy(Blocks.CRIMSON_HYPHAE).strength(2F, 3F).sounds(BlockSoundGroup.NETHER_STEM)),
+            new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG).sounds(BlockSoundGroup.NETHER_STEM)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block STRIPPED_CORLITE_HYPHAE = registerBlock("stripped_corlite_hyphae",
-            new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_CRIMSON_HYPHAE).strength(2F, 3F).sounds(BlockSoundGroup.NETHER_STEM)),
+            new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG).sounds(BlockSoundGroup.NETHER_STEM)),
             ModItemGroup.ENHANCED_END_BLOCKS);
+
     public static final Block CORLITE_PLANKS = registerBlock("corlite_planks",
             new Block(FabricBlockSettings.copy(Blocks.CRIMSON_PLANKS).strength(2F, 3F).sounds(BlockSoundGroup.WOOD)),
             ModItemGroup.ENHANCED_END_BLOCKS);
@@ -221,6 +228,22 @@ public class ModBlocks {
 
     public static final Block CORLITE_SIGN_BLOCK = registerBlockWithoutBlockItem("corlite_sign",
             new SignBlock(FabricBlockSettings.copy(Blocks.OAK_SIGN), ModSignTypes.CORLITE), ModItemGroup.ENHANCED_END_BLOCKS);
+    //Blots and Mushrooms
+    public static final Block MIDNIGHT_MUSHROOM = registerBlock("midnight_mushroom",
+            new ModMagicMushroomBlock(new MidnightSaplingGenerator(),
+                    FabricBlockSettings.of(Material.PLANT).breakInstantly().noCollision().sounds(BlockSoundGroup.FUNGUS)), ModItemGroup.ENHANCED_END_ITEMS);
+    public static final Block CORLITE_MUSHROOM = registerBlock("corlite_mushroom",
+            new ModMagicMushroomBlock(new CorliteSaplingGenerator(),
+                    FabricBlockSettings.of(Material.PLANT).breakInstantly().noCollision().sounds(BlockSoundGroup.FUNGUS)), ModItemGroup.ENHANCED_END_ITEMS);
+    public static final Block MIDNIGHT_BLOTS = registerBlock("midnight_blots",
+            new Block(FabricBlockSettings.of(Material.SOLID_ORGANIC).strength(1.0f).sounds(BlockSoundGroup.WART_BLOCK)), ModItemGroup.ENHANCED_END_BLOCKS);
+    public static final Block CORLITE_BLOTS = registerBlock("corlite_blots",
+            new Block(FabricBlockSettings.of(Material.SOLID_ORGANIC).strength(1.0f).sounds(BlockSoundGroup.WART_BLOCK)), ModItemGroup.ENHANCED_END_BLOCKS);
+    //Endium and End Matter
+    public static final Block ENDIUM_SOIL = registerBlock("endium_soil",
+            new Block(FabricBlockSettings.of(Material.SOIL).strength(1f).requiresTool().sounds(BlockSoundGroup.SOUL_SOIL)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+
 
 
 
