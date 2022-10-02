@@ -274,6 +274,10 @@ public class ModBlocks {
             new PillarBlock(FabricBlockSettings.of(Material.STONE).strength(8f).requiresTool()),
             ModItemGroup.ENHANCED_END_BLOCKS);
 
+    public static final Block SCORIA = registerBlock("scoria",
+            new ModScoriaBlock(FabricBlockSettings.of(Material.STONE).strength(1f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+
 
 
 
