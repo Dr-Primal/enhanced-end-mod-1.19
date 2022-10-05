@@ -20,6 +20,8 @@
   "item.enhancedend.endimintium_leggings": "Endimintium Leggings",
   "item.enhancedend.endimintium_boots": "Endimintium Boots",
 
+  "item.enhancedend.ender_matter_speck": "Ender Matter Speck",
+
   "block.enhancedend.endimintium_block": "Block of Endimintium",
   "block.enhancedend.end_tanzanite_ore": "End Tanzanite Ore",
   "block.enhancedend.tanzanite_block": "Block of Tanzanite",
@@ -94,13 +96,21 @@
 
   "block.enhancedend.midnight_mushroom": "Midnight Mushroom",
   "block.enhancedend.corlite_mushroom": "Corlite Mushroom",
+  "block.enhancedend.potted_midnight_mushroom": "Potted Midnight Mushroom",
+  "block.enhancedend.potted_corlite_mushroom": "Potted Corlite Mushroom",
   "block.enhancedend.midnight_blots": "Midnight Blots",
   "block.enhancedend.corlite_blots": "Corlite Blots",
 
   "block.enhancedend.endium_soil": "Endium Soil",
   "block.enhancedend.endium_mushroom_block": "Endium Mushroom Block",
   "block.enhancedend.endium_mushroom": "Endium Mushroom",
+  "block.enhancedend.potted_endium_mushroom": "Potted Endium Mushroom",
   "block.enhancedend.scoria": "Scoria",
+
+  "block.enhancedend.shaded_oculit": "Shaded Oculit",
+  "block.enhancedend.tinted_oculit": "Tinted Oculit",
+  "block.enhancedend.potted_shaded_oculit": "Potted Shaded Oculit",
+  "block.enhancedend.potted_tinted_oculit": "Potted Tinted Oculit",
 
 
 

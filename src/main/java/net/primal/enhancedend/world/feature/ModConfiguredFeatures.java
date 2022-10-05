@@ -25,7 +25,7 @@ public class ModConfiguredFeatures {
                     BlockStateProvider.of(ModBlocks.ENDIUM_MUSHROOM_BLOCK),
                     new JungleFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(0), 0),
                     new TwoLayersFeatureSize(0, 0, 0)).dirtProvider(BlockStateProvider.of(ModBlocks.ENDIUM_SOIL)).forceDirt().build());
-//Future Template for Endium Mushrooms/\
+//Template for Endium Mushrooms/\
 
 //Template for Corlite and Midnighht Trees\/
     public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> CORLITE_TREE =

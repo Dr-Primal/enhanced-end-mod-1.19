@@ -3,6 +3,7 @@ package net.primal.enhancedend.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -137,10 +138,10 @@ public class ModBlocks {
             ModItemGroup.ENHANCED_END_BLOCKS);
     //End stone Blocks
     public static final Block MIDNIGHT_END_STONE = registerBlock("midnight_end_stone",
-            new NyliumBlock(FabricBlockSettings.of(Material.STONE).strength(3.0f, 9.0f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            new ModNyliumBlock(FabricBlockSettings.of(Material.STONE).strength(3.0f, 9.0f).requiresTool().sounds(BlockSoundGroup.STONE)),
             ModItemGroup.ENHANCED_END_DECORATIONS);
     public static final Block CORLITE_END_STONE = registerBlock("corlite_end_stone",
-            new NyliumBlock(FabricBlockSettings.of(Material.STONE).strength(3.0f, 9.0f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            new ModNyliumBlock(FabricBlockSettings.of(Material.STONE).strength(3.0f, 9.0f).requiresTool().sounds(BlockSoundGroup.STONE)),
             ModItemGroup.ENHANCED_END_DECORATIONS);
     //Midnight Wood Variants
     public static final Block MIDNIGHT_STEM = registerBlock("midnight_stem",
@@ -268,21 +269,50 @@ public class ModBlocks {
             new Block(FabricBlockSettings.of(Material.WOOD).strength(0.2f).sounds(BlockSoundGroup.WOOD)),
             ModItemGroup.ENHANCED_END_DECORATIONS);
     public static final Block ENDIUM_SOIL = registerBlock("endium_soil",
-            new Block(FabricBlockSettings.of(Material.SOIL).strength(1f).requiresTool().sounds(BlockSoundGroup.SOUL_SOIL)),
+            new Block(FabricBlockSettings.of(Material.SOIL).strength(0.7f).sounds(BlockSoundGroup.SOUL_SOIL)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block HARDENED_ENDER_MATTER = registerBlock("hardened_ender_matter",
             new PillarBlock(FabricBlockSettings.of(Material.STONE).strength(8f).requiresTool()),
             ModItemGroup.ENHANCED_END_BLOCKS);
 
     public static final Block SCORIA = registerBlock("scoria",
-            new ModScoriaBlock(FabricBlockSettings.of(Material.STONE).strength(1f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            new ModScoriaBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.STONE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
+
+    //Flowers and Potted Variants
+    public static final Block SHADED_OCULIT = registerBlock("shaded_oculit",
+            new ModFlowerBlock(StatusEffects.SLOW_FALLING, 8,
+                    FabricBlockSettings.of(Material.NETHER_SHOOTS, MapColor.CYAN)
+                            .noCollision().breakInstantly().sounds(BlockSoundGroup.ROOTS)
+                            .offsetType(AbstractBlock.OffsetType.XZ).sounds(BlockSoundGroup.GRASS)),
+            ModItemGroup.ENHANCED_END_DECORATIONS);
+    public static final Block TINTED_OCULIT = registerBlock("tinted_oculit",
+            new ModFlowerBlock(StatusEffects.LEVITATION, 8,
+                    FabricBlockSettings.of(Material.NETHER_SHOOTS, MapColor.CYAN)
+                            .noCollision().breakInstantly().sounds(BlockSoundGroup.ROOTS)
+                            .offsetType(AbstractBlock.OffsetType.XZ).sounds(BlockSoundGroup.GRASS)),
+            ModItemGroup.ENHANCED_END_DECORATIONS);
+
+    public static final Block POTTED_SHADED_OCULIT = registerBlockWithoutItem("potted_shaded_oculit",
+            new FlowerPotBlock(SHADED_OCULIT, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque()));
+    public static final Block POTTED_TINTED_OCULIT = registerBlockWithoutItem("potted_tinted_oculit",
+            new FlowerPotBlock(TINTED_OCULIT, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque()));
+
+    public static final Block POTTED_MIDNIGHT_MUSHROOM = registerBlockWithoutItem("potted_midnight_mushroom",
+            new FlowerPotBlock(MIDNIGHT_MUSHROOM, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque()));
+    public static final Block POTTED_CORLITE_MUSHROOM = registerBlockWithoutItem("potted_corlite_mushroom",
+            new FlowerPotBlock(CORLITE_MUSHROOM, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque()));
+    public static final Block POTTED_ENDIUM_MUSHROOM = registerBlockWithoutItem("potted_endium_mushroom",
+            new FlowerPotBlock(ENDIUM_MUSHROOM, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque()));
 
 
 
 
 
     private static Block registerBlockWithoutBlockItem(String name, Block block, ItemGroup group) {
+        return Registry.register(Registry.BLOCK, new Identifier(EnhancedEnd.MOD_ID, name), block);
+    }
+    private static Block registerBlockWithoutItem(String name, Block block) {
         return Registry.register(Registry.BLOCK, new Identifier(EnhancedEnd.MOD_ID, name), block);
     }
     private static Block registerBlock(String name, Block block, ItemGroup tab) {

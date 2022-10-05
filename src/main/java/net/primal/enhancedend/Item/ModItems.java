@@ -7,6 +7,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.primal.enhancedend.EnhancedEnd;
 import net.primal.enhancedend.Item.custom.ModBowItem;
+import net.primal.enhancedend.Item.custom.ModEnchantedFoodItem;
 import net.primal.enhancedend.block.ModBlocks;
 import net.primal.enhancedend.block.custom.ModHoeItem;
 
@@ -66,6 +67,10 @@ public class ModItems {
     public static final Item ENDIMINTIUM_PICKAXE = registerItem("endimintium_pickaxe",
             new PickaxeItem(ModToolMaterial.ENDIMINTIUM, 2, -2.8f,
                     new FabricItemSettings().fireproof().group(ModItemGroup.ENHANCED_END_ITEMS)));
+
+    //Food Items
+    public static final Item ENDER_MATTER_SPECK = registerItem("ender_matter_speck",
+            new ModEnchantedFoodItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(EnhancedEnd.MOD_ID, name), item);
