@@ -8,6 +8,7 @@ import net.minecraft.util.registry.Registry;
 import net.primal.enhancedend.EnhancedEnd;
 import net.primal.enhancedend.Item.custom.ModBowItem;
 import net.primal.enhancedend.Item.custom.ModEnchantedFoodItem;
+import net.primal.enhancedend.Item.custom.ModEnderPearlItem;
 import net.primal.enhancedend.block.ModBlocks;
 import net.primal.enhancedend.block.custom.ModHoeItem;
 
@@ -71,6 +72,12 @@ public class ModItems {
     //Food Items
     public static final Item ENDER_MATTER_SPECK = registerItem("ender_matter_speck",
             new ModEnchantedFoodItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)));
+
+    //Main Loot Drops
+    public static final Item REINFORCED_SHARD = registerItem("reinforced_shard",
+            new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
+    public static final Item ENHANCED_PEARL = registerItem("enhanced_pearl",
+            new ModEnderPearlItem(new FabricItemSettings().maxCount(16).group(ModItemGroup.ENHANCED_END_ITEMS)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(EnhancedEnd.MOD_ID, name), item);

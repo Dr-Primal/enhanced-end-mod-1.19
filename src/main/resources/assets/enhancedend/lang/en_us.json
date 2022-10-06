@@ -6,7 +6,6 @@
   "item.enhancedend.endimintium_ingot": "Endimintium Ingot",
   "item.enhancedend.diamond_fragment": "Diamond Fragment",
   "item.enhancedend.ender_matter_bucket": "Ender Matter in a Bucket",
-  "block.enhancedend.hardened_ender_matter": "Hardened Ender Matter",
 
   "item.enhancedend.endimintium_bow": "Endimintium Bow",
   "item.enhancedend.endimintium_sword": "Endimintium Sword",
@@ -21,6 +20,10 @@
   "item.enhancedend.endimintium_boots": "Endimintium Boots",
 
   "item.enhancedend.ender_matter_speck": "Ender Matter Speck",
+
+  "item.enhancedend.reinforced_shard": "Reinforced Shard",
+  "item.enhancedend.enhanced_pearl": "Enhanced Pearl",
+
 
   "block.enhancedend.endimintium_block": "Block of Endimintium",
   "block.enhancedend.end_tanzanite_ore": "End Tanzanite Ore",
@@ -106,6 +109,7 @@
   "block.enhancedend.endium_mushroom": "Endium Mushroom",
   "block.enhancedend.potted_endium_mushroom": "Potted Endium Mushroom",
   "block.enhancedend.scoria": "Scoria",
+  "block.enhancedend.hardened_ender_matter": "Hardened Ender Matter",
 
   "block.enhancedend.shaded_oculit": "Shaded Oculit",
   "block.enhancedend.tinted_oculit": "Tinted Oculit",
