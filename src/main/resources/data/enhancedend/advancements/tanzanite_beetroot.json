@@ -1,16 +1,16 @@
 {
   "display": {
     "icon": {
-      "item": "enhancedend:ender_matter_bucket"
+      "item": "enhancedend:tanzanite_beetroot"
     },
-    "title": "Wait, This Isn't Water!",
-    "description": "Discover the substance of the void",
+    "title": "And Thy Shall See In The Dark",
+    "description": "The power of night vision in the palm of your hands",
     "frame": "task",
-    "hidden": true,
+    "hidden": false,
     "show_toast": true,
     "announce_to_chat": true
   },
-  "parent": "enhancedend:enhanced_end_beginning",
+  "parent": "enhancedend:ender_matter_bucket",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",
@@ -18,14 +18,11 @@
         "items": [
           {
             "items": [
-              "enhancedend:ender_matter_bucket"
+              "enhancedend:tanzanite_beetroot"
             ]
           }
         ]
       }
     }
-  },
-  "rewards": {
-    "experience": 100
   }
 }

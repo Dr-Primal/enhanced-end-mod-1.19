@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "a#a",
+    "#@#",
+    "a#a"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "@": {
+      "item": "minecraft:beetroot"
+    },
+    "a": {
+      "item": "enhancedend:ender_matter_speck"
+    }
+  },
+  "result": {
+    "item": "enhancedend:diamond_infused_beetroot"
+  }
+}

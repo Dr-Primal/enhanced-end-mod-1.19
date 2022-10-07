@@ -1,0 +1,79 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:beetroot"
+    },
+    "title": "The Beetroot Family Tree",
+    "description": "Consume all types of beetroot",
+    "frame": "challenge",
+    "hidden": true,
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "enhancedend:corrupted_beetroot",
+  "criteria": {
+    "beetroot": {
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:beetroot"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "corrupted_beetroot": {
+      "conditions": {
+        "item": {
+          "items": [
+            "enhancedend:corrupted_beetroot"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "enhanced_beetroot": {
+      "conditions": {
+        "item": {
+          "items": [
+            "enhancedend:enhanced_beetroot"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "tanzanite_beetroot": {
+      "conditions": {
+        "item": {
+          "items": [
+            "enhancedend:tanzanite_beetroot"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "diamond_infused_beetroot": {
+      "conditions": {
+        "item": {
+          "items": [
+            "enhancedend:diamond_infused_beetroot"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "beetroot_soup": {
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:beetroot_soup"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "rewards": {
+    "experience": 100
+  }
+}

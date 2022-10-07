@@ -4,23 +4,31 @@
       "item": "enhancedend:tanzanite"
     },
     "title": "The Enhanced End",
-    "description": "The Journey continues...",
+    "description": "The Journey Continues...",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,
     "background": "enhancedend:textures/block/silstone.png"
   },
   "criteria": {
-    "entered_end_gateway": {
+    "killed_dragon": {
       "conditions": {
-        "block": "minecraft:end_gateway"
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "minecraft:ender_dragon"
+            }
+          }
+        ]
       },
-      "trigger": "minecraft:enter_block"
+      "trigger": "minecraft:player_killed_entity"
     }
-  },
+    },
   "requirements": [
     [
-      "entered_end_gateway"
+      "killed_dragon"
     ]
   ]
 }

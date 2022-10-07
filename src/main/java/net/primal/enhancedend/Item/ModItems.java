@@ -2,6 +2,8 @@ package net.primal.enhancedend.Item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -72,6 +74,41 @@ public class ModItems {
     //Food Items
     public static final Item ENDER_MATTER_SPECK = registerItem("ender_matter_speck",
             new ModEnchantedFoodItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)));
+
+    public static final Item TANZANITE_BEETROOT = registerItem("tanzanite_beetroot",
+            new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)
+                    .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.8f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 6000, 0), 1.0f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 300, 0), 1.0f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 6000, 0), 0.5f)
+                            .alwaysEdible().build())));
+    public static final Item DIAMOND_INFUSED_BEETROOT = registerItem("diamond_infused_beetroot",
+            new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)
+                    .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.8f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 2000, 0), 1f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.HASTE, 2400, 0), 1f)
+                            .alwaysEdible().build())));
+    public static final Item ENHANCED_BEETROOT = registerItem("enhanced_beetroot",
+            new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)
+                    .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.8f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 30, 4), 1f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 1000, 1), 0.8f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 1000, 1), 0.8f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 1000, 0), 0.6f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 1000, 0), 0.6f)
+                            .alwaysEdible().build())));
+    public static final Item CORRUPTED_BEETROOT = registerItem("corrupted_beetroot",
+            new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)
+                    .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.8f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 1000, 0), 0.6f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 1000, 0), 0.6f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 1000, 0), 0.6f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 500, 0), 0.6f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.WITHER, 50, 5), 0.4f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 500, 0), 0.6f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 500, 0), 0.6f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 50, 3), 0.4f)
+                            .alwaysEdible().build())));
 
     //Main Loot Drops
     public static final Item REINFORCED_SHARD = registerItem("reinforced_shard",
