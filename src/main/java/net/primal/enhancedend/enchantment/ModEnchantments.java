@@ -13,7 +13,7 @@ public class ModEnchantments {
     public static Enchantment BLINDING_ASPECT = register("blinding_aspect",
             new BlindingAspectEnchantment(Enchantment.Rarity.RARE,
                     EnchantmentTarget.WEAPON, EquipmentSlot.MAINHAND));
-
+//Plans for an enchantment to walk on air with "melting scoria"
     private static Enchantment register(String name, Enchantment enchantment) {
         return Registry.register(Registry.ENCHANTMENT, new Identifier(EnhancedEnd.MOD_ID, name), enchantment);
     }
