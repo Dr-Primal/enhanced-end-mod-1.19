@@ -4,9 +4,7 @@ import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.primal.enhancedend.block.ModBlocks;
 
 public class ModRegistries {
-    public static void registerModStuffs() {
-        registerStrippables();
-    }
+    public static void registerModStuffs() {registerStrippables();}
 
     private static void registerStrippables() {
         StrippableBlockRegistry.register(ModBlocks.MIDNIGHT_STEM, ModBlocks.STRIPPED_MIDNIGHT_STEM);

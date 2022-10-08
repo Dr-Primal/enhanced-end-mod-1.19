@@ -3,6 +3,7 @@ package net.primal.enhancedend;
 import net.fabricmc.api.ModInitializer;
 import net.primal.enhancedend.Item.ModItems;
 import net.primal.enhancedend.block.ModBlocks;
+import net.primal.enhancedend.enchantment.ModEnchantments;
 import net.primal.enhancedend.fluid.ModFluids;
 import net.primal.enhancedend.util.ModRegistries;
 import net.primal.enhancedend.world.feature.ModConfiguredFeatures;
@@ -25,5 +26,6 @@ public class EnhancedEnd implements ModInitializer {
 		ModFluids.register();
 		ModWorldGen.generateWorldGen();
 		ModConfiguredFeatures.registerConfiguredFeatures();
+		ModEnchantments.registerModEnchantments();
 	}
 }

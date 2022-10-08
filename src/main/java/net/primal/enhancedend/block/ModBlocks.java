@@ -3,6 +3,7 @@ package net.primal.enhancedend.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -283,14 +284,16 @@ public class ModBlocks {
     public static final Block SHADED_OCULIT = registerBlock("shaded_oculit",
             new ModFlowerBlock(StatusEffects.SLOW_FALLING, 8,
                     FabricBlockSettings.of(Material.NETHER_SHOOTS, MapColor.CYAN)
-                            .noCollision().breakInstantly().sounds(BlockSoundGroup.ROOTS)
-                            .offsetType(AbstractBlock.OffsetType.XZ).sounds(BlockSoundGroup.GRASS)),
+                            .noCollision().breakInstantly()
+                            .offsetType(AbstractBlock.OffsetType.XZ)
+                            .sounds(BlockSoundGroup.GRASS)),
             ModItemGroup.ENHANCED_END_DECORATIONS);
     public static final Block TINTED_OCULIT = registerBlock("tinted_oculit",
             new ModFlowerBlock(StatusEffects.LEVITATION, 8,
                     FabricBlockSettings.of(Material.NETHER_SHOOTS, MapColor.CYAN)
-                            .noCollision().breakInstantly().sounds(BlockSoundGroup.ROOTS)
-                            .offsetType(AbstractBlock.OffsetType.XZ).sounds(BlockSoundGroup.GRASS)),
+                            .noCollision().breakInstantly()
+                            .offsetType(AbstractBlock.OffsetType.XZ)
+                            .sounds(BlockSoundGroup.GRASS)),
             ModItemGroup.ENHANCED_END_DECORATIONS);
 
     public static final Block POTTED_SHADED_OCULIT = registerBlockWithoutItem("potted_shaded_oculit",
