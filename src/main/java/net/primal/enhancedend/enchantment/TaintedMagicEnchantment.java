@@ -29,10 +29,10 @@ public class TaintedMagicEnchantment extends Enchantment {
             ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 50, 4));
         }
         if (target instanceof LivingEntity) {
-            ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 50, 4));
+            ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 50, 1));
         }
         if (user != null) {
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 25, 0));
+            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 30, 0));
         }
         if (user != null) {
             (user).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 25, 0));
