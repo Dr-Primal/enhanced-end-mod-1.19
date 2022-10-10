@@ -14,10 +14,6 @@ public class EnhancedMagicEnchantment extends Enchantment {
     public EnhancedMagicEnchantment(Rarity weight, EquipmentSlot... slotTypes) {
         super(weight, EnchantmentTarget.ARMOR_CHEST, slotTypes);
     }
-    public boolean isCursed() {
-        return true;
-    }
-
     public boolean isAvailableForEnchantedBookOffer() {
         return false;
     }
@@ -36,10 +32,10 @@ public class EnhancedMagicEnchantment extends Enchantment {
             ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 50, 2));
         }
         if (target instanceof LivingEntity) {
-            ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 40, 0));
+            ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 100, 0));
         }
         if (user != null) {
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 100, 0));
+            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 60, 0));
         }
         if (user != null) {
             (user).addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 30, 2));
