@@ -8,12 +8,14 @@ import net.minecraft.util.registry.Registry;
 import net.primal.enhancedend.EnhancedEnd;
 
 public class ModEnchantments {
-    public static final Enchantment MAGIC_INFUSED = register("magic_infused",
-            new MagicDefenseEnchantment(Enchantment.Rarity.VERY_RARE, EquipmentSlot.CHEST));
+    public static final Enchantment TAINTED_MAGIC = register("tainted_magic",
+            new TaintedMagicEnchantment(Enchantment.Rarity.VERY_RARE, EquipmentSlot.CHEST));
     public static Enchantment BLINDING_ASPECT = register("blinding_aspect",
             new BlindingAspectEnchantment(Enchantment.Rarity.RARE,
                     EnchantmentTarget.WEAPON, EquipmentSlot.MAINHAND));
-//Plans for an enchantment to walk on air with "melting scoria"
+    public static Enchantment FROSTBURN = register("frostburn",
+            new FrostBurnEnchantment(Enchantment.Rarity.RARE,
+                    EnchantmentTarget.WEAPON, EquipmentSlot.MAINHAND));
     private static Enchantment register(String name, Enchantment enchantment) {
         return Registry.register(Registry.ENCHANTMENT, new Identifier(EnhancedEnd.MOD_ID, name), enchantment);
     }

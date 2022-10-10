@@ -6,8 +6,8 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 
 
-public class MagicDefenseEnchantment extends Enchantment {
-    public MagicDefenseEnchantment(Rarity weight, EquipmentSlot... slotTypes) {
+public class TaintedMagicEnchantment extends Enchantment {
+    public TaintedMagicEnchantment(Rarity weight, EquipmentSlot... slotTypes) {
         super(weight, EnchantmentTarget.ARMOR_CHEST, slotTypes);
     }
     public boolean isCursed() {
@@ -28,8 +28,17 @@ public class MagicDefenseEnchantment extends Enchantment {
         if (target instanceof LivingEntity) {
             ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 50, 4));
         }
+        if (target instanceof LivingEntity) {
+            ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 50, 4));
+        }
         if (user != null) {
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 50, 2));
+            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 25, 0));
+        }
+        if (user != null) {
+            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 25, 0));
+        }
+        if (user != null) {
+            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 40, 0));
         }
         super.onUserDamaged(user, target, level);
     }
