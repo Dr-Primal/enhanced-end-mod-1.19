@@ -9,6 +9,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.primal.enhancedend.EnhancedEnd;
 import net.primal.enhancedend.Item.custom.ModBowItem;
+import net.primal.enhancedend.Item.custom.ModCrossbowItem;
 import net.primal.enhancedend.Item.custom.ModEnchantedFoodItem;
 import net.primal.enhancedend.Item.custom.ModEnderPearlItem;
 import net.primal.enhancedend.block.ModBlocks;
@@ -39,6 +40,13 @@ public class ModItems {
     //Bow
     public static final Item ENDIMINTIUM_BOW = registerItem("endimintium_bow",
             new ModBowItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS).maxDamage(500).fireproof()));
+
+    //Crossbow
+    /*
+    Make Crossbow do more damage, fix the posing player animation, and fix the client pulling animation
+     */
+    public static final Item ENDIMINTIUM_CROSSBOW = registerItem("endimintium_crossbow",
+            new ModCrossbowItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS).maxDamage(700).fireproof()));
 
     //Armor
     public static final Item ENDIMINTIUM_HELMET = registerItem("endimintium_helmet",
