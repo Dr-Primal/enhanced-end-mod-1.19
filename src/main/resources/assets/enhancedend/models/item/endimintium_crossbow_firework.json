@@ -1,6 +1,0 @@
-{
-  "parent": "enhancedend:item/endimintium_crossbow",
-  "textures": {
-    "layer0": "enhancedend:item/endimintium_crossbow_firework"
-  }
-}

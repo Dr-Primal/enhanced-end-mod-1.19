@@ -9,7 +9,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.primal.enhancedend.EnhancedEnd;
 import net.primal.enhancedend.Item.custom.ModBowItem;
-import net.primal.enhancedend.Item.custom.ModCrossbowItem;
 import net.primal.enhancedend.Item.custom.ModEnchantedFoodItem;
 import net.primal.enhancedend.Item.custom.ModEnderPearlItem;
 import net.primal.enhancedend.block.ModBlocks;
@@ -37,17 +36,14 @@ public class ModItems {
     public static final Item CORLITE_SIGN = registerItem("corlite_sign",
             new SignItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_BLOCKS).maxCount(16),
                     ModBlocks.CORLITE_SIGN_BLOCK, ModBlocks.CORLITE_WALL_SIGN_BLOCK));
-    //Bow
+    //Bow(*Change name and texture of Bow*)
     public static final Item ENDIMINTIUM_BOW = registerItem("endimintium_bow",
             new ModBowItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS).maxDamage(500).fireproof()));
-
-    //Crossbow
     /*
-    Make Crossbow do more damage, fix the posing player animation, and fix the client pulling animation
-     */
-    public static final Item ENDIMINTIUM_CROSSBOW = registerItem("endimintium_crossbow",
-            new ModCrossbowItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS).maxDamage(700).fireproof()));
-
+    Add Staffs that Shoot Magic Projectiles that give effects on hit; they act as a bow item, however do NOT get the same enchantments as the bow item.
+    Either A: Books can be found that can be added onto a staff of some sort like an enchantment
+    OR B: Individual Staffs can be found/created throughout the world that give different effects on use
+    */
     //Armor
     public static final Item ENDIMINTIUM_HELMET = registerItem("endimintium_helmet",
             new ArmorItem(ModArmorMaterials.ENDIMINTIUM, EquipmentSlot.HEAD,
