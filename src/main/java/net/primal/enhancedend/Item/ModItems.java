@@ -9,10 +9,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import net.primal.enhancedend.EnhancedEnd;
-import net.primal.enhancedend.Item.custom.ModBowItem;
-import net.primal.enhancedend.Item.custom.ModEnchantedFoodItem;
-import net.primal.enhancedend.Item.custom.ModEnderPearlItem;
-import net.primal.enhancedend.Item.custom.ModPhantomPearlItem;
+import net.primal.enhancedend.Item.custom.*;
 import net.primal.enhancedend.block.ModBlocks;
 import net.primal.enhancedend.block.custom.ModHoeItem;
 import net.primal.enhancedend.sound.ModSounds;
@@ -43,6 +40,8 @@ public class ModItems {
     //Bow
     public static final Item ENDIMINTIUM_BOW = registerItem("endimintium_bow",
             new ModBowItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS).maxDamage(500).fireproof()));
+    public static final Item ENDIMINTIUM_CROSSBOW = registerItem("endimintium_crossbow",
+            new ModCrossbowItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS).maxDamage(500).fireproof()));
     //Create Crossbow(Attempt #2)
     //Armor
     public static final Item ENDIMINTIUM_HELMET = registerItem("endimintium_helmet",
