@@ -6,13 +6,16 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 import net.primal.enhancedend.EnhancedEnd;
 import net.primal.enhancedend.Item.custom.ModBowItem;
 import net.primal.enhancedend.Item.custom.ModEnchantedFoodItem;
 import net.primal.enhancedend.Item.custom.ModEnderPearlItem;
+import net.primal.enhancedend.Item.custom.ModPhantomPearlItem;
 import net.primal.enhancedend.block.ModBlocks;
 import net.primal.enhancedend.block.custom.ModHoeItem;
+import net.primal.enhancedend.sound.ModSounds;
 
 public class ModItems {
     public static final Item TANZANITE = registerItem("tanzanite",
@@ -36,14 +39,11 @@ public class ModItems {
     public static final Item CORLITE_SIGN = registerItem("corlite_sign",
             new SignItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_BLOCKS).maxCount(16),
                     ModBlocks.CORLITE_SIGN_BLOCK, ModBlocks.CORLITE_WALL_SIGN_BLOCK));
-    //Bow(*Change name and texture of Bow*)
+
+    //Bow
     public static final Item ENDIMINTIUM_BOW = registerItem("endimintium_bow",
             new ModBowItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS).maxDamage(500).fireproof()));
-    /*
-    Add Staffs that Shoot Magic Projectiles that give effects on hit; they act as a bow item, however do NOT get the same enchantments as the bow item.
-    Either A: Books can be found that can be added onto a staff of some sort like an enchantment
-    OR B: Individual Staffs can be found/created throughout the world that give different effects on use
-    */
+    //Create Crossbow(Attempt #2)
     //Armor
     public static final Item ENDIMINTIUM_HELMET = registerItem("endimintium_helmet",
             new ArmorItem(ModArmorMaterials.ENDIMINTIUM, EquipmentSlot.HEAD,
@@ -117,8 +117,30 @@ public class ModItems {
     //Main Loot Drops
     public static final Item REINFORCED_SHARD = registerItem("reinforced_shard",
             new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
+    //Drops from Reinforced Obsidian Golems^
+
     public static final Item ENHANCED_PEARL = registerItem("enhanced_pearl",
             new ModEnderPearlItem(new FabricItemSettings().maxCount(16).group(ModItemGroup.ENHANCED_END_ITEMS)));
+    //Drops from Enhanced Enderman^
+
+    //Crafted from Enhanced Pearl, Phantom Membranes(ADD RECIPE WHEN READY)
+    public static final Item PHANTOM_PEARL = registerItem("phantom_pearl",
+            new ModPhantomPearlItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.ENHANCED_END_ITEMS)));
+
+    public static final Item CARNACUS_LEG = registerItem("carnacus_leg",
+            new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
+    //Drops from Carnacuses^
+    public static final Item ALLAMITE_HIDE = registerItem("allamite_hide",
+            new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
+    //Drops from Allamites^
+
+    //Music Discs
+    public static final Item MYSTERIOUS_LIGHTS_MUSIC_DISC = registerItem("mysterious_lights_music_disc",
+            new MusicDiscItem(16, ModSounds.MYSTERIOUS_LIGHTS,
+                    new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS).rarity(Rarity.RARE).maxCount(1), 178));
+    public static final Item SANCTITY_MUSIC_DISC = registerItem("sanctity_music_disc",
+            new MusicDiscItem(17, ModSounds.SANCTITY,
+                    new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS).rarity(Rarity.RARE).maxCount(1), 245));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(EnhancedEnd.MOD_ID, name), item);

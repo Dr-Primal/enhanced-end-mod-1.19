@@ -1,0 +1,18 @@
+{
+  "sanctity": {
+    "sounds": [
+      {
+        "name": "enhancedend:sanctity",
+        "stream": true
+      }
+    ]
+  },
+  "mysterious_lights": {
+    "sounds": [
+      {
+        "name": "enhancedend:mysterious_lights",
+        "stream": true
+      }
+    ]
+  }
+}

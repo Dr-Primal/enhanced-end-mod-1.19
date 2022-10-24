@@ -11,7 +11,7 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    ENDIMINTIUM("endimintium", 45, new int[]{4, 7, 9, 4}, 20,
+    ENDIMINTIUM("endimintium", 45, new int[]{8, 10, 12, 8}, 20,
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 4f, 0.15f, () -> Ingredient.ofItems(ModItems.ENDIMINTIUM_INGOT));
 
     private static final int[] BASE_DURABILITY;
