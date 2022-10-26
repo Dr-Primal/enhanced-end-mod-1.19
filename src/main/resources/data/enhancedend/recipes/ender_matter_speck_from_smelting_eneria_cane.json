@@ -3,7 +3,7 @@
   "cookingtime": 200,
   "experience": 0.7,
   "ingredient": {
-    "item": "enhancedend:hardened_ender_matter"
+    "item": "enhancedend:eneria_cane"
   },
   "result": "enhancedend:ender_matter_speck"
 }

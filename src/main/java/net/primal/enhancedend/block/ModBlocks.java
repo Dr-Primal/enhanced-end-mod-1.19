@@ -280,20 +280,32 @@ public class ModBlocks {
             new ModScoriaBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.STONE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
 
-    //Flowers and Potted Variants
+    //Flowers, Plants, and Potted Variants
     public static final Block SHADED_OCULIT = registerBlock("shaded_oculit",
             new ModFlowerBlock(StatusEffects.SLOW_FALLING, 8,
-                    FabricBlockSettings.of(Material.NETHER_SHOOTS, MapColor.CYAN)
+                    FabricBlockSettings.of(Material.NETHER_SHOOTS, MapColor.TERRACOTTA_BLACK)
                             .noCollision().breakInstantly()
                             .offsetType(AbstractBlock.OffsetType.XZ)
                             .sounds(BlockSoundGroup.GRASS)),
             ModItemGroup.ENHANCED_END_DECORATIONS);
     public static final Block TINTED_OCULIT = registerBlock("tinted_oculit",
             new ModFlowerBlock(StatusEffects.LEVITATION, 8,
-                    FabricBlockSettings.of(Material.NETHER_SHOOTS, MapColor.CYAN)
+                    FabricBlockSettings.of(Material.NETHER_SHOOTS, MapColor.WHITE_GRAY)
                             .noCollision().breakInstantly()
                             .offsetType(AbstractBlock.OffsetType.XZ)
                             .sounds(BlockSoundGroup.GRASS)),
+            ModItemGroup.ENHANCED_END_DECORATIONS);
+
+    public static final Block END_FLORIA = registerBlock("end_floria",
+            new ModFlowerBlock(StatusEffects.HASTE, 0,
+                    FabricBlockSettings.of(Material.PLANT, MapColor.LIME)
+                            .noCollision().breakInstantly()
+                            .offsetType(AbstractBlock.OffsetType.XZ)
+                            .sounds(BlockSoundGroup.GRASS)),
+            ModItemGroup.ENHANCED_END_DECORATIONS);
+
+    public static final Block ENERIA_CANE = registerBlock("eneria_cane",
+            new ModEneriaCaneBlock(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.WET_GRASS)),
             ModItemGroup.ENHANCED_END_DECORATIONS);
 
     public static final Block POTTED_SHADED_OCULIT = registerBlockWithoutItem("potted_shaded_oculit",
@@ -307,6 +319,9 @@ public class ModBlocks {
             new FlowerPotBlock(CORLITE_MUSHROOM, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque()));
     public static final Block POTTED_ENDIUM_MUSHROOM = registerBlockWithoutItem("potted_endium_mushroom",
             new FlowerPotBlock(ENDIUM_MUSHROOM, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque()));
+
+    public static final Block POTTED_END_FLORIA = registerBlockWithoutItem("potted_end_floria",
+            new FlowerPotBlock(END_FLORIA, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque()));
 
 
 

@@ -22,11 +22,11 @@ import org.jetbrains.annotations.Nullable;
 public class ModEnderPearlEntity
         extends ThrownItemEntity {
     public ModEnderPearlEntity(EntityType<? extends net.minecraft.entity.projectile.thrown.EnderPearlEntity> entityType, World world) {
-        super((EntityType<? extends ThrownItemEntity>)entityType, world);
+        super(entityType, world);
     }
 
     public ModEnderPearlEntity(World world, LivingEntity owner) {
-        super((EntityType<? extends ThrownItemEntity>)EntityType.ENDER_PEARL, owner, world);
+        super(EntityType.ENDER_PEARL, owner, world);
     }
 
     @Override

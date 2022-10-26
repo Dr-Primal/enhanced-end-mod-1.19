@@ -41,8 +41,7 @@ public class ModItems {
     public static final Item ENDIMINTIUM_BOW = registerItem("endimintium_bow",
             new ModBowItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS).maxDamage(500).fireproof()));
     public static final Item ENDIMINTIUM_CROSSBOW = registerItem("endimintium_crossbow",
-            new ModCrossbowItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS).maxDamage(500).fireproof()));
-    //Create Crossbow(Attempt #2)
+            new ModCrossbowItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS).maxDamage(750).fireproof()));
     //Armor
     public static final Item ENDIMINTIUM_HELMET = registerItem("endimintium_helmet",
             new ArmorItem(ModArmorMaterials.ENDIMINTIUM, EquipmentSlot.HEAD,
@@ -131,7 +130,7 @@ public class ModItems {
     //Drops from Carnacuses^
     public static final Item ALLAMITE_HIDE = registerItem("allamite_hide",
             new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
-    //Drops from Allamites^
+    //Drops from Allamites^, used for non-flammable carpets and "wool block"
 
     //Music Discs
     public static final Item MYSTERIOUS_LIGHTS_MUSIC_DISC = registerItem("mysterious_lights_music_disc",

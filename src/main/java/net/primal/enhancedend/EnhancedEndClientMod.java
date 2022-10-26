@@ -33,6 +33,11 @@ public class EnhancedEndClientMod implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TINTED_OCULIT, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_TINTED_OCULIT, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ENERIA_CANE, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.END_FLORIA, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTTED_END_FLORIA, RenderLayer.getCutout());
+
 
         FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.STILL_ENDER_MATTER, ModFluids.FLOWING_ENDER_MATTER,
                 new SimpleFluidRenderHandler(
