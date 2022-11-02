@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "a#a",
+    "#@#",
+    "a#a"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:gold_ingot"
+    },
+    "@": {
+      "item": "minecraft:beetroot"
+    },
+    "a": {
+      "item": "enhancedend:ender_matter_speck"
+    }
+  },
+  "result": {
+    "item": "enhancedend:golden_beetroot"
+  }
+}

@@ -7,16 +7,16 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:diamond"
+      "item": "enhancedend:enhanced_pearl"
     },
     "@": {
-      "item": "minecraft:beetroot"
+      "item": "enhancedend:enhanced_beetroot"
     },
     "a": {
-      "item": "enhancedend:ender_matter_speck"
+      "item": "minecraft:phantom_membrane"
     }
   },
   "result": {
-    "item": "enhancedend:diamond_infused_beetroot"
+    "item": "enhancedend:phantom_pearl"
   }
 }

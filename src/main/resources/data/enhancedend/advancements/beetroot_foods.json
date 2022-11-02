@@ -22,6 +22,16 @@
       },
       "trigger": "minecraft:consume_item"
     },
+    "golden_beetroot": {
+      "conditions": {
+        "item": {
+          "items": [
+            "enhancedend:golden_beetroot"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
     "corrupted_beetroot": {
       "conditions": {
         "item": {
@@ -52,11 +62,11 @@
       },
       "trigger": "minecraft:consume_item"
     },
-    "diamond_infused_beetroot": {
+    "diamond_beetroot": {
       "conditions": {
         "item": {
           "items": [
-            "enhancedend:diamond_infused_beetroot"
+            "enhancedend:diamond_beetroot"
           ]
         }
       },
@@ -72,8 +82,5 @@
       },
       "trigger": "minecraft:consume_item"
     }
-  },
-  "rewards": {
-    "experience": 100
   }
 }
