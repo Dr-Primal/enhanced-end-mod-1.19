@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "enhancedend:block/corlite_fescus"
+  }
+}

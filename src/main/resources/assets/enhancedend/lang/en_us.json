@@ -126,6 +126,11 @@
   "block.enhancedend.midnight_blots": "Midnight Blots",
   "block.enhancedend.corlite_blots": "Corlite Blots",
 
+  "block.enhancedend.midnight_fescus": "Midnight Fescus",
+  "block.enhancedend.endium_rhizome": "Endium Rhizome",
+  "block.enhancedend.corlite_fescus": "Corlite Fescus",
+
+
   "block.enhancedend.endium_soil": "Endium Soil",
   "block.enhancedend.endium_mushroom_block": "Endium Mushroom Block",
   "block.enhancedend.endium_mushroom": "Endium Mushroom",
@@ -147,6 +152,6 @@
 
   "itemGroup.enhancedend.end_tanzanite_ore": "Enhanced End Blocks",
   "itemGroup.enhancedend.tanzanite": "Enhanced End Items",
-  "itemGroup.enhancedend.endium_mushroom": "Enhanced End Decorations/Food"
+  "itemGroup.enhancedend.endium_mushroom": "Enhanced End Nature"
 
 }

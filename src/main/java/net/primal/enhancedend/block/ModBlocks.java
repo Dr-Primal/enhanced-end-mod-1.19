@@ -261,6 +261,19 @@ public class ModBlocks {
     public static final Block CORLITE_BLOTS = registerBlock("corlite_blots",
             new Block(FabricBlockSettings.of(Material.SOLID_ORGANIC).strength(1.0f).sounds(BlockSoundGroup.WART_BLOCK)),
             ModItemGroup.ENHANCED_END_DECORATIONS);
+    //Fescus and Rhizome
+    public static final Block MIDNIGHT_FESCUS = registerBlock("midnight_fescus",
+            new FescusBlock(FabricBlockSettings.of(Material.REPLACEABLE_PLANT).breakInstantly().noCollision()
+                    .sounds(BlockSoundGroup.GRASS).offsetType(AbstractBlock.OffsetType.XZ)),
+            ModItemGroup.ENHANCED_END_DECORATIONS);
+    public static final Block ENDIUM_RHIZOME = registerBlock("endium_rhizome",
+            new RhizomeBlock(FabricBlockSettings.of(Material.REPLACEABLE_PLANT).breakInstantly().noCollision()
+                    .sounds(BlockSoundGroup.GRASS).offsetType(AbstractBlock.OffsetType.XZ)),
+            ModItemGroup.ENHANCED_END_DECORATIONS);
+    public static final Block CORLITE_FESCUS = registerBlock("corlite_fescus",
+            new FescusBlock(FabricBlockSettings.of(Material.REPLACEABLE_PLANT).breakInstantly().noCollision()
+                    .sounds(BlockSoundGroup.GRASS).offsetType(AbstractBlock.OffsetType.XZ)),
+            ModItemGroup.ENHANCED_END_DECORATIONS);
     //Endium and End Matter
     public static final Block ENDIUM_MUSHROOM = registerBlock("endium_mushroom",
             new ModMagicMushroomBlock(new EndiumMushroomGenerator(),
@@ -270,8 +283,8 @@ public class ModBlocks {
             new Block(FabricBlockSettings.of(Material.WOOD).strength(0.2f).sounds(BlockSoundGroup.WOOD)),
             ModItemGroup.ENHANCED_END_DECORATIONS);
     public static final Block ENDIUM_SOIL = registerBlock("endium_soil",
-            new Block(FabricBlockSettings.of(Material.SOIL).strength(0.7f).sounds(BlockSoundGroup.SOUL_SOIL)),
-            ModItemGroup.ENHANCED_END_BLOCKS);
+            new Block(FabricBlockSettings.of(Material.SOIL).strength(0.7f).sounds(BlockSoundGroup.WET_GRASS)),
+            ModItemGroup.ENHANCED_END_DECORATIONS);
     public static final Block HARDENED_ENDER_MATTER = registerBlock("hardened_ender_matter",
             new PillarBlock(FabricBlockSettings.of(Material.STONE).strength(8f).requiresTool()),
             ModItemGroup.ENHANCED_END_BLOCKS);
@@ -297,7 +310,7 @@ public class ModBlocks {
             ModItemGroup.ENHANCED_END_DECORATIONS);
 
     public static final Block END_FLORIA = registerBlock("end_floria",
-            new ModFlowerBlock(StatusEffects.HASTE, 0,
+            new ModFloriaFlowerBlock(StatusEffects.HASTE, 0,
                     FabricBlockSettings.of(Material.PLANT, MapColor.LIME)
                             .noCollision().breakInstantly()
                             .offsetType(AbstractBlock.OffsetType.XZ)
