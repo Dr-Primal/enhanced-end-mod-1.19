@@ -20,6 +20,9 @@
   "item.enhancedend.endimintium_leggings": "Endimintium Leggings",
   "item.enhancedend.endimintium_boots": "Endimintium Boots",
 
+  "entity.enhancedend.enhanced_enderman": "Enhanced Enderman",
+  "item.enhancedend.enhanced_enderman_spawn_egg": "Enhanced Enderman Spawn Egg",
+
   "item.enhancedend.ender_matter_speck": "Ender Matter Speck",
 
   "item.enhancedend.reinforced_shard": "Reinforced Shard",
@@ -146,8 +149,7 @@
   "block.enhancedend.eneria_cane": "Eneria Cane",
 
   "block.enhancedend.end_floria": "End Floria",
-  "block.enhancedend.potted_end_floria": "Potted Floria",
-
+  "block.enhancedend.potted_end_floria": "Potted End Floria",
 
 
   "itemGroup.enhancedend.end_tanzanite_ore": "Enhanced End Blocks",

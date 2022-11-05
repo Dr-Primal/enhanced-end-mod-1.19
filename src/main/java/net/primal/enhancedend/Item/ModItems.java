@@ -12,6 +12,7 @@ import net.primal.enhancedend.EnhancedEnd;
 import net.primal.enhancedend.Item.custom.*;
 import net.primal.enhancedend.block.ModBlocks;
 import net.primal.enhancedend.block.custom.ModHoeItem;
+import net.primal.enhancedend.entity.ModEntities;
 import net.primal.enhancedend.sound.ModSounds;
 
 public class ModItems {
@@ -143,6 +144,10 @@ public class ModItems {
     public static final Item SANCTITY_MUSIC_DISC = registerItem("sanctity_music_disc",
             new MusicDiscItem(17, ModSounds.SANCTITY,
                     new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS).rarity(Rarity.RARE).maxCount(1), 245));
+    //Spawn Eggs!!!
+    public static final Item ENHANCED_ENDERMAN_SPAWN_EGG = registerItem("enhanced_enderman_spawn_egg",
+            new SpawnEggItem(ModEntities.ENHANCED_ENDERMAN,0xd4d6d6, 0x8bfdff,
+                    new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(EnhancedEnd.MOD_ID, name), item);
