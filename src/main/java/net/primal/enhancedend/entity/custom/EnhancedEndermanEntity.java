@@ -7,17 +7,24 @@ import net.minecraft.entity.*;
 import net.minecraft.entity.ai.TargetPredicate;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
+import net.minecraft.entity.attribute.EntityAttributeInstance;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.predicate.entity.EntityPredicates;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.tag.FluidTags;
+import net.minecraft.util.TimeHelper;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.world.EntityView;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 import org.jetbrains.annotations.Nullable;
@@ -31,11 +38,12 @@ import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 import java.util.EnumSet;
+import java.util.UUID;
 import java.util.function.Predicate;
 
 public class EnhancedEndermanEntity
         extends EndermanEntity
-        implements IAnimatable {
+        implements IAnimatable, Angerable {
     private AnimationFactory factory = new AnimationFactory(this);
 
     public EnhancedEndermanEntity(EntityType<? extends EndermanEntity> entityType, World world) {
@@ -44,7 +52,7 @@ public class EnhancedEndermanEntity
     public static DefaultAttributeContainer.Builder setAttributes() {
         return HostileEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 80.0)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3f)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.5f)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 16.0)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 64.0);
     }
@@ -146,6 +154,43 @@ public class EnhancedEndermanEntity
                 super.tick();
             }
         }
+    }
+   @Override
+   protected void mobTick() {
+       this.tickAngerLogic((ServerWorld)this.world, true);
+       if (this.getTarget() != null) {
+           this.tickAngerPassing();
+       }
+       if (this.hasAngerTime()) {
+           this.playerHitTimer = this.age;
+       }
+       super.mobTick();
+   }
+    private static final UniformIntProvider ANGER_PASSING_COOLDOWN_RANGE = TimeHelper.betweenSeconds(4, 6);
+    private int angerPassingCooldown;
+    private void tickAngerPassing() {
+        if (this.angerPassingCooldown > 0) {
+            --this.angerPassingCooldown;
+            return;
+        }
+        if (this.getVisibilityCache().canSee(this.getTarget())) {
+            this.angerNearbyEnhancedEnderman();
+        }
+        this.angerPassingCooldown = ANGER_PASSING_COOLDOWN_RANGE.get(this.random);
+    }
+    private void angerNearbyEnhancedEnderman() {
+        double d = this.getAttributeValue(EntityAttributes.GENERIC_FOLLOW_RANGE);
+        Box box = Box.from(this.getPos()).expand(d, 10.0, d);
+        this.world.getEntitiesByClass(EnhancedEndermanEntity.class, box, EntityPredicates.EXCEPT_SPECTATOR)
+                .stream().filter(enhancedEnderman -> enhancedEnderman != this)
+                .filter(enhancedEnderman -> enhancedEnderman.getTarget() == null)
+                .filter(enhancedEnderman -> !enhancedEnderman.isTeammate(this.getTarget()))
+                .forEach(enhancedEnderman -> enhancedEnderman.setTarget(this.getTarget()));
+    }
+
+    @Override
+    public boolean canImmediatelyDespawn(double distanceSquared) {
+        return false;
     }
 
     @Override

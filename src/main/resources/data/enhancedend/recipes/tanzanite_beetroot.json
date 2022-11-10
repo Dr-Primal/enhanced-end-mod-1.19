@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
+    "a#a",
     "#@#",
-    "###"
+    "a#a"
   ],
   "key": {
     "#": {
@@ -11,6 +11,9 @@
     },
     "@": {
       "item": "minecraft:beetroot"
+    },
+    "a": {
+      "item": "enhancedend:eneria_speck"
     }
   },
   "result": {

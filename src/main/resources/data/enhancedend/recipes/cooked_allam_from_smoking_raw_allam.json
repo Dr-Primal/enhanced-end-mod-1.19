@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smoking",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "enhanced_end_items",
+  "ingredient": {
+    "item": "enhancedend:raw_allam"
+  },
+  "result": "enhancedend:cooked_allam"
+}

@@ -9,7 +9,9 @@ import net.primal.enhancedend.Item.ModItems;
 import net.primal.enhancedend.block.ModBlocks;
 import net.primal.enhancedend.enchantment.ModEnchantments;
 import net.primal.enhancedend.entity.ModEntities;
+import net.primal.enhancedend.entity.client.AllamiteRenderer;
 import net.primal.enhancedend.entity.client.EnhancedEndermanRenderer;
+import net.primal.enhancedend.entity.custom.AllamiteEntity;
 import net.primal.enhancedend.entity.custom.EnhancedEndermanEntity;
 import net.primal.enhancedend.fluid.ModFluids;
 import net.primal.enhancedend.sound.ModSounds;
@@ -38,8 +40,11 @@ public class EnhancedEnd implements ModInitializer {
 		ModEnchantments.registerModEnchantments();
 
 		GeckoLib.initialize();
-//registering enhanced enderman:
+//registering entities:
 		FabricDefaultAttributeRegistry.register(ModEntities.ENHANCED_ENDERMAN, EnhancedEndermanEntity.setAttributes());
 		EntityRendererRegistry.register(ModEntities.ENHANCED_ENDERMAN, EnhancedEndermanRenderer::new);
+
+		FabricDefaultAttributeRegistry.register(ModEntities.ALLAMITE, AllamiteEntity.setAttributes());
+		EntityRendererRegistry.register(ModEntities.ALLAMITE, AllamiteRenderer::new);
 	}
 }

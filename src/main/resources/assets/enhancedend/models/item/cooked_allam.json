@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "enhancedend:item/ender_matter_speck"
+    "layer0": "enhancedend:item/cooked_allam"
   }
 }

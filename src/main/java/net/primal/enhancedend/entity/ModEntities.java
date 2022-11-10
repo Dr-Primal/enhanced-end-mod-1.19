@@ -7,12 +7,16 @@ import net.minecraft.entity.SpawnGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.primal.enhancedend.EnhancedEnd;
+import net.primal.enhancedend.entity.custom.AllamiteEntity;
 import net.primal.enhancedend.entity.custom.EnhancedEndermanEntity;
-
 public class ModEntities {
     public static final EntityType<EnhancedEndermanEntity> ENHANCED_ENDERMAN = Registry.register(
             Registry.ENTITY_TYPE, new Identifier(EnhancedEnd.MOD_ID, "enhanced_enderman"),
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, EnhancedEndermanEntity::new)
-                    .dimensions(EntityDimensions.fixed(0.6f, 3f)).build());
-
+                    .dimensions(EntityDimensions.fixed(0.6f, 2.9f)).build());
+//Make sizable hitboxes for adult and baby Allamites
+    public static final EntityType<AllamiteEntity> ALLAMITE = Registry.register(
+            Registry.ENTITY_TYPE, new Identifier(EnhancedEnd.MOD_ID, "allamite"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, AllamiteEntity::new)
+                    .dimensions(EntityDimensions.changing(1.5f, 1.5f)).build());
 }

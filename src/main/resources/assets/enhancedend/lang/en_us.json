@@ -22,8 +22,12 @@
 
   "entity.enhancedend.enhanced_enderman": "Enhanced Enderman",
   "item.enhancedend.enhanced_enderman_spawn_egg": "Enhanced Enderman Spawn Egg",
+  "entity.enhancedend.allamite": "Allamite",
+  "item.enhancedend.allamite_spawn_egg": "Allamite Spawn Egg",
 
-  "item.enhancedend.ender_matter_speck": "Ender Matter Speck",
+  "item.enhancedend.raw_allam": "Raw Allam",
+  "item.enhancedend.cooked_allam": "Cooked Allam",
+  "item.enhancedend.eneria_speck": "Eneria Speck",
 
   "item.enhancedend.reinforced_shard": "Reinforced Shard",
   "item.enhancedend.allamite_hide": "Allamite Hide",

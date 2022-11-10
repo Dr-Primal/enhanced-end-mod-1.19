@@ -75,7 +75,7 @@ public class ModItems {
                     new FabricItemSettings().fireproof().group(ModItemGroup.ENHANCED_END_ITEMS)));
 
     //Food Items
-    public static final Item ENDER_MATTER_SPECK = registerItem("ender_matter_speck",
+    public static final Item ENERIA_SPECK = registerItem("eneria_speck",
             new ModEnchantedFoodItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)));
 
     public static final Item TANZANITE_BEETROOT = registerItem("tanzanite_beetroot",
@@ -97,7 +97,7 @@ public class ModItems {
                             .alwaysEdible().build())));
     public static final Item ENHANCED_BEETROOT = registerItem("enhanced_beetroot",
             new ModEnchantedFoodItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)
-                    .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.8f)
+                    .food(new FoodComponent.Builder().hunger(2).saturationModifier(1f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 30, 4), 1f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 1000, 1), 0.8f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 1000, 1), 0.8f)
@@ -106,7 +106,7 @@ public class ModItems {
                             .alwaysEdible().build())));
     public static final Item CORRUPTED_BEETROOT = registerItem("corrupted_beetroot",
             new ModEnchantedFoodItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)
-                    .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.8f)
+                    .food(new FoodComponent.Builder().hunger(2).saturationModifier(1.5f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 1000, 0), 0.6f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 1000, 0), 0.6f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 1000, 0), 0.6f)
@@ -117,6 +117,19 @@ public class ModItems {
                             .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 50, 3), 0.4f)
                             .alwaysEdible().build())));
 
+    public static final Item RAW_ALLAM = registerItem("raw_allam",
+            new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)
+                    .food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 50, 0), 0.6f)
+                            .build())));
+    public static final Item COOKED_ALLAM = registerItem("cooked_allam",
+            new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)
+                    .food(new FoodComponent.Builder().hunger(9).saturationModifier(0.8f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 50, 0), 0.2f)
+                            .build())));
+
+
+
     //Main Loot Drops
     public static final Item REINFORCED_SHARD = registerItem("reinforced_shard",
             new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
@@ -126,7 +139,7 @@ public class ModItems {
             new ModEnderPearlItem(new FabricItemSettings().maxCount(16).group(ModItemGroup.ENHANCED_END_ITEMS)));
     //Drops from Enhanced Enderman^
 
-    //Crafted from Enhanced Pearl, Phantom Membranes(ADD RECIPE WHEN READY)
+    //Crafted from Enhanced Pearl, Phantom Membranes, Eneria Speck
     public static final Item PHANTOM_PEARL = registerItem("phantom_pearl",
             new ModPhantomPearlItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.ENHANCED_END_ITEMS)));
 
@@ -147,7 +160,10 @@ public class ModItems {
     //Spawn Eggs!!!
     public static final Item ENHANCED_ENDERMAN_SPAWN_EGG = registerItem("enhanced_enderman_spawn_egg",
             new SpawnEggItem(ModEntities.ENHANCED_ENDERMAN,0xd4d6d6, 0x8bfdff,
-                    new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
+                    new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)));
+    public static final Item ALLAMITE_SPAWN_EGG = registerItem("allamite_spawn_egg",
+            new SpawnEggItem(ModEntities.ALLAMITE,0x322353, 0xffebf5,
+                    new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(EnhancedEnd.MOD_ID, name), item);
