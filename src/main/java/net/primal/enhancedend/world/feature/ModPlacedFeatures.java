@@ -1,6 +1,7 @@
 package net.primal.enhancedend.world.feature;
 
 import net.minecraft.util.registry.RegistryEntry;
+import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.feature.PlacedFeature;
 import net.minecraft.world.gen.feature.PlacedFeatures;
 import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
@@ -20,6 +21,15 @@ public class ModPlacedFeatures {
     public static final RegistryEntry<PlacedFeature> ENDIUM_PLACED = PlacedFeatures.register("endium_placed",
             ModConfiguredFeatures.ENDIUM_SPAWN,
             VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(1, 0.1f, 2)));
+
+
+    public static final RegistryEntry<PlacedFeature> TANZANITE_ORE_PLACED = PlacedFeatures.register("tanzanite_ore_placed",
+            ModConfiguredFeatures.TANZANITE_ORE, modifiersWithCount(8,
+                    HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(120))));
+
+    public static final RegistryEntry<PlacedFeature> CLITANIUM_ORE_PLACED = PlacedFeatures.register("clitanium_ore_placed",
+            ModConfiguredFeatures.CLITANIUM_ORE, modifiersWithCount(8,
+                    HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(120))));
 
 
 

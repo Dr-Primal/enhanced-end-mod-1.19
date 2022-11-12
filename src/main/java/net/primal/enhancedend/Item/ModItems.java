@@ -128,8 +128,6 @@ public class ModItems {
                             .statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 50, 0), 0.2f)
                             .build())));
 
-
-
     //Main Loot Drops
     public static final Item REINFORCED_SHARD = registerItem("reinforced_shard",
             new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));

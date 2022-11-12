@@ -1,6 +1,5 @@
 package net.primal.enhancedend.entity.client;
 
-import net.minecraft.client.model.ModelPart;
 import net.minecraft.util.Identifier;
 import net.primal.enhancedend.EnhancedEnd;
 import net.primal.enhancedend.entity.custom.AllamiteEntity;

@@ -1,6 +1,7 @@
 package net.primal.enhancedend.world.feature;
 
 import net.minecraft.block.Blocks;
+import net.minecraft.structure.rule.BlockMatchRuleTest;
 import net.minecraft.world.gen.feature.size.ThreeLayersFeatureSize;
 import net.minecraft.world.gen.foliage.JungleFoliagePlacer;
 import net.minecraft.world.gen.trunk.MegaJungleTrunkPlacer;
@@ -68,6 +69,19 @@ public class ModConfiguredFeatures {
             ConfiguredFeatures.register("endium_spawn", Feature.RANDOM_SELECTOR,
                     new RandomFeatureConfig(List.of(new RandomFeatureEntry(ENDIUM_CHECKED, 0.5f)),
                             ENDIUM_CHECKED));
+
+    public static final List<OreFeatureConfig.Target> END_TANZANITE_ORES = List.of(
+            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE), ModBlocks.END_TANZANITE_ORE.getDefaultState()));
+
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> TANZANITE_ORE =
+            ConfiguredFeatures.register("tanzanite_ore", Feature.ORE, new OreFeatureConfig(END_TANZANITE_ORES, 6));
+
+
+    public static final List<OreFeatureConfig.Target> END_CLITANIUM_ORES = List.of(
+            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE), ModBlocks.END_CLITANIUM_ORE.getDefaultState()));
+
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> CLITANIUM_ORE =
+            ConfiguredFeatures.register("clitanium_ore", Feature.ORE, new OreFeatureConfig(END_CLITANIUM_ORES, 6));
 
 
 

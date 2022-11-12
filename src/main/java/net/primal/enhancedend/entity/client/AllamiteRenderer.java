@@ -8,7 +8,6 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.primal.enhancedend.EnhancedEnd;
 import net.primal.enhancedend.entity.custom.AllamiteEntity;
-import net.primal.enhancedend.entity.custom.EnhancedEndermanEntity;
 import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
 
 public class AllamiteRenderer extends GeoEntityRenderer<AllamiteEntity> {
