@@ -146,7 +146,6 @@ public class ModItems {
     //Drops from Carnacuses^
     public static final Item ALLAMITE_HIDE = registerItem("allamite_hide",
             new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
-    //Drops from Allamites^, used for non-flammable carpets and "wool block"
 
     //Music Discs
     public static final Item MYSTERIOUS_LIGHTS_MUSIC_DISC = registerItem("mysterious_lights_music_disc",
@@ -155,12 +154,15 @@ public class ModItems {
     public static final Item SANCTITY_MUSIC_DISC = registerItem("sanctity_music_disc",
             new MusicDiscItem(17, ModSounds.SANCTITY,
                     new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS).rarity(Rarity.RARE).maxCount(1), 245));
-    //Spawn Eggs!!!
+    //Spawn Eggs
     public static final Item ENHANCED_ENDERMAN_SPAWN_EGG = registerItem("enhanced_enderman_spawn_egg",
             new SpawnEggItem(ModEntities.ENHANCED_ENDERMAN,0xd4d6d6, 0x8bfdff,
                     new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)));
     public static final Item ALLAMITE_SPAWN_EGG = registerItem("allamite_spawn_egg",
             new SpawnEggItem(ModEntities.ALLAMITE,0x322353, 0xffebf5,
+                    new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)));
+    public static final Item SEASPRAY_SPAWN_EGG = registerItem("seaspray_spawn_egg",
+            new SpawnEggItem(ModEntities.SEASPRAY,0x364032, 0xd1dacf,
                     new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)));
 
     private static Item registerItem(String name, Item item) {

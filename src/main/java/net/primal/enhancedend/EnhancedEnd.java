@@ -9,8 +9,10 @@ import net.primal.enhancedend.enchantment.ModEnchantments;
 import net.primal.enhancedend.entity.ModEntities;
 import net.primal.enhancedend.entity.client.AllamiteRenderer;
 import net.primal.enhancedend.entity.client.EnhancedEndermanRenderer;
+import net.primal.enhancedend.entity.client.SeasprayRenderer;
 import net.primal.enhancedend.entity.custom.AllamiteEntity;
 import net.primal.enhancedend.entity.custom.EnhancedEndermanEntity;
+import net.primal.enhancedend.entity.custom.SeasprayEntity;
 import net.primal.enhancedend.fluid.ModFluids;
 import net.primal.enhancedend.util.ModRegistries;
 import net.primal.enhancedend.world.feature.ModConfiguredFeatures;
@@ -45,5 +47,8 @@ public class EnhancedEnd implements ModInitializer {
 
 		FabricDefaultAttributeRegistry.register(ModEntities.ALLAMITE, AllamiteEntity.setAttributes());
 		EntityRendererRegistry.register(ModEntities.ALLAMITE, AllamiteRenderer::new);
+
+		FabricDefaultAttributeRegistry.register(ModEntities.SEASPRAY, SeasprayEntity.setAttributes());
+		EntityRendererRegistry.register(ModEntities.SEASPRAY, SeasprayRenderer::new);
 	}
 }
