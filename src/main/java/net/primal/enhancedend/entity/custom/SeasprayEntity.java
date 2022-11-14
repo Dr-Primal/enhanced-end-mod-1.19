@@ -145,7 +145,7 @@ public class SeasprayEntity extends FlyingEntity implements IAnimatable {
 
     @Override
     public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, @Nullable EntityData entityData, @Nullable NbtCompound entityNbt) {
-        this.circlingCenter = this.getBlockPos().up(5);
+        this.circlingCenter = this.getBlockPos().up(10);
         this.setSeaspraySize(0);
         return super.initialize(world, difficulty, spawnReason, entityData, entityNbt);
     }
