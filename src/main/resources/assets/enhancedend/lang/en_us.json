@@ -20,12 +20,21 @@
   "item.enhancedend.endimintium_leggings": "Endimintium Leggings",
   "item.enhancedend.endimintium_boots": "Endimintium Boots",
 
+
+
   "entity.enhancedend.enhanced_enderman": "Enhanced Enderman",
   "item.enhancedend.enhanced_enderman_spawn_egg": "Enhanced Enderman Spawn Egg",
+
   "entity.enhancedend.allamite": "Allamite",
   "item.enhancedend.allamite_spawn_egg": "Allamite Spawn Egg",
+
   "entity.enhancedend.seaspray": "Seaspray",
   "item.enhancedend.seaspray_spawn_egg": "Seaspray Spawn Egg",
+
+  "entity.enhancedend.enforced_obsidian_golem": "Enforced Obsidian Golem",
+  "item.enhancedend.enforced_obsidian_golem_spawn_egg": "Enforced Obsidian Golem Spawn Egg",
+
+
 
   "item.enhancedend.raw_allam": "Raw Allam",
   "item.enhancedend.cooked_allam": "Cooked Allam",
@@ -79,7 +88,7 @@
   "block.enhancedend.cobbled_silstone_wall": "Cobbled Silstone Wall",
 
   "block.enhancedend.silstone_bricks": "Silstone Bricks",
-  "block.enhancedend.silstone_brick_stairs": "Cobbled Silstone Stairs",
+  "block.enhancedend.silstone_brick_stairs": "Silstone Brick Stairs",
   "block.enhancedend.silstone_brick_slab": "Silstone Brick Slab",
   "block.enhancedend.silstone_brick_wall": "Silstone Brick Wall",
   "block.enhancedend.chiseled_silstone": "Chiseled Silstone",

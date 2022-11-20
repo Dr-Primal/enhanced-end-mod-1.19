@@ -8,6 +8,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.primal.enhancedend.EnhancedEnd;
 import net.primal.enhancedend.entity.custom.AllamiteEntity;
+import net.primal.enhancedend.entity.custom.EnforcedObsidianGolemEntity;
 import net.primal.enhancedend.entity.custom.EnhancedEndermanEntity;
 import net.primal.enhancedend.entity.custom.SeasprayEntity;
 
@@ -26,4 +27,9 @@ public class ModEntities {
             Registry.ENTITY_TYPE, new Identifier(EnhancedEnd.MOD_ID, "seaspray"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, SeasprayEntity::new)
                     .dimensions(EntityDimensions.changing(1f, 0.6f)).build());
+
+    public static final EntityType<EnforcedObsidianGolemEntity> ENFORCED_OBSIDIAN_GOLEM = Registry.register(
+            Registry.ENTITY_TYPE, new Identifier(EnhancedEnd.MOD_ID, "enforced_obsidian_golem"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, EnforcedObsidianGolemEntity::new)
+                    .dimensions(EntityDimensions.fixed(1f, 3.1f)).build());
 }

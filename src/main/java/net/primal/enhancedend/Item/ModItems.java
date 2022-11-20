@@ -164,6 +164,9 @@ public class ModItems {
     public static final Item SEASPRAY_SPAWN_EGG = registerItem("seaspray_spawn_egg",
             new SpawnEggItem(ModEntities.SEASPRAY,0x364032, 0xd1dacf,
                     new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)));
+    public static final Item ENFORCED_OBSIDIAN_GOLEM_SPAWN_EGG = registerItem("enforced_obsidian_golem_spawn_egg",
+            new SpawnEggItem(ModEntities.ENFORCED_OBSIDIAN_GOLEM,0x2a0b34, 0x18061e,
+                    new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(EnhancedEnd.MOD_ID, name), item);
