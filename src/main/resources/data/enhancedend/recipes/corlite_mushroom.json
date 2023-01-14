@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "enhancedend:corlite_blots"
+    }
+  ],
+  "result": {
+    "item": "enhancedend:corlite_mushroom",
+    "count": 4
+  }
+}

@@ -7,10 +7,7 @@ import net.minecraft.entity.SpawnGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.primal.enhancedend.EnhancedEnd;
-import net.primal.enhancedend.entity.custom.AllamiteEntity;
-import net.primal.enhancedend.entity.custom.EnforcedObsidianGolemEntity;
-import net.primal.enhancedend.entity.custom.EnhancedEndermanEntity;
-import net.primal.enhancedend.entity.custom.SeasprayEntity;
+import net.primal.enhancedend.entity.custom.*;
 
 public class ModEntities {
     public static final EntityType<EnhancedEndermanEntity> ENHANCED_ENDERMAN = Registry.register(
@@ -32,4 +29,9 @@ public class ModEntities {
             Registry.ENTITY_TYPE, new Identifier(EnhancedEnd.MOD_ID, "enforced_obsidian_golem"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, EnforcedObsidianGolemEntity::new)
                     .dimensions(EntityDimensions.fixed(1f, 3.1f)).build());
+
+    public static final EntityType<BulwarkSentryEntity> BULWARK_SENTRY = Registry.register(
+            Registry.ENTITY_TYPE, new Identifier(EnhancedEnd.MOD_ID, "bulwark_sentry"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, BulwarkSentryEntity::new)
+                    .dimensions(EntityDimensions.fixed(1f, 1.3f)).build());
 }

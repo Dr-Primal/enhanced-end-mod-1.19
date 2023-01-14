@@ -108,7 +108,7 @@ public class EnforcedObsidianGolemEntity extends HostileEntity implements IAnima
         return HostileEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 170.0)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3f)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 35.0)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 40.0)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 16.0)
                 .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 1.0)
                 .add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, 0.0)

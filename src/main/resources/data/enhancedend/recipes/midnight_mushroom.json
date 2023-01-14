@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "enhancedend:midnight_blots"
+    }
+  ],
+  "result": {
+    "item": "enhancedend:midnight_mushroom",
+    "count": 4
+  }
+}

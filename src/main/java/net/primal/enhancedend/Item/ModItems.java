@@ -140,6 +140,9 @@ public class ModItems {
     //Crafted from Enhanced Pearl, Phantom Membranes, Eneria Speck
     public static final Item PHANTOM_PEARL = registerItem("phantom_pearl",
             new ModPhantomPearlItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.ENHANCED_END_ITEMS)));
+    //Loot drop from Bulwark Sentry: Purpose TBD
+    public static final Item SENTRY_DISC = registerItem("sentry_disc",
+            new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
 
     public static final Item CARNACUS_LEG = registerItem("carnacus_leg",
             new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
@@ -166,6 +169,9 @@ public class ModItems {
                     new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)));
     public static final Item ENFORCED_OBSIDIAN_GOLEM_SPAWN_EGG = registerItem("enforced_obsidian_golem_spawn_egg",
             new SpawnEggItem(ModEntities.ENFORCED_OBSIDIAN_GOLEM,0x2a0b34, 0x18061e,
+                    new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)));
+    public static final Item BULWARK_SENTRY_SPAWN_EGG = registerItem("bulwark_sentry_spawn_egg",
+            new SpawnEggItem(ModEntities.BULWARK_SENTRY,0x3e412d, 0x899798,
                     new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)));
 
     private static Item registerItem(String name, Item item) {
