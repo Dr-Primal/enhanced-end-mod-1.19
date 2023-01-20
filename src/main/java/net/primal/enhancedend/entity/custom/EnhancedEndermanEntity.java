@@ -63,8 +63,8 @@ public class EnhancedEndermanEntity
         this.goalSelector.add(5, new LookAroundGoal(this));
         this.targetSelector.add(1, new TeleportTowardsPlayerGoal(this, this::shouldAngerAt));
         this.targetSelector.add(2, new RevengeGoal(this, new Class[0]));
-        this.targetSelector.add(3, new ActiveTargetGoal<EndermiteEntity>((MobEntity)this, EndermiteEntity.class, true, false));
-        this.targetSelector.add(4, new UniversalAngerGoal<EnhancedEndermanEntity>(this, false));
+        this.targetSelector.add(3, new ActiveTargetGoal<>(this, EndermiteEntity.class, true, false));
+        this.targetSelector.add(4, new UniversalAngerGoal<>(this, false));
     }
 
     @Override
@@ -231,8 +231,8 @@ public class EnhancedEndermanEntity
             this.world.emitGameEvent(GameEvent.TELEPORT, vec3d, GameEvent.Emitter.of(this));
             if (!this.isSilent()) {
                 this.world.playSound(null, this.prevX, this.prevY, this.prevZ, SoundEvents.ENTITY_ENDERMAN_TELEPORT,
-                this.getSoundCategory(), 1.0f, 1.0f);
-                this.playSound(SoundEvents.ENTITY_ENDERMAN_TELEPORT, 1.0f, 1.0f);
+                this.getSoundCategory(), 1.0f, 0.1f);
+                this.playSound(SoundEvents.ENTITY_ENDERMAN_TELEPORT, 1.0f, 0.1f);
             }
         }
         return bl3;

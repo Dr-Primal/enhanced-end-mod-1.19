@@ -2,30 +2,32 @@ package net.primal.enhancedend.entity.client;
 
 import net.minecraft.util.Identifier;
 import net.primal.enhancedend.EnhancedEnd;
+import net.primal.enhancedend.entity.custom.BulwarkShadowEntity;
 import net.primal.enhancedend.entity.custom.EnhancedEndermanEntity;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.processor.IBone;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
 import software.bernie.geckolib3.model.provider.data.EntityModelData;
 
-public class EnhancedEndermanModel extends AnimatedGeoModel<EnhancedEndermanEntity> {
+public class BulwarkShadowModel extends AnimatedGeoModel<BulwarkShadowEntity> {
     @Override
-    public Identifier getModelResource(EnhancedEndermanEntity object) {
-        return new Identifier(EnhancedEnd.MOD_ID, "geo/enhanced_enderman.geo.json");
+    public Identifier getModelResource(BulwarkShadowEntity object) {
+        return new Identifier(EnhancedEnd.MOD_ID, "geo/bulwark_shadow.geo.json");
     }
 
     @Override
-    public Identifier getTextureResource(EnhancedEndermanEntity object) {
-        return new Identifier(EnhancedEnd.MOD_ID, "textures/entity/enhanced_enderman_texture.png");
+    public Identifier getTextureResource(BulwarkShadowEntity object) {
+        return new Identifier(EnhancedEnd.MOD_ID, "textures/entity/bulwark_shadow_texture.png");
     }
 
     @Override
-    public Identifier getAnimationResource(EnhancedEndermanEntity animatable) {
-        return new Identifier(EnhancedEnd.MOD_ID, "animations/enhanced_enderman.animation.json");
+    public Identifier getAnimationResource(BulwarkShadowEntity animatable) {
+        return new Identifier(EnhancedEnd.MOD_ID, "animations/bulwark_shadow.animation.json");
     }
+
     @SuppressWarnings({ "unchecked"})
     @Override
-    public void setLivingAnimations(EnhancedEndermanEntity entity, Integer uniqueID, AnimationEvent customPredicate) {
+    public void setLivingAnimations(BulwarkShadowEntity entity, Integer uniqueID, AnimationEvent customPredicate) {
         super.setLivingAnimations(entity, uniqueID, customPredicate);
         IBone skull = this.getAnimationProcessor().getBone("skull");
 

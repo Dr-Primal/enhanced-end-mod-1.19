@@ -37,6 +37,9 @@
   "entity.enhancedend.bulwark_sentry": "Bulwark Sentry",
   "item.enhancedend.bulwark_sentry_spawn_egg": "Bulwark Sentry Spawn Egg",
 
+  "entity.enhancedend.bulwark_shadow": "Bulwark Shadow",
+  "item.enhancedend.bulwark_shadow_spawn_egg": "Bulwark Shadow Spawn Egg",
+
 
   "item.enhancedend.raw_allam": "Raw Allam",
   "item.enhancedend.cooked_allam": "Cooked Allam",
@@ -44,6 +47,7 @@
 
   "item.enhancedend.reinforced_shard": "Reinforced Shard",
   "item.enhancedend.allamite_hide": "Allamite Hide",
+  "item.enhancedend.sentry_disk": "Sentry Disk",
   "item.enhancedend.carnacus_leg": "Carnacus Leg",
   "item.enhancedend.enhanced_pearl": "Enhanced Pearl",
   "item.enhancedend.phantom_pearl": "Phantom Pearl",

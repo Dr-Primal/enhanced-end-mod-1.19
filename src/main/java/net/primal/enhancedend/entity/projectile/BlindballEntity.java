@@ -55,7 +55,7 @@ public class BlindballEntity
                 i = 80;
             }
             if (i > 0) {
-                ((LivingEntity)entity).addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 50), this.getEffectCause());
+                ((LivingEntity)entity).addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 150), this.getEffectCause());
             }
         }
     }

@@ -2,12 +2,8 @@ package net.primal.enhancedend.entity.client;
 
 import net.minecraft.util.Identifier;
 import net.primal.enhancedend.EnhancedEnd;
-import net.primal.enhancedend.entity.custom.AllamiteEntity;
 import net.primal.enhancedend.entity.custom.BulwarkSentryEntity;
-import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
-import software.bernie.geckolib3.core.processor.IBone;
 import software.bernie.geckolib3.model.AnimatedGeoModel;
-import software.bernie.geckolib3.model.provider.data.EntityModelData;
 
 public class BulwarkSentryModel extends AnimatedGeoModel<BulwarkSentryEntity> {
     @Override

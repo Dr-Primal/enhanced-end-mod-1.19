@@ -140,8 +140,8 @@ public class ModItems {
     //Crafted from Enhanced Pearl, Phantom Membranes, Eneria Speck
     public static final Item PHANTOM_PEARL = registerItem("phantom_pearl",
             new ModPhantomPearlItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.ENHANCED_END_ITEMS)));
-    //Loot drop from Bulwark Sentry: Purpose TBD
-    public static final Item SENTRY_DISC = registerItem("sentry_disc",
+    //Loot drop from Bulwark Sentry
+    public static final Item SENTRY_DISK = registerItem("sentry_disk",
             new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
 
     public static final Item CARNACUS_LEG = registerItem("carnacus_leg",
@@ -161,17 +161,25 @@ public class ModItems {
     public static final Item ENHANCED_ENDERMAN_SPAWN_EGG = registerItem("enhanced_enderman_spawn_egg",
             new SpawnEggItem(ModEntities.ENHANCED_ENDERMAN,0xd4d6d6, 0x8bfdff,
                     new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)));
+
     public static final Item ALLAMITE_SPAWN_EGG = registerItem("allamite_spawn_egg",
             new SpawnEggItem(ModEntities.ALLAMITE,0x322353, 0xffebf5,
                     new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)));
+
     public static final Item SEASPRAY_SPAWN_EGG = registerItem("seaspray_spawn_egg",
             new SpawnEggItem(ModEntities.SEASPRAY,0x364032, 0xd1dacf,
                     new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)));
+
     public static final Item ENFORCED_OBSIDIAN_GOLEM_SPAWN_EGG = registerItem("enforced_obsidian_golem_spawn_egg",
             new SpawnEggItem(ModEntities.ENFORCED_OBSIDIAN_GOLEM,0x2a0b34, 0x18061e,
                     new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)));
+
     public static final Item BULWARK_SENTRY_SPAWN_EGG = registerItem("bulwark_sentry_spawn_egg",
             new SpawnEggItem(ModEntities.BULWARK_SENTRY,0x3e412d, 0x899798,
+                    new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)));
+
+    public static final Item BULWARK_SHADOW_SPAWN_EGG = registerItem("bulwark_shadow_spawn_egg",
+            new SpawnEggItem(ModEntities.BULWARK_SHADOW,0x000000, 0x939573,
                     new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)));
 
     private static Item registerItem(String name, Item item) {

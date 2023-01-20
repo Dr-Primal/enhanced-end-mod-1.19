@@ -35,7 +35,7 @@ public class BulwarkSentryEntity extends HostileEntity implements IAnimatable {
     @Override
     protected void initGoals() {
         this.goalSelector.add(3, new BulwarkSentryEntity.ShootBlindballGoal(this));
-        this.goalSelector.add(3, new GoToWalkTargetGoal(this, 1.5));
+        this.goalSelector.add(2, new GoToWalkTargetGoal(this, 1.4));
         this.goalSelector.add(1, new LookAtEntityGoal(this, PlayerEntity.class, 64.0f));
         this.goalSelector.add(1, new LookAroundGoal(this));
         this.targetSelector.add(2, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
@@ -47,6 +47,16 @@ public class BulwarkSentryEntity extends HostileEntity implements IAnimatable {
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.23f)
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 20.0)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 36.0);
+    }
+
+    @Override
+    protected int getNextAirUnderwater(int air) {
+        return air;
+    }
+
+    @Override
+    public boolean handleFallDamage(float fallDistance, float damageMultiplier, DamageSource damageSource) {
+        return false;
     }
 
     @Override
@@ -66,7 +76,7 @@ public class BulwarkSentryEntity extends HostileEntity implements IAnimatable {
         }
         boolean bl = super.damage(source, amount);
         if (bl) {
-            this.playSound(SoundEvents.ENTITY_BLAZE_HURT, 1.0f, 0.1f);
+            this.playSound(SoundEvents.ENTITY_GUARDIAN_HURT, 1.0f, 0.1f);
         }
         return super.damage(source, amount);
     }
@@ -100,7 +110,7 @@ public class BulwarkSentryEntity extends HostileEntity implements IAnimatable {
 
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_BLAZE_DEATH;
+        return SoundEvents.ENTITY_GUARDIAN_DEATH;
     }
 
     @Override
@@ -197,7 +207,7 @@ public class BulwarkSentryEntity extends HostileEntity implements IAnimatable {
                     if (this.bulletsFired > 1) {
                         double h = Math.sqrt(Math.sqrt(d)) * 0.5;
                         if (!this.bulwark_sentry.isSilent()) {
-                            this.bulwark_sentry.world.syncWorldEvent(null, WorldEvents.ENDER_DRAGON_SHOOTS, this.bulwark_sentry.getBlockPos(), 0);
+                            this.bulwark_sentry.world.syncWorldEvent(null, WorldEvents.EYE_OF_ENDER_BREAKS, this.bulwark_sentry.getBlockPos(), 0);
                         }
                         for (int i = 0; i < 1; ++i) {
                             BlindballEntity blindballEntity =

@@ -27,11 +27,16 @@ public class ModEntities {
 
     public static final EntityType<EnforcedObsidianGolemEntity> ENFORCED_OBSIDIAN_GOLEM = Registry.register(
             Registry.ENTITY_TYPE, new Identifier(EnhancedEnd.MOD_ID, "enforced_obsidian_golem"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, EnforcedObsidianGolemEntity::new)
-                    .dimensions(EntityDimensions.fixed(1f, 3.1f)).build());
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, EnforcedObsidianGolemEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.95f, 3.1f)).build());
 
     public static final EntityType<BulwarkSentryEntity> BULWARK_SENTRY = Registry.register(
             Registry.ENTITY_TYPE, new Identifier(EnhancedEnd.MOD_ID, "bulwark_sentry"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, BulwarkSentryEntity::new)
-                    .dimensions(EntityDimensions.fixed(1f, 1.3f)).build());
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, BulwarkSentryEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.95f, 1.3f)).build());
+
+    public static final EntityType<BulwarkShadowEntity> BULWARK_SHADOW = Registry.register(
+            Registry.ENTITY_TYPE, new Identifier(EnhancedEnd.MOD_ID, "bulwark_shadow"),
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, BulwarkShadowEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.95f, 1.75f)).build());
 }

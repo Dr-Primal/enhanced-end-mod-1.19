@@ -86,7 +86,7 @@ public class EnforcedObsidianGolemEntity extends HostileEntity implements IAnima
             target.setVelocity(target.getVelocity().add(0.0, (double)0.4f * e, 0.0));
             this.applyDamageEffects(this, target);
         }
-        this.playSound(SoundEvents.ENTITY_IRON_GOLEM_ATTACK, 1.0f, 1.0f);
+        this.playSound(SoundEvents.ENTITY_IRON_GOLEM_ATTACK, 1.0f, 0.65f);
         return bl;
     }
 
