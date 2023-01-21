@@ -32,7 +32,7 @@ public class ModBlocks {
             ModItemGroup.ENHANCED_END_BLOCKS);
 
     public static final Block ENDIMINTIUM_BLOCK = registerBlock("endimintium_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(80f, 1700f).requiresTool().sounds(BlockSoundGroup.NETHERITE)),
+            new Block(FabricBlockSettings.of(Material.METAL).strength(80000f, 800000f).requiresTool().sounds(BlockSoundGroup.NETHERITE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
 
 //Tanzanite Variants
@@ -62,80 +62,80 @@ public class ModBlocks {
 
 //Silstone Blocks
     public static final Block SILSTONE = registerBlock("silstone",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(2.5f).requiresTool().sounds(BlockSoundGroup.CALCITE)),
+            new Block(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.CALCITE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block COBBLED_SILSTONE = registerBlock("cobbled_silstone",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(2.5f).requiresTool().sounds(BlockSoundGroup.CALCITE)),
+            new Block(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.CALCITE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block SILSTONE_BRICKS = registerBlock("silstone_bricks",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(2.5f).requiresTool().sounds(BlockSoundGroup.DRIPSTONE_BLOCK)),
+            new Block(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.DRIPSTONE_BLOCK)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block CHISELED_SILSTONE = registerBlock("chiseled_silstone",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(2.5f).requiresTool().sounds(BlockSoundGroup.DRIPSTONE_BLOCK)),
+            new Block(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.DRIPSTONE_BLOCK)),
             ModItemGroup.ENHANCED_END_BLOCKS);
 //Silstone Redstone Variants
     public static final Block SILSTONE_BUTTON = registerBlock("silstone_button",
-            new ModStoneButtonBlock(FabricBlockSettings.of(Material.STONE).strength(0.5f).requiresTool().noCollision().sounds(BlockSoundGroup.CALCITE)),
+            new ModStoneButtonBlock(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().noCollision().sounds(BlockSoundGroup.CALCITE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block SILSTONE_PRESSURE_PLATE = registerBlock("silstone_pressure_plate",
-            new ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of(Material.STONE).strength(0.5f).requiresTool().sounds(BlockSoundGroup.CALCITE)),
+            new ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.CALCITE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     //Silstone Variants
     public static final Block SILSTONE_STAIRS = registerBlock("silstone_stairs",
-            new ModStairsBlock(ModBlocks.SILSTONE.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(2.5f).requiresTool().sounds(BlockSoundGroup.CALCITE)),
+            new ModStairsBlock(ModBlocks.SILSTONE.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.CALCITE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block SILSTONE_SLAB = registerBlock("silstone_slab",
-            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(2.5f).requiresTool().sounds(BlockSoundGroup.CALCITE)),
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.CALCITE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     //Cobbled Silstone
     public static final Block COBBLED_SILSTONE_STAIRS = registerBlock("cobbled_silstone_stairs",
-            new ModStairsBlock(ModBlocks.COBBLED_SILSTONE.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(2.5f).requiresTool().sounds(BlockSoundGroup.CALCITE)),
+            new ModStairsBlock(ModBlocks.COBBLED_SILSTONE.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.CALCITE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block COBBLED_SILSTONE_SLAB = registerBlock("cobbled_silstone_slab",
-            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(2.5f).requiresTool().sounds(BlockSoundGroup.CALCITE)),
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.CALCITE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block COBBLED_SILSTONE_WALL = registerBlock("cobbled_silstone_wall",
-            new WallBlock(FabricBlockSettings.of(Material.STONE).strength(2.5f).requiresTool().sounds(BlockSoundGroup.CALCITE)),
+            new WallBlock(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.CALCITE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     //Silstone Bricks
     public static final Block SILSTONE_BRICK_STAIRS = registerBlock("silstone_brick_stairs",
-            new ModStairsBlock(ModBlocks.SILSTONE_BRICKS.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(2.5f).requiresTool().sounds(BlockSoundGroup.DRIPSTONE_BLOCK)),
+            new ModStairsBlock(ModBlocks.SILSTONE_BRICKS.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.DRIPSTONE_BLOCK)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block SILSTONE_BRICK_SLAB = registerBlock("silstone_brick_slab",
-            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(2.5f).requiresTool().sounds(BlockSoundGroup.DRIPSTONE_BLOCK)),
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.DRIPSTONE_BLOCK)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block SILSTONE_BRICK_WALL = registerBlock("silstone_brick_wall",
-            new WallBlock(FabricBlockSettings.of(Material.STONE).strength(2.5f).requiresTool().sounds(BlockSoundGroup.DRIPSTONE_BLOCK)),
+            new WallBlock(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.DRIPSTONE_BLOCK)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     //Kimberlite
     public static final Block KIMBERLITE = registerBlock("kimberlite",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            new Block(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.STONE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block POLISHED_KIMBERLITE = registerBlock("polished_kimberlite",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            new Block(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.STONE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block KIMBERLITE_PILLAR = registerBlock("kimberlite_pillar",
-            new PillarBlock(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            new PillarBlock(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.STONE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     //Kimberlite Variants
     public static final Block KIMBERLITE_STAIRS = registerBlock("kimberlite_stairs",
-            new ModStairsBlock(ModBlocks.KIMBERLITE.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            new ModStairsBlock(ModBlocks.KIMBERLITE.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.STONE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block KIMBERLITE_SLAB = registerBlock("kimberlite_slab",
-            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.STONE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block INFUSED_KIMBERLITE = registerBlock("infused_kimberlite",
-            new Block(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool().sounds(BlockSoundGroup.GILDED_BLACKSTONE)),
+            new Block(FabricBlockSettings.of(Material.STONE).strength(70f, 1600f).requiresTool().sounds(BlockSoundGroup.GILDED_BLACKSTONE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     //Polished Kimberlite Variants
     public static final Block POLISHED_KIMBERLITE_STAIRS = registerBlock("polished_kimberlite_stairs",
-            new ModStairsBlock(ModBlocks.KIMBERLITE.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            new ModStairsBlock(ModBlocks.KIMBERLITE.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.STONE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block POLISHED_KIMBERLITE_SLAB = registerBlock("polished_kimberlite_slab",
-            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.STONE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block POLISHED_KIMBERLITE_WALL = registerBlock("polished_kimberlite_wall",
-            new WallBlock(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            new WallBlock(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.STONE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     //End stone Blocks
     public static final Block MIDNIGHT_END_STONE = registerBlock("midnight_end_stone",
@@ -290,7 +290,7 @@ public class ModBlocks {
             ModItemGroup.ENHANCED_END_BLOCKS);
 
     public static final Block SCORIA = registerBlock("scoria",
-            new ModScoriaBlock(FabricBlockSettings.of(Material.STONE).strength(1.5f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            new ModScoriaBlock(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.STONE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
 
     //Flowers, Plants, and Potted Variants

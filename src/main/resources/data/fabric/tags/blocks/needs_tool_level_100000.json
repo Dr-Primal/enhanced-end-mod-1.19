@@ -1,0 +1,34 @@
+{
+  "replace": false,
+  "values": [
+    "enhancedend:scoria",
+    "enhancedend:endimintium_block",
+
+    "enhancedend:silstone",
+    "enhancedend:silstone_stairs",
+    "enhancedend:silstone_slab",
+    "enhancedend:silstone_button",
+    "enhancedend:silstone_pressure_plate",
+
+    "enhancedend:cobbled_silstone",
+    "enhancedend:cobbled_silstone_stairs",
+    "enhancedend:cobbled_silstone_slab",
+    "enhancedend:cobbled_silstone_wall",
+
+    "enhancedend:silstone_bricks",
+    "enhancedend:silstone_brick_stairs",
+    "enhancedend:silstone_brick_slab",
+    "enhancedend:silstone_brick_wall",
+    "enhancedend:chiseled_silstone",
+
+    "enhancedend:kimberlite",
+    "enhancedend:kimberlite_stairs",
+    "enhancedend:kimberlite_slab",
+
+    "enhancedend:polished_kimberlite",
+    "enhancedend:polished_kimberlite_stairs",
+    "enhancedend:polished_kimberlite_slab",
+    "enhancedend:polished_kimberlite_wall",
+    "enhancedend:kimberlite_pillar"
+  ]
+}
