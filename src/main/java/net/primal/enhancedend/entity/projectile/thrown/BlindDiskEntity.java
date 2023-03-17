@@ -1,4 +1,4 @@
-package net.primal.enhancedend.entity.projectile;
+package net.primal.enhancedend.entity.projectile.thrown;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -6,23 +6,22 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.entity.projectile.ExplosiveProjectileEntity;
+import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
+import net.minecraft.item.Item;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.World;
-import net.minecraft.world.explosion.Explosion;
+import net.primal.enhancedend.Item.ModItems;
+import net.primal.enhancedend.entity.ModEntities;
 
-public class BlindballEntity
-        extends ExplosiveProjectileEntity {
-
-    public BlindballEntity(World world, LivingEntity owner, double directionX, double directionY, double directionZ) {
-        super(EntityType.SMALL_FIREBALL, owner, directionX, directionY, directionZ, world);
+public class BlindDiskEntity extends ThrownItemEntity {
+    public BlindDiskEntity(EntityType<? extends ThrownItemEntity> entityType, World world) {
+        super(entityType, world);
     }
 
-    @Override
-    public boolean isOnFire() {
-        return false;
+    public BlindDiskEntity(World world, LivingEntity owner) {
+        super(ModEntities.BlindDiskEntityEntityType, owner, world);
     }
 
     @Override
@@ -50,38 +49,28 @@ public class BlindballEntity
         if (bl && entity instanceof LivingEntity) {
             int i = 0;
             if (this.world.getDifficulty() == Difficulty.NORMAL) {
-                i = 40;
+                i = 60;
             } else if (this.world.getDifficulty() == Difficulty.HARD) {
                 i = 80;
             }
             if (i > 0) {
-                ((LivingEntity)entity).addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 150), this.getEffectCause());
+                entity.damage(DamageSource.thrownProjectile(this, this.getOwner()), (float) i / 12);
+                ((LivingEntity)entity).addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, i * 2), this.getEffectCause());
             }
         }
     }
 
-    @Override
     protected void onCollision(HitResult hitResult) {
         super.onCollision(hitResult);
         if (!this.world.isClient) {
-            Explosion.DestructionType destructionType = Explosion.DestructionType.NONE;
-            this.world.createExplosion(this, this.getX(), this.getY(), this.getZ(), 1.0f, false, destructionType);
-            this.discard();
+            this.world.sendEntityStatus(this, (byte)3);
+            this.kill();
         }
+
     }
 
     @Override
-    public boolean canHit() {
-        return false;
-    }
-
-    @Override
-    public boolean damage(DamageSource source, float amount) {
-        return false;
-    }
-
-    @Override
-    protected boolean isBurning() {
-        return false;
+    protected Item getDefaultItem() {
+        return ModItems.SENTRY_DISK;
     }
 }

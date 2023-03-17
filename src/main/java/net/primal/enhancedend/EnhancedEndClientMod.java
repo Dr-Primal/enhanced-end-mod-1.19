@@ -4,9 +4,12 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.util.Identifier;
 import net.primal.enhancedend.block.ModBlocks;
 import net.minecraft.client.render.RenderLayer;
+import net.primal.enhancedend.entity.ModEntities;
 import net.primal.enhancedend.fluid.ModFluids;
 import net.primal.enhancedend.util.ModModelPredicateProvider;
 
@@ -55,6 +58,9 @@ public class EnhancedEndClientMod implements ClientModInitializer {
                 ModFluids.STILL_ENDER_MATTER, ModFluids.FLOWING_ENDER_MATTER);
 
         ModModelPredicateProvider.registerModModels();
+
+
+        EntityRendererRegistry.register(ModEntities.BlindDiskEntityEntityType, FlyingItemEntityRenderer::new);
     }
 
 }

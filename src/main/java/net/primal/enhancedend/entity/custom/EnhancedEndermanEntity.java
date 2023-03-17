@@ -40,17 +40,10 @@ import java.util.function.Predicate;
 public class EnhancedEndermanEntity
         extends EndermanEntity
         implements IAnimatable, Angerable {
-    private AnimationFactory factory = new AnimationFactory(this);
+    private final AnimationFactory factory = new AnimationFactory(this);
 
     public EnhancedEndermanEntity(EntityType<? extends EndermanEntity> entityType, World world) {
         super(entityType, world);
-    }
-    public static DefaultAttributeContainer.Builder setAttributes() {
-        return HostileEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 80.0)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.5f)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 16.0)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 64.0);
     }
 
     @Override
@@ -62,9 +55,16 @@ public class EnhancedEndermanEntity
         this.goalSelector.add(4, new LookAtEntityGoal(this, PlayerEntity.class, 16.0f));
         this.goalSelector.add(5, new LookAroundGoal(this));
         this.targetSelector.add(1, new TeleportTowardsPlayerGoal(this, this::shouldAngerAt));
-        this.targetSelector.add(2, new RevengeGoal(this, new Class[0]));
+        this.targetSelector.add(2, new RevengeGoal(this));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, EndermiteEntity.class, true, false));
         this.targetSelector.add(4, new UniversalAngerGoal<>(this, false));
+    }
+    public static DefaultAttributeContainer.Builder setAttributes() {
+        return HostileEntity.createMobAttributes()
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 80.0)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.5f)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 16.0)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 64.0);
     }
 
     @Override

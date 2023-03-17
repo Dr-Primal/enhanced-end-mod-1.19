@@ -40,6 +40,9 @@
   "entity.enhancedend.bulwark_shadow": "Bulwark Shadow",
   "item.enhancedend.bulwark_shadow_spawn_egg": "Bulwark Shadow Spawn Egg",
 
+  "entity.enhancedend.bulwark_sentinel": "Bulwark Sentinel",
+  "item.enhancedend.bulwark_sentinel_spawn_egg": "Bulwark Sentinel Spawn Egg",
+
 
   "item.enhancedend.raw_allam": "Raw Allam",
   "item.enhancedend.cooked_allam": "Cooked Allam",
@@ -109,6 +112,20 @@
   "block.enhancedend.polished_kimberlite_stairs": "Polished Kimberlite Stairs",
   "block.enhancedend.polished_kimberlite_slab": "Polished Kimberlite Slab",
   "block.enhancedend.polished_kimberlite_wall": "Polished Kimberlite Wall",
+
+
+
+  "block.enhancedend.arc_stone": "Arc",
+  "block.enhancedend.arc_stairs": "Arc Stairs",
+  "block.enhancedend.arc_slab": "Arc Slab",
+
+  "block.enhancedend.arc_bricks": "Arc Bricks",
+  "block.enhancedend.arc_brick_stairs": "Arc Brick Stairs",
+  "block.enhancedend.arc_brick_slab": "Arc Brick Slab",
+  "block.enhancedend.arc_brick_wall": "Arc Brick Wall",
+
+
+
 
   "block.enhancedend.midnight_end_stone": "Midnight End Stone",
   "block.enhancedend.corlite_end_stone": "Corlite End Stone",

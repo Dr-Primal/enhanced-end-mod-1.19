@@ -44,6 +44,6 @@ public class EnhancedMagicEnchantment extends Enchantment {
     }
     @Override
     public boolean canAccept(Enchantment other) {
-        return super.canAccept(other) && other != Enchantments.THORNS && other !=ModEnchantments.TAINTED_MAGIC;
+        return super.canAccept(other);
     }
 }

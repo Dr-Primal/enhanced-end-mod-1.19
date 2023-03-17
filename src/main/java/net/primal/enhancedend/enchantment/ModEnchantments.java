@@ -8,8 +8,7 @@ import net.minecraft.util.registry.Registry;
 import net.primal.enhancedend.EnhancedEnd;
 
 public class ModEnchantments {
-    public static final Enchantment TAINTED_MAGIC = register("tainted_magic",
-            new TaintedMagicEnchantment(Enchantment.Rarity.VERY_RARE, EquipmentSlot.CHEST));
+
     public static final Enchantment ENHANCED_MAGIC = register("enhanced_magic",
             new EnhancedMagicEnchantment(Enchantment.Rarity.VERY_RARE, EquipmentSlot.CHEST));
     public static Enchantment BLINDING_ASPECT = register("blinding_aspect",

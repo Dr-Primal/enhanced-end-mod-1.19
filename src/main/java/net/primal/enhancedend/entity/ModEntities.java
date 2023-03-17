@@ -8,8 +8,10 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.primal.enhancedend.EnhancedEnd;
 import net.primal.enhancedend.entity.custom.*;
+import net.primal.enhancedend.entity.projectile.thrown.BlindDiskEntity;
 
 public class ModEntities {
+    //Mobs
     public static final EntityType<EnhancedEndermanEntity> ENHANCED_ENDERMAN = Registry.register(
             Registry.ENTITY_TYPE, new Identifier(EnhancedEnd.MOD_ID, "enhanced_enderman"),
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, EnhancedEndermanEntity::new)
@@ -39,4 +41,19 @@ public class ModEntities {
             Registry.ENTITY_TYPE, new Identifier(EnhancedEnd.MOD_ID, "bulwark_shadow"),
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, BulwarkShadowEntity::new)
                     .dimensions(EntityDimensions.fixed(0.95f, 1.75f)).build());
+
+    public static final EntityType<BulwarkSentinelEntity> BULWARK_SENTINEL = Registry.register(
+            Registry.ENTITY_TYPE, new Identifier(EnhancedEnd.MOD_ID, "bulwark_striker"),
+            FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, BulwarkSentinelEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.95f, 2.25f)).build());
+
+    //Projectiles
+    public static final EntityType<BlindDiskEntity> BlindDiskEntityEntityType = Registry.register(
+            Registry.ENTITY_TYPE,
+            new Identifier(EnhancedEnd.MOD_ID, "blind_disk"),
+            FabricEntityTypeBuilder.<BlindDiskEntity>create(SpawnGroup.MISC, BlindDiskEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.4f, 0.1f))
+                    .trackRangeBlocks(4).trackedUpdateRate(10)
+                    .build()
+    );
 }

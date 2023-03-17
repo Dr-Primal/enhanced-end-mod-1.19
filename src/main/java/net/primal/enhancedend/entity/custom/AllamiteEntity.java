@@ -37,12 +37,11 @@ import software.bernie.geckolib3.core.controller.AnimationController;
 import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
-
 import java.util.UUID;
 
 public class AllamiteEntity extends AnimalEntity implements IAnimatable, Angerable {
 
-    private AnimationFactory factory = new AnimationFactory(this);
+    private final AnimationFactory factory = new AnimationFactory(this);
 
     public AllamiteEntity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
@@ -54,7 +53,7 @@ public class AllamiteEntity extends AnimalEntity implements IAnimatable, Angerab
     @Override
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this));
-        this.targetSelector.add(1, new RevengeGoal(this, new Class[0]));
+        this.targetSelector.add(1, new RevengeGoal(this));
         this.goalSelector.add(1, new MeleeAttackGoal(this, 1.5, false));
         this.targetSelector.add(2, new AnimalMateGoal(this, 1));
         this.goalSelector.add(3, new TemptGoal(this, 1.25, Ingredient.ofItems(ModBlocks.MIDNIGHT_MUSHROOM.asItem()), false));

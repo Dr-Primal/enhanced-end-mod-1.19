@@ -29,6 +29,15 @@
     "enhancedend:polished_kimberlite_stairs",
     "enhancedend:polished_kimberlite_slab",
     "enhancedend:polished_kimberlite_wall",
-    "enhancedend:kimberlite_pillar"
+    "enhancedend:kimberlite_pillar",
+
+    "enhancedend:arc_stone",
+    "enhancedend:arc_stairs",
+    "enhancedend:arc_slab",
+
+    "enhancedend:arc_bricks",
+    "enhancedend:arc_brick_stairs",
+    "enhancedend:arc_brick_slab",
+    "enhancedend:arc_brick_wall"
   ]
 }
