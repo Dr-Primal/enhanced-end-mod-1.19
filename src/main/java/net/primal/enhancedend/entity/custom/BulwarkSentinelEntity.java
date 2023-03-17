@@ -40,7 +40,6 @@ public class BulwarkSentinelEntity extends HostileEntity implements IAnimatable 
         this.goalSelector.add(1, new MeleeAttackGoal(this, 0.4, false));
         this.goalSelector.add(2, new LookAtEntityGoal(this, PlayerEntity.class, 16.0f));
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
-        this.goalSelector.add(3, new WanderAroundFarGoal(this, 0.4, 0.0f));
         this.goalSelector.add(8, new LookAroundGoal(this));
     }
 
