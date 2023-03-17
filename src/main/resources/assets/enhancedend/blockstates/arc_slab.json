@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "enhancedend:block/arc_slab"
+    },
+    "type=double": {
+      "model": "enhancedend:block/arc_stone"
+    },
+    "type=top": {
+      "model": "enhancedend:block/arc_slab_top"
+    }
+  }
+}

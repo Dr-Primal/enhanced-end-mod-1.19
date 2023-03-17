@@ -142,7 +142,7 @@ public class ModItems {
             new ModPhantomPearlItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.ENHANCED_END_ITEMS)));
     //Loot drop from Bulwark Sentry
     public static final Item SENTRY_DISK = registerItem("sentry_disk",
-            new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
+            new ModDiskItem(new FabricItemSettings().maxCount(16).group(ModItemGroup.ENHANCED_END_ITEMS)));
 
     public static final Item CARNACUS_LEG = registerItem("carnacus_leg",
             new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
@@ -180,6 +180,10 @@ public class ModItems {
 
     public static final Item BULWARK_SHADOW_SPAWN_EGG = registerItem("bulwark_shadow_spawn_egg",
             new SpawnEggItem(ModEntities.BULWARK_SHADOW,0x000000, 0x939573,
+                    new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)));
+
+    public static final Item BULWARK_SENTINEL_SPAWN_EGG = registerItem("bulwark_sentinel_spawn_egg",
+            new SpawnEggItem(ModEntities.BULWARK_SENTINEL,0x474944, 0xf0f7ed,
                     new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)));
 
     private static Item registerItem(String name, Item item) {

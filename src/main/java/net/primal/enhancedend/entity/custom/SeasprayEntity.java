@@ -41,17 +41,22 @@ public class SeasprayEntity extends FlyingEntity implements IAnimatable {
     BlockPos circlingCenter = BlockPos.ORIGIN;
     SeasprayMovementType movementType = SeasprayMovementType.CIRCLE;
 
-    public SeasprayEntity(EntityType<? extends FlyingEntity> entityType, World world) {
-        super(entityType, world);
-        this.experiencePoints = 5;
-        this.moveControl = new SeasprayEntity.SeasprayMoveControl(this);
-        this.lookControl = new SeasprayLookControl(this);
+    @Override
+    protected void initGoals() {
+        this.goalSelector.add(1, new SeasprayEntity.CircleMovementGoal());
     }
 
     public static DefaultAttributeContainer.Builder setAttributes() {
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 10.0)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3f);
+    }
+
+    public SeasprayEntity(EntityType<? extends FlyingEntity> entityType, World world) {
+        super(entityType, world);
+        this.experiencePoints = 5;
+        this.moveControl = new SeasprayEntity.SeasprayMoveControl(this);
+        this.lookControl = new SeasprayLookControl(this);
     }
 
     @Override
@@ -83,11 +88,6 @@ public class SeasprayEntity extends FlyingEntity implements IAnimatable {
     @Override
     protected BodyControl createBodyControl() {
         return new SeasprayEntity.SeasprayBodyControl(this);
-    }
-
-    @Override
-    protected void initGoals() {
-        this.goalSelector.add(1, new SeasprayEntity.CircleMovementGoal());
     }
 
     @Override

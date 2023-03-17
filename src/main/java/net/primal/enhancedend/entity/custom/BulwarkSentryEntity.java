@@ -2,6 +2,7 @@ package net.primal.enhancedend.entity.custom;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.ai.RangedAttackMob;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -13,8 +14,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldEvents;
-import net.primal.enhancedend.entity.projectile.BlindballEntity;
+import net.primal.enhancedend.entity.projectile.thrown.BlindDiskEntity;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
 import software.bernie.geckolib3.core.builder.AnimationBuilder;
@@ -23,9 +23,7 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-import java.util.EnumSet;
-
-public class BulwarkSentryEntity extends HostileEntity implements IAnimatable {
+public class BulwarkSentryEntity extends HostileEntity implements IAnimatable, RangedAttackMob {
     public BulwarkSentryEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
     }
@@ -34,9 +32,9 @@ public class BulwarkSentryEntity extends HostileEntity implements IAnimatable {
 
     @Override
     protected void initGoals() {
-        this.goalSelector.add(3, new BulwarkSentryEntity.ShootBlindballGoal(this));
-        this.goalSelector.add(2, new GoToWalkTargetGoal(this, 1.4));
-        this.goalSelector.add(1, new LookAtEntityGoal(this, PlayerEntity.class, 64.0f));
+        this.goalSelector.add(1, new ProjectileAttackGoal(this, 1.3, 40, 16.0f));
+        this.goalSelector.add(2, new GoToWalkTargetGoal(this, 1.3));
+        this.goalSelector.add(1, new LookAtEntityGoal(this, PlayerEntity.class, 32.0f));
         this.goalSelector.add(1, new LookAroundGoal(this));
         this.targetSelector.add(2, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
     }
@@ -76,7 +74,7 @@ public class BulwarkSentryEntity extends HostileEntity implements IAnimatable {
         }
         boolean bl = super.damage(source, amount);
         if (bl) {
-            this.playSound(SoundEvents.ENTITY_GUARDIAN_HURT, 1.0f, 0.1f);
+            this.playSound(SoundEvents.ENTITY_BEE_HURT, 1.0f, 0.1f);
         }
         return super.damage(source, amount);
     }
@@ -109,17 +107,6 @@ public class BulwarkSentryEntity extends HostileEntity implements IAnimatable {
     private int eyeOffsetCooldown;
 
     @Override
-    protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_GUARDIAN_DEATH;
-    }
-
-    @Override
-    public float getSoundPitch() {
-        return 0.1f;
-    }
-
-
-    @Override
     public void registerControllers(AnimationData animationData) {
         animationData.addAnimationController(new AnimationController(this, "controller",
                 0, this::predicate));
@@ -137,101 +124,31 @@ public class BulwarkSentryEntity extends HostileEntity implements IAnimatable {
         return factory;
     }
 
-    static class ShootBlindballGoal
-            extends Goal {
-        private final BulwarkSentryEntity bulwark_sentry;
-        private int bulletsFired;
-        private int bulletCooldown;
-        private int targetNotVisibleTicks;
+    @Override
+    public void attack(LivingEntity target, float pullProgress) {
+        BlindDiskEntity blindDiskEntity = new BlindDiskEntity(this.world, this);
+        double d = target.getEyeY() - (double)1.1f;
+        double e = target.getX() - this.getX();
+        double f = d - blindDiskEntity.getY();
+        double g = target.getZ() - this.getZ();
+        double h = Math.sqrt(e * e + g * g) * (double)0.2f;
+        blindDiskEntity.setVelocity(e, f + h, g, 1.5f, 0.0f);
+        this.playSound(SoundEvents.ENTITY_BEE_STING, 1.0f, 0.01f / (this.getRandom().nextFloat() * 0.4f + 0.8f));
+        this.world.spawnEntity(blindDiskEntity);
+    }
 
-        public ShootBlindballGoal(BulwarkSentryEntity bulwark_sentry) {
-            this.bulwark_sentry = bulwark_sentry;
-            this.setControls(EnumSet.of(Goal.Control.MOVE, Goal.Control.LOOK));
-        }
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return SoundEvents.ENTITY_BEE_LOOP_AGGRESSIVE;
+    }
 
-        @Override
-        public boolean canStart() {
-            LivingEntity livingEntity = this.bulwark_sentry.getTarget();
-            return livingEntity != null && livingEntity.isAlive() && this.bulwark_sentry.canTarget(livingEntity);
-        }
+    @Override
+    protected SoundEvent getDeathSound() {
+        return SoundEvents.ENTITY_BEE_DEATH;
+    }
 
-        @Override
-        public void start() {
-            this.bulletsFired = 0;
-        }
-
-        @Override
-        public void stop() {
-            this.targetNotVisibleTicks = 0;
-        }
-
-        @Override
-        public boolean shouldRunEveryTick() {
-            return true;
-        }
-
-        @Override
-        public void tick() {
-            --this.bulletCooldown;
-            LivingEntity livingEntity = this.bulwark_sentry.getTarget();
-            if (livingEntity == null) {
-                return;
-            }
-            boolean bl = this.bulwark_sentry.getVisibilityCache().canSee(livingEntity);
-            this.targetNotVisibleTicks = bl ? 0 : ++this.targetNotVisibleTicks;
-            double d = this.bulwark_sentry.squaredDistanceTo(livingEntity);
-            if (d < 4.0) {
-                if (!bl) {
-                    return;
-                }
-                if (this.bulletCooldown <= 0) {
-                    this.bulletCooldown = 5;
-                    this.bulwark_sentry.tryAttack(livingEntity);
-                }
-                this.bulwark_sentry.getMoveControl().moveTo(livingEntity.getX(), livingEntity.getY(), livingEntity.getZ(), 3.0);
-            }
-            else if (d < this.getFollowRange() * this.getFollowRange() && bl) {
-                double e = livingEntity.getX() - this.bulwark_sentry.getX();
-                double f = livingEntity.getBodyY(0.5) - this.bulwark_sentry.getBodyY(0.5);
-                double g = livingEntity.getZ() - this.bulwark_sentry.getZ();
-                if (this.bulletCooldown <= 0) {
-                    ++this.bulletsFired;
-                    if (this.bulletsFired == 1) {
-                        this.bulletCooldown = 5;
-                    } else if (this.bulletsFired <= 6) {
-                        this.bulletCooldown = 20;
-                    } else {
-                        this.bulletCooldown = 40;
-                        this.bulletsFired = 0;
-                    }
-                    if (this.bulletsFired > 1) {
-                        double h = Math.sqrt(Math.sqrt(d)) * 0.5;
-                        if (!this.bulwark_sentry.isSilent()) {
-                            this.bulwark_sentry.world.syncWorldEvent(null, WorldEvents.EYE_OF_ENDER_BREAKS, this.bulwark_sentry.getBlockPos(), 0);
-                        }
-                        for (int i = 0; i < 1; ++i) {
-                            BlindballEntity blindballEntity =
-                                    new BlindballEntity(
-                                            this.bulwark_sentry.world,
-                                            this.bulwark_sentry,
-                                            this.bulwark_sentry.getRandom()
-                                            .nextTriangular(e, 2.297 * h), f, this.bulwark_sentry.getRandom()
-                                            .nextTriangular(g, 2.297 * h));
-                            blindballEntity.setPosition(blindballEntity.getX(),
-                                    this.bulwark_sentry.getBodyY(0.5) + 0.5, blindballEntity.getZ());
-                            this.bulwark_sentry.world.spawnEntity(blindballEntity);
-                        }
-                    }
-                }
-                this.bulwark_sentry.getLookControl().lookAt(livingEntity, 10.0f, 10.0f);
-            } else if (this.targetNotVisibleTicks < 5) {
-                this.bulwark_sentry.getMoveControl().moveTo(livingEntity.getX(), livingEntity.getY(), livingEntity.getZ(), 3.0);
-            }
-            super.tick();
-        }
-
-        private double getFollowRange() {
-            return this.bulwark_sentry.getAttributeValue(EntityAttributes.GENERIC_FOLLOW_RANGE);
-        }
+    @Override
+    public float getSoundPitch() {
+        return 0.01f;
     }
 }

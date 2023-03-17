@@ -13,7 +13,7 @@ import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
 public class EnforcedObsidianGolemRenderer extends GeoEntityRenderer<EnforcedObsidianGolemEntity> {
     public EnforcedObsidianGolemRenderer(EntityRendererFactory.Context ctx) {
         super(ctx, new EnforcedObsidianGolemModel());
-        this.shadowRadius = 1f;
+        this.shadowRadius = 1.0f;
     }
     @Override
     public Identifier getTextureResource(EnforcedObsidianGolemEntity instance) {

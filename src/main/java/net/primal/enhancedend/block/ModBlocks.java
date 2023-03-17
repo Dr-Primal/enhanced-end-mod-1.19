@@ -293,7 +293,39 @@ public class ModBlocks {
             new ModScoriaBlock(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.STONE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
 
-    //Flowers, Plants, and Potted Variants
+
+    //Arc and Arc Variants
+    public static final Block ARC_STONE = registerBlock("arc_stone",
+            new Block(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+
+    public static final Block ARC_STAIRS = registerBlock("arc_stairs",
+            new ModStairsBlock(ModBlocks.ARC_STONE.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+
+    public static final Block ARC_SLAB = registerBlock("arc_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+
+
+
+    public static final Block ARC_BRICKS = registerBlock("arc_bricks",
+            new Block(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+
+    public static final Block ARC_BRICK_STAIRS = registerBlock("arc_brick_stairs",
+            new ModStairsBlock(ModBlocks.ARC_BRICKS.getDefaultState(), FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+
+    public static final Block ARC_BRICK_SLAB = registerBlock("arc_brick_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+
+    public static final Block ARC_BRICK_WALL = registerBlock("arc_brick_wall",
+            new WallBlock(FabricBlockSettings.of(Material.STONE).strength(5000f, 50000f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+
+    //Plants
     public static final Block SHADED_OCULIT = registerBlock("shaded_oculit",
             new ModFlowerBlock(StatusEffects.SLOW_FALLING, 8,
                     FabricBlockSettings.of(Material.NETHER_SHOOTS, MapColor.TERRACOTTA_BLACK)
@@ -321,6 +353,7 @@ public class ModBlocks {
             new ModEneriaCaneBlock(FabricBlockSettings.of(Material.PLANT).noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.WET_GRASS)),
             ModItemGroup.ENHANCED_END_DECORATIONS);
 
+    //Potted Plants
     public static final Block POTTED_SHADED_OCULIT = registerBlockWithoutItem("potted_shaded_oculit",
             new FlowerPotBlock(SHADED_OCULIT, FabricBlockSettings.of(Material.DECORATION).breakInstantly().nonOpaque()));
     public static final Block POTTED_TINTED_OCULIT = registerBlockWithoutItem("potted_tinted_oculit",
@@ -355,6 +388,9 @@ public class ModBlocks {
         return Registry.register(Registry.ITEM, new Identifier(EnhancedEnd.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings().group(tab)));
     }
+
+
+
 
 
     public static void registerModBlocks() {

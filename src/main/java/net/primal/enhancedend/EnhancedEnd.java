@@ -55,5 +55,8 @@ public class EnhancedEnd implements ModInitializer {
 
 		FabricDefaultAttributeRegistry.register(ModEntities.BULWARK_SHADOW, BulwarkShadowEntity.setAttributes());
 		EntityRendererRegistry.register(ModEntities.BULWARK_SHADOW, BulwarkShadowRenderer::new);
+
+		FabricDefaultAttributeRegistry.register(ModEntities.BULWARK_SENTINEL, BulwarkSentinelEntity.setAttributes());
+		EntityRendererRegistry.register(ModEntities.BULWARK_SENTINEL, BulwarkSentinelRenderer::new);
 	}
 }

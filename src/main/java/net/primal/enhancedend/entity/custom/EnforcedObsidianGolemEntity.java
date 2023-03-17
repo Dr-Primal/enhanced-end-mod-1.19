@@ -9,6 +9,7 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.HostileEntity;
+import net.minecraft.entity.mob.WardenEntity;
 import net.minecraft.entity.passive.GolemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.sound.SoundEvent;
@@ -29,6 +30,37 @@ public class EnforcedObsidianGolemEntity extends HostileEntity implements IAnima
         super(entityType, world);
     }
     private final AnimationFactory factory = new AnimationFactory(this);
+
+    @Override
+    protected int getNextAirUnderwater(int air) {
+        return air;
+    }
+
+    @Override
+    public boolean canTarget(EntityType<?> type) {
+        return super.canTarget(type);
+    }
+
+    @Override
+    protected void initGoals() {
+        this.goalSelector.add(1, new SwimGoal(this));
+        this.goalSelector.add(2, new MeleeAttackGoal(this, 1.0, false));
+        this.goalSelector.add(2, new LookAtEntityGoal(this, PlayerEntity.class, 6.0f));
+        this.targetSelector.add(2, new ActiveTargetGoal<>(this, GolemEntity.class, true));
+        this.targetSelector.add(3, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
+    }
+
+    public static DefaultAttributeContainer.Builder setAttributes() {
+        return HostileEntity.createMobAttributes()
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 170.0)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.285f)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 40.0)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 16.0)
+                .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 1.0)
+                .add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, 0.0)
+                .add(EntityAttributes.GENERIC_ARMOR, 6.0)
+                .add(EntityAttributes.GENERIC_ATTACK_SPEED, 2.5);
+    }
 
     @Override
     public boolean handleFallDamage(float fallDistance, float damageMultiplier, DamageSource damageSource) {
@@ -88,37 +120,6 @@ public class EnforcedObsidianGolemEntity extends HostileEntity implements IAnima
         }
         this.playSound(SoundEvents.ENTITY_IRON_GOLEM_ATTACK, 1.0f, 0.65f);
         return bl;
-    }
-
-    @Override
-    protected int getNextAirUnderwater(int air) {
-        return air;
-    }
-
-    @Override
-    protected void initGoals() {
-        this.goalSelector.add(1, new SwimGoal(this));
-        this.goalSelector.add(2, new MeleeAttackGoal(this, 1.0, false));
-        this.goalSelector.add(2, new LookAtEntityGoal(this, PlayerEntity.class, 6.0f));
-        this.targetSelector.add(2, new ActiveTargetGoal<>(this, GolemEntity.class, true));
-        this.targetSelector.add(3, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
-    }
-
-    public static DefaultAttributeContainer.Builder setAttributes() {
-        return HostileEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 170.0)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3f)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 40.0)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 16.0)
-                .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 1.0)
-                .add(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, 0.0)
-                .add(EntityAttributes.GENERIC_ARMOR, 6.0)
-                .add(EntityAttributes.GENERIC_ATTACK_SPEED, 2.5);
-    }
-
-    @Override
-    public boolean canTarget(EntityType<?> type) {
-        return super.canTarget(type);
     }
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {

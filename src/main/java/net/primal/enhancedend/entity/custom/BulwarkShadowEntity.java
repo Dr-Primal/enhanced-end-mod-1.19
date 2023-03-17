@@ -8,6 +8,7 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
@@ -25,21 +26,21 @@ public class BulwarkShadowEntity extends HostileEntity implements IAnimatable {
         super(entityType, world);
     }
 
-    public static DefaultAttributeContainer.Builder setAttributes() {
-        return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 30.0)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.15f)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 20.0)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 16.0);
-    }
-
     @Override
     protected void initGoals() {
         this.goalSelector.add(4, new SwimGoal(this));
         this.goalSelector.add(1, new MeleeAttackGoal(this, 1, false));
-        this.goalSelector.add(2, new LookAtEntityGoal(this, PlayerEntity.class, 6.0f));
+        this.goalSelector.add(2, new LookAtEntityGoal(this, PlayerEntity.class, 8.0f));
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
         this.goalSelector.add(3, new WanderAroundFarGoal(this, 1, 0.0f));
+    }
+
+    public static DefaultAttributeContainer.Builder setAttributes() {
+        return MobEntity.createMobAttributes()
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 30.0)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.15f)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 25.0)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 16.0);
     }
 
     @Override
@@ -69,9 +70,23 @@ public class BulwarkShadowEntity extends HostileEntity implements IAnimatable {
         }
         boolean bl = super.damage(source, amount);
         if (bl) {
-            this.playSound(SoundEvents.ENTITY_SKELETON_HURT, 1.0f, 0.1f);
+            this.playSound(SoundEvents.ENTITY_WITHER_SKELETON_HURT, 1.0f, 0.1f);
         }
         return super.damage(source, amount);
+    }
+
+    @Override
+    public void tickMovement() {
+        if (this.world.isClient) {
+            for (int i = 0; i < 2; ++i) {
+                this.world.addParticle(ParticleTypes.ASH,
+                        this.getParticleX(0.5), this.getRandomBodyY() - 0.25,
+                        this.getParticleZ(0.5), (this.random.nextDouble() - 0.5) * 2.0,
+                        -this.random.nextDouble(), (this.random.nextDouble() - 0.5) * 2.0);
+            }
+        }
+        this.jumping = false;
+        super.tickMovement();
     }
 
     private final AnimationFactory factory = new AnimationFactory(this);
@@ -107,21 +122,21 @@ public class BulwarkShadowEntity extends HostileEntity implements IAnimatable {
 
     @Override
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.ENTITY_SKELETON_AMBIENT;
+        return SoundEvents.ENTITY_WITHER_SKELETON_AMBIENT;
     }
 
     @Override
     protected SoundEvent getHurtSound(DamageSource source) {
-        return SoundEvents.ENTITY_SKELETON_HURT;
+        return SoundEvents.ENTITY_WITHER_SKELETON_HURT;
     }
 
     @Override
     protected SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_SKELETON_DEATH;
+        return SoundEvents.ENTITY_WITHER_SKELETON_DEATH;
     }
 
     @Override
     public float getSoundPitch() {
-        return 0.1f;
+        return 0.01f;
     }
 }

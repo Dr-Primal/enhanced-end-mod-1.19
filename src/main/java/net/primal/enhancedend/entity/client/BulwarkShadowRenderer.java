@@ -14,7 +14,7 @@ public class BulwarkShadowRenderer extends GeoEntityRenderer<BulwarkShadowEntity
 
     public BulwarkShadowRenderer(EntityRendererFactory.Context ctx) {
         super(ctx, new BulwarkShadowModel());
-        this.shadowRadius = 1f;
+        this.shadowRadius = 1.0f;
     }
 
     @Override
