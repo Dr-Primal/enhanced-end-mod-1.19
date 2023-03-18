@@ -1,0 +1,18 @@
+{
+  "structures": [
+    {
+      "structure": "enhancedend:endermite_dungeon",
+      "weight": 1
+    }
+  ],
+  "placement": {
+
+    "salt": 1942636494,
+
+    "spacing": 12,
+
+    "separation": 4,
+
+    "type": "minecraft:random_spread"
+  }
+}
