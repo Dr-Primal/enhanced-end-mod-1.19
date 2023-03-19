@@ -37,7 +37,7 @@ public class BulwarkSentinelEntity extends HostileEntity implements IAnimatable 
     @Override
     protected void initGoals() {
         this.goalSelector.add(4, new SwimGoal(this));
-        this.goalSelector.add(1, new MeleeAttackGoal(this, 0.4, false));
+        this.goalSelector.add(1, new MeleeAttackGoal(this, 1, false));
         this.goalSelector.add(2, new LookAtEntityGoal(this, PlayerEntity.class, 16.0f));
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
         this.goalSelector.add(8, new LookAroundGoal(this));
@@ -62,14 +62,26 @@ public class BulwarkSentinelEntity extends HostileEntity implements IAnimatable 
     }
 
     @Override
+    public boolean canImmediatelyDespawn(double distanceSquared) {
+        return false;
+    }
+
+    @Override
+    public boolean isPushable() {
+        return false;
+    }
+
+    @Override
     public boolean damage(DamageSource source, float amount) {
-        if (source == DamageSource.LAVA ||
+        if (
+                source == DamageSource.LAVA ||
                 source == DamageSource.CACTUS ||
                 source == DamageSource.MAGIC ||
                 source == DamageSource.HOT_FLOOR ||
                 source == DamageSource.FREEZE ||
                 source == DamageSource.WITHER ||
                 source == DamageSource.ON_FIRE ||
+                source == DamageSource.IN_FIRE ||
                 source == DamageSource.SWEET_BERRY_BUSH ||
                 source.isExplosive() ||
                 source.isFire() ||
@@ -81,11 +93,6 @@ public class BulwarkSentinelEntity extends HostileEntity implements IAnimatable 
             this.playSound(SoundEvents.ENTITY_SKELETON_HURT, 1.0f, 0.1f);
         }
         return super.damage(source, amount);
-    }
-
-    @Override
-    protected void initEquipment(Random random, LocalDifficulty localDifficulty) {
-        this.equipStack(EquipmentSlot.MAINHAND, new ItemStack(Items.IRON_SWORD));
     }
 
     @Override

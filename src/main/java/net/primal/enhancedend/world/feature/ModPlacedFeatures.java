@@ -10,17 +10,9 @@ import net.minecraft.world.gen.placementmodifier.*;
 import java.util.List;
 
 public class ModPlacedFeatures {
-    public static final RegistryEntry<PlacedFeature> MIDNIGHT_PLACED = PlacedFeatures.register("midnight_placed",
-            ModConfiguredFeatures.MIDNIGHT_SPAWN,
-            VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(1, 0.1f, 2)));
-
-    public static final RegistryEntry<PlacedFeature> CORLITE_PLACED = PlacedFeatures.register("corlite_placed",
-            ModConfiguredFeatures.CORLITE_SPAWN,
-            VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(1, 0.1f, 2)));
-
     public static final RegistryEntry<PlacedFeature> ENDIUM_PLACED = PlacedFeatures.register("endium_placed",
             ModConfiguredFeatures.ENDIUM_SPAWN,
-            VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(1, 0.1f, 2)));
+            VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(1, 0.1f, 1)));
 
 
     public static final RegistryEntry<PlacedFeature> TANZANITE_ORE_PLACED = PlacedFeatures.register("tanzanite_ore_placed",

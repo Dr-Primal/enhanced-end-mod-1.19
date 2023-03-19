@@ -18,6 +18,6 @@ public class BulwarkSentinelModel extends AnimatedGeoModel<BulwarkSentinelEntity
 
     @Override
     public Identifier getAnimationResource(BulwarkSentinelEntity animatable) {
-        return new Identifier(EnhancedEnd.MOD_ID, "animations/bulwark_striker.animation.json");
+        return new Identifier(EnhancedEnd.MOD_ID, "animations/bulwark_sentinel.animation.json");
     }
 }

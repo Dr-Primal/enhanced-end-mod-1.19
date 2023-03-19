@@ -54,7 +54,7 @@ public class BlindDiskEntity extends ThrownItemEntity {
                 i = 80;
             }
             if (i > 0) {
-                entity.damage(DamageSource.thrownProjectile(this, this.getOwner()), (float) i / 12);
+                entity.damage(DamageSource.thrownProjectile(this, this.getOwner()), (float) i / 16);
                 ((LivingEntity)entity).addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, i * 2), this.getEffectCause());
             }
         }

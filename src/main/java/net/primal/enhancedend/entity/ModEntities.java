@@ -43,7 +43,7 @@ public class ModEntities {
                     .dimensions(EntityDimensions.fixed(0.95f, 1.75f)).build());
 
     public static final EntityType<BulwarkSentinelEntity> BULWARK_SENTINEL = Registry.register(
-            Registry.ENTITY_TYPE, new Identifier(EnhancedEnd.MOD_ID, "bulwark_striker"),
+            Registry.ENTITY_TYPE, new Identifier(EnhancedEnd.MOD_ID, "bulwark_sentinel"),
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, BulwarkSentinelEntity::new)
                     .dimensions(EntityDimensions.fixed(0.95f, 2.25f)).build());
 

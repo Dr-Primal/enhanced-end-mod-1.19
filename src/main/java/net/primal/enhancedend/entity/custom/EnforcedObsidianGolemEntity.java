@@ -3,6 +3,7 @@ package net.primal.enhancedend.entity.custom;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
+import net.minecraft.entity.ai.pathing.PathNodeType;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
@@ -28,18 +29,16 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 public class EnforcedObsidianGolemEntity extends HostileEntity implements IAnimatable {
     public EnforcedObsidianGolemEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
+        this.getNavigation().setCanSwim(true);
+        this.setPathfindingPenalty(PathNodeType.UNPASSABLE_RAIL, 0.0f);
+        this.setPathfindingPenalty(PathNodeType.DAMAGE_OTHER, 8.0f);
+        this.setPathfindingPenalty(PathNodeType.POWDER_SNOW, 8.0f);
+        this.setPathfindingPenalty(PathNodeType.LAVA, 8.0f);
+        this.setPathfindingPenalty(PathNodeType.DAMAGE_FIRE, 0.0f);
+        this.setPathfindingPenalty(PathNodeType.DANGER_FIRE, 0.0f);
     }
+
     private final AnimationFactory factory = new AnimationFactory(this);
-
-    @Override
-    protected int getNextAirUnderwater(int air) {
-        return air;
-    }
-
-    @Override
-    public boolean canTarget(EntityType<?> type) {
-        return super.canTarget(type);
-    }
 
     @Override
     protected void initGoals() {
@@ -68,24 +67,46 @@ public class EnforcedObsidianGolemEntity extends HostileEntity implements IAnima
     }
 
     @Override
-    public boolean isOnFire() {
+    public boolean isImmuneToExplosion() {
+        return true;
+    }
+
+    @Override
+    public boolean canImmediatelyDespawn(double distanceSquared) {
         return false;
     }
 
     @Override
+    public boolean isPushable() {
+        return false;
+    }
+
+    @Override
+    protected int getNextAirUnderwater(int air) {
+        return air;
+    }
+
+    @Override
+    public boolean canTarget(EntityType<?> type) {
+        return super.canTarget(type);
+    }
+
+    @Override
     public boolean damage(DamageSource source, float amount) {
-    if (source == DamageSource.LAVA ||
-        source == DamageSource.CACTUS ||
-        source == DamageSource.MAGIC ||
-        source == DamageSource.HOT_FLOOR ||
-        source == DamageSource.FREEZE ||
-        source == DamageSource.WITHER ||
-        source == DamageSource.ON_FIRE ||
-        source == DamageSource.SWEET_BERRY_BUSH ||
-        source.isExplosive() ||
-        source.isFire() ||
-        source.isProjectile() ||
-        source.isMagic()) {
+        if (
+                        source == DamageSource.LAVA ||
+                        source == DamageSource.CACTUS ||
+                        source == DamageSource.MAGIC ||
+                        source == DamageSource.HOT_FLOOR ||
+                        source == DamageSource.FREEZE ||
+                        source == DamageSource.WITHER ||
+                        source == DamageSource.ON_FIRE ||
+                        source == DamageSource.IN_FIRE ||
+                        source == DamageSource.SWEET_BERRY_BUSH ||
+                        source.isExplosive() ||
+                        source.isFire() ||
+                        source.isProjectile() ||
+                        source.isMagic()) {
             return true;
         }
         boolean bl = super.damage(source, amount);

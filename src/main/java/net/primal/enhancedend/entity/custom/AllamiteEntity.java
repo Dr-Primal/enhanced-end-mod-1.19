@@ -93,7 +93,7 @@ public class AllamiteEntity extends AnimalEntity implements IAnimatable, Angerab
     @Override
     public float getSoundPitch() {
         if (this.isBaby()) {
-            return 0.3f;
+            return 0.5f;
         }
         return 0.1f;
     }

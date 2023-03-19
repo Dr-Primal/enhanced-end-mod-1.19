@@ -30,15 +30,15 @@ public class BulwarkShadowEntity extends HostileEntity implements IAnimatable {
     protected void initGoals() {
         this.goalSelector.add(4, new SwimGoal(this));
         this.goalSelector.add(1, new MeleeAttackGoal(this, 1, false));
-        this.goalSelector.add(2, new LookAtEntityGoal(this, PlayerEntity.class, 8.0f));
+        this.goalSelector.add(2, new LookAtEntityGoal(this, PlayerEntity.class, 16.0f));
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
     }
 
     public static DefaultAttributeContainer.Builder setAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 30.0)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.15f)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 25.0)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 20.0)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.45f)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 30.0)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 16.0);
     }
 
@@ -53,14 +53,26 @@ public class BulwarkShadowEntity extends HostileEntity implements IAnimatable {
     }
 
     @Override
+    public boolean canImmediatelyDespawn(double distanceSquared) {
+        return false;
+    }
+
+    @Override
+    public boolean isPushable() {
+        return false;
+    }
+
+    @Override
     public boolean damage(DamageSource source, float amount) {
-        if (source == DamageSource.LAVA ||
+        if (
+                source == DamageSource.LAVA ||
                 source == DamageSource.CACTUS ||
                 source == DamageSource.MAGIC ||
                 source == DamageSource.HOT_FLOOR ||
                 source == DamageSource.FREEZE ||
                 source == DamageSource.WITHER ||
                 source == DamageSource.ON_FIRE ||
+                source == DamageSource.IN_FIRE ||
                 source == DamageSource.SWEET_BERRY_BUSH ||
                 source.isExplosive() ||
                 source.isFire() ||

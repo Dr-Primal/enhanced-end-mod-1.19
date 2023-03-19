@@ -80,6 +80,7 @@ public class ModItems {
 
     public static final Item TANZANITE_BEETROOT = registerItem("tanzanite_beetroot",
             new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)
+                    .maxCount(16)
                     .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.8f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 6000, 0), 1.0f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 300, 0), 1.0f)
@@ -87,16 +88,19 @@ public class ModItems {
                             .alwaysEdible().build())));
     public static final Item DIAMOND_BEETROOT = registerItem("diamond_beetroot",
             new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)
+                    .maxCount(16)
                     .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.8f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 2000, 0), 1f)
                             .alwaysEdible().build())));
     public static final Item GOLDEN_BEETROOT = registerItem("golden_beetroot",
             new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)
+                    .maxCount(16)
                     .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.8f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.HASTE, 2400, 0), 1f)
                             .alwaysEdible().build())));
     public static final Item ENHANCED_BEETROOT = registerItem("enhanced_beetroot",
             new ModEnchantedFoodItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)
+                    .maxCount(16)
                     .food(new FoodComponent.Builder().hunger(2).saturationModifier(1f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 30, 4), 1f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 1000, 1), 0.8f)
@@ -106,6 +110,7 @@ public class ModItems {
                             .alwaysEdible().build())));
     public static final Item CORRUPTED_BEETROOT = registerItem("corrupted_beetroot",
             new ModEnchantedFoodItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)
+                    .maxCount(16)
                     .food(new FoodComponent.Builder().hunger(2).saturationModifier(1.5f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 1000, 0), 0.6f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 1000, 0), 0.6f)

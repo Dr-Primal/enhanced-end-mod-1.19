@@ -32,9 +32,9 @@ public class BulwarkSentryEntity extends HostileEntity implements IAnimatable, R
 
     @Override
     protected void initGoals() {
-        this.goalSelector.add(1, new ProjectileAttackGoal(this, 1.3, 40, 16.0f));
-        this.goalSelector.add(2, new GoToWalkTargetGoal(this, 1.3));
-        this.goalSelector.add(1, new LookAtEntityGoal(this, PlayerEntity.class, 32.0f));
+        this.goalSelector.add(1, new ProjectileAttackGoal(this, 0.8, 60, 24.0f));
+        this.goalSelector.add(2, new GoToWalkTargetGoal(this, 0.8));
+        this.goalSelector.add(1, new LookAtEntityGoal(this, PlayerEntity.class, 24.0f));
         this.goalSelector.add(1, new LookAroundGoal(this));
         this.targetSelector.add(2, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
     }
@@ -43,8 +43,8 @@ public class BulwarkSentryEntity extends HostileEntity implements IAnimatable, R
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 40.0)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.23f)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 20.0)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 36.0);
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 15.0)
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 24.0);
     }
 
     @Override
@@ -59,13 +59,15 @@ public class BulwarkSentryEntity extends HostileEntity implements IAnimatable, R
 
     @Override
     public boolean damage(DamageSource source, float amount) {
-        if (source == DamageSource.LAVA ||
+        if (
+                source == DamageSource.LAVA ||
                 source == DamageSource.CACTUS ||
                 source == DamageSource.MAGIC ||
                 source == DamageSource.HOT_FLOOR ||
                 source == DamageSource.FREEZE ||
                 source == DamageSource.WITHER ||
                 source == DamageSource.ON_FIRE ||
+                source == DamageSource.IN_FIRE ||
                 source == DamageSource.SWEET_BERRY_BUSH ||
                 source.isExplosive() ||
                 source.isFire() ||
@@ -77,6 +79,21 @@ public class BulwarkSentryEntity extends HostileEntity implements IAnimatable, R
             this.playSound(SoundEvents.ENTITY_BEE_HURT, 1.0f, 0.1f);
         }
         return super.damage(source, amount);
+    }
+
+    @Override
+    public boolean disablesShield() {
+        return true;
+    }
+
+    @Override
+    public boolean canImmediatelyDespawn(double distanceSquared) {
+        return false;
+    }
+
+    @Override
+    public boolean isPushable() {
+        return false;
     }
 
     @Override
@@ -132,7 +149,7 @@ public class BulwarkSentryEntity extends HostileEntity implements IAnimatable, R
         double f = d - blindDiskEntity.getY();
         double g = target.getZ() - this.getZ();
         double h = Math.sqrt(e * e + g * g) * (double)0.2f;
-        blindDiskEntity.setVelocity(e, f + h, g, 1.5f, 0.0f);
+        blindDiskEntity.setVelocity(e, f + h, g, 1.35f, 0.0f);
         this.playSound(SoundEvents.ENTITY_BEE_STING, 1.0f, 0.01f / (this.getRandom().nextFloat() * 0.4f + 0.8f));
         this.world.spawnEntity(blindDiskEntity);
     }
