@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "enhancedend:block/laristone_slab"
+    },
+    "type=double": {
+      "model": "enhancedend:block/laristone"
+    },
+    "type=top": {
+      "model": "enhancedend:block/laristone_slab_top"
+    }
+  }
+}

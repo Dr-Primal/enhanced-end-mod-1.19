@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "enhancedend:laristone"
+    }
+  },
+  "result": {
+    "item": "enhancedend:laristone_stairs",
+    "count": 4
+  }
+}

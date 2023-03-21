@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "enhancedend:arc_bricks"
+    }
+  },
+  "result": {
+    "item": "enhancedend:arc_brick_slab",
+    "count": 6
+  }
+}

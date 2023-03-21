@@ -367,6 +367,43 @@ public class ModBlocks {
                     .strength(8f).requiresTool().sounds(BlockSoundGroup.STONE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
 
+    //Laristone and Laristone Variants
+    public static final Block LARISTONE = registerBlock("laristone",
+            new Block(FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_LIGHT_BLUE)
+                    .strength(6f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+
+    public static final Block LARISTONE_STAIRS = registerBlock("laristone_stairs",
+            new ModStairsBlock(ModBlocks.LARISTONE.getDefaultState(), FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_LIGHT_BLUE)
+                    .strength(6f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+
+    public static final Block LARISTONE_SLAB = registerBlock("laristone_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE, MapColor.LIGHT_BLUE)
+                    .strength(6f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+
+
+
+    public static final Block LARISTONE_BRICKS = registerBlock("laristone_bricks",
+            new Block(FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_LIGHT_BLUE)
+                    .strength(6f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+
+    public static final Block LARISTONE_BRICK_STAIRS = registerBlock("laristone_brick_stairs",
+            new ModStairsBlock(ModBlocks.LARISTONE_BRICKS.getDefaultState(), FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_LIGHT_BLUE)
+                    .strength(6f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+
+    public static final Block LARISTONE_BRICK_SLAB = registerBlock("laristone_brick_slab",
+            new SlabBlock(FabricBlockSettings.of(Material.STONE, MapColor.LIGHT_BLUE)
+                    .strength(6f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+
+    public static final Block LARISTONE_BRICK_WALL = registerBlock("laristone_brick_wall",
+            new WallBlock(FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_LIGHT_BLUE)
+                    .strength(6f).requiresTool().sounds(BlockSoundGroup.STONE)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
 
     //Arc and Arc Variants
     public static final Block ARC_STONE = registerBlock("arc_stone",

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "enhancedend:laristone"
+    }
+  },
+  "result": {
+    "item": "enhancedend:laristone_bricks",
+    "count": 4
+  }
+}

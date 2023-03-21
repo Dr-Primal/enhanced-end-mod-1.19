@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "enhancedend:block/laristone",
+    "top": "enhancedend:block/laristone",
+    "side": "enhancedend:block/laristone"
+  }
+}

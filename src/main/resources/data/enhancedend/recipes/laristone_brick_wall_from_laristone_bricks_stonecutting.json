@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "enhancedend:laristone_bricks"
+  },
+  "result": "enhancedend:laristone_brick_wall"
+}
