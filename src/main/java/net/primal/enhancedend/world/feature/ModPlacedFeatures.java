@@ -23,6 +23,10 @@ public class ModPlacedFeatures {
             ModConfiguredFeatures.CLITANIUM_ORE, modifiersWithCount(8,
                     HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(120))));
 
+    public static final RegistryEntry<PlacedFeature> ENDIUM_RHIZOME = PlacedFeatures.register("endium_rhizome_placed",
+            ModConfiguredFeatures.ENDIUM_RHIZOME, RarityFilterPlacementModifier.of(4), SquarePlacementModifier.of(),
+            PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+
 
 
     private static List<PlacementModifier> modifiers(PlacementModifier countModifier, PlacementModifier heightModifier) {

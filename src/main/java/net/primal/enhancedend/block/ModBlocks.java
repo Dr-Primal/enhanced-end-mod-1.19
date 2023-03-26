@@ -354,7 +354,7 @@ public class ModBlocks {
             new Block(FabricBlockSettings.of(Material.NETHER_WOOD, MapColor.LIME).strength(0.2f).sounds(BlockSoundGroup.WOOD)),
             ModItemGroup.ENHANCED_END_DECORATIONS);
     public static final Block ENDIUM_SOIL = registerBlock("endium_soil",
-            new Block(FabricBlockSettings.of(Material.SOIL, MapColor.DARK_GREEN)
+            new ModNyliumBlock(FabricBlockSettings.of(Material.SOIL, MapColor.DARK_GREEN)
                     .strength(0.7f).sounds(BlockSoundGroup.WET_GRASS)),
             ModItemGroup.ENHANCED_END_DECORATIONS);
     public static final Block HARDENED_ENDER_MATTER = registerBlock("hardened_ender_matter",
