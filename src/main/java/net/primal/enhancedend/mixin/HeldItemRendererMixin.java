@@ -37,7 +37,7 @@ public class HeldItemRendererMixin {
     @Inject(method = "renderFirstPersonItem", at = @At(value = "HEAD"), cancellable = true)
     private void renderFirstPersonItemMixin(AbstractClientPlayerEntity player, float tickDelta, float pitch, Hand hand, float swingProgress, ItemStack item, float equipProgress, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, CallbackInfo info) {
 
-        if (item.getItem() == ModItems.ENDIMINTIUM_CROSSBOW) {
+        if (item.getItem() == ModItems.ENDIMINTIUM_CROSSBOW || item.getItem() == ModItems.CLITANIUM_CROSSBOW) {
             matrices.push();
 
             boolean bl = hand == Hand.MAIN_HAND;

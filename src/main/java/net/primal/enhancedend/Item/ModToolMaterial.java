@@ -1,13 +1,17 @@
 package net.primal.enhancedend.Item;
 
+import net.fabricmc.yarn.constants.MiningLevels;
+import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
 import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
-    ENDIMINTIUM(100000, 100000, 100000f, 10.0f, 100,
-            () -> Ingredient.ofItems(ModItems.ENDIMINTIUM_SCRAP));
+    ENDIMINTIUM(100000, 2031, 9.0f, 4.0f, 15,
+            () -> Ingredient.ofItems(ModItems.ENDIMINTIUM_SCRAP)),
+    CLITANIUM(3, 500, 7.5f, 3.0f, 10,
+            () -> Ingredient.ofItems(ModItems.CLITANIUM));
 
     private final int miningLevel;
     private final int itemDurability;

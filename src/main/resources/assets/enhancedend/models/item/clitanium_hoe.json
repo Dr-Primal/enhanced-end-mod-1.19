@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "enhancedend:item/clitanium_hoe"
+  }
+}

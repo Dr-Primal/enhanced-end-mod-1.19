@@ -21,7 +21,7 @@ public class ModCrossbowItemMixin {
 
     @Inject(method = "createArrow", at = @At("RETURN"), locals = LocalCapture.CAPTURE_FAILSOFT, cancellable = true)
     private static void createArrowMixin(World world, LivingEntity entity, ItemStack crossbow, ItemStack arrow, CallbackInfoReturnable<PersistentProjectileEntity> info, ArrowItem arrowItem, PersistentProjectileEntity persistentProjectileEntity) {
-        if (crossbow.getItem() == ModItems.ENDIMINTIUM_CROSSBOW) {
+        if (crossbow.getItem() == ModItems.ENDIMINTIUM_CROSSBOW || crossbow.getItem() == ModItems.CLITANIUM_CROSSBOW) {
             persistentProjectileEntity.setDamage(persistentProjectileEntity.getDamage() * 1.25f + 1f);
             info.setReturnValue(persistentProjectileEntity);
         }
@@ -30,6 +30,13 @@ public class ModCrossbowItemMixin {
     @Inject(method = "getSpeed", at = @At("HEAD"), cancellable = true)
     private static void getSpeedMixin(ItemStack stack, CallbackInfoReturnable<Float> info) {
         if (stack.getItem() == ModItems.ENDIMINTIUM_CROSSBOW) {
+            if (hasProjectile(stack, Items.FIREWORK_ROCKET)) {
+                info.setReturnValue(4.0F);
+            } else {
+                info.setReturnValue(8.0F);
+            }
+        }
+        else if (stack.getItem() == ModItems.CLITANIUM_CROSSBOW) {
             if (hasProjectile(stack, Items.FIREWORK_ROCKET)) {
                 info.setReturnValue(2.0F);
             } else {

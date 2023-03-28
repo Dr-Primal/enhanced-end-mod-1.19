@@ -20,6 +20,8 @@ public class PlayerEntityRendererMixin {
         ItemStack itemStack = abstractClientPlayerEntity.getStackInHand(hand);
         if (!abstractClientPlayerEntity.handSwinging && itemStack.getItem() == ModItems.ENDIMINTIUM_CROSSBOW && CrossbowItem.isCharged(itemStack)) {
             cir.setReturnValue(BipedEntityModel.ArmPose.CROSSBOW_HOLD);
+        } else if (!abstractClientPlayerEntity.handSwinging && itemStack.getItem() == ModItems.CLITANIUM_CROSSBOW && CrossbowItem.isCharged(itemStack)) {
+            cir.setReturnValue(BipedEntityModel.ArmPose.CROSSBOW_HOLD);
         }
     }
 

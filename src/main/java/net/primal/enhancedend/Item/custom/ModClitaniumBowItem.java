@@ -1,6 +1,5 @@
 package net.primal.enhancedend.Item.custom;
 
-import java.util.function.Predicate;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
@@ -15,11 +14,13 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
-public class ModBowItem
+import java.util.function.Predicate;
+
+public class ModClitaniumBowItem
         extends RangedWeaponItem
         implements Vanishable {
 
-    public ModBowItem(Item.Settings settings) {
+    public ModClitaniumBowItem(Settings settings) {
         super(settings);
     }
 
@@ -40,7 +41,7 @@ public class ModBowItem
         if (itemStack.isEmpty()) {
             itemStack = new ItemStack(Items.ARROW);
         }
-        if ((double)(f = net.primal.enhancedend.Item.custom.ModBowItem.getPullProgress(i = this.getMaxUseTime(stack) - remainingUseTicks)) < 0.1) {
+        if ((double)(f = ModClitaniumBowItem.getPullProgress(i = this.getMaxUseTime(stack) - remainingUseTicks)) < 0.1) {
             return;
         }
         bl2 = bl && itemStack.isOf(Items.ARROW);
@@ -49,7 +50,7 @@ public class ModBowItem
             int j;
             ArrowItem arrowItem = (ArrowItem)(itemStack.getItem() instanceof ArrowItem ? itemStack.getItem() : Items.ARROW);
             PersistentProjectileEntity persistentProjectileEntity = arrowItem.createArrow(world, itemStack, playerEntity);
-            persistentProjectileEntity.setVelocity(playerEntity, playerEntity.getPitch(), playerEntity.getYaw(), 0.0f, f * 9.0f, 0.0f);
+            persistentProjectileEntity.setVelocity(playerEntity, playerEntity.getPitch(), playerEntity.getYaw(), 0.0f, f * 6.0f, 0.5f);
             if (f == 1.0f) {
                 persistentProjectileEntity.setCritical(true);
             }

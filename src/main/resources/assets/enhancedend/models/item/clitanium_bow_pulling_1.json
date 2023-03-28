@@ -1,0 +1,6 @@
+{
+    "parent": "enhancedend:item/clitanium_bow",
+    "textures": {
+        "layer0": "enhancedend:item/clitanium_bow_pulling_1"
+    }
+}

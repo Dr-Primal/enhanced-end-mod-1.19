@@ -1,0 +1,6 @@
+{
+  "parent": "enhancedend:item/clitanium_crossbow",
+  "textures": {
+    "layer0": "enhancedend:item/clitanium_crossbow_firework"
+  }
+}

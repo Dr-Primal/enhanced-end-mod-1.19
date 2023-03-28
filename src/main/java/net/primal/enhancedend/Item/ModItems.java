@@ -40,9 +40,14 @@ public class ModItems {
 
     //Bow
     public static final Item ENDIMINTIUM_BOW = registerItem("endimintium_bow",
-            new ModBowItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS).maxDamage(500).fireproof()));
+            new ModBowItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS).maxDamage(1000).fireproof()));
     public static final Item ENDIMINTIUM_CROSSBOW = registerItem("endimintium_crossbow",
-            new ModCrossbowItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS).maxDamage(750).fireproof()));
+            new ModCrossbowItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS).maxDamage(1500).fireproof()));
+
+    public static final Item CLITANIUM_BOW = registerItem("clitanium_bow",
+            new ModClitaniumBowItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS).maxDamage(500)));
+    public static final Item CLITANIUM_CROSSBOW = registerItem("clitanium_crossbow",
+            new ModClitaniumCrossbowItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS).maxDamage(750)));
     //Armor
     public static final Item ENDIMINTIUM_HELMET = registerItem("endimintium_helmet",
             new ArmorItem(ModArmorMaterials.ENDIMINTIUM, EquipmentSlot.HEAD,
@@ -56,6 +61,19 @@ public class ModItems {
     public static final Item ENDIMINTIUM_BOOTS = registerItem("endimintium_boots",
             new ArmorItem(ModArmorMaterials.ENDIMINTIUM, EquipmentSlot.FEET,
                     new FabricItemSettings().fireproof().group(ModItemGroup.ENHANCED_END_ITEMS)));
+
+    public static final Item CLITANIUM_HELMET = registerItem("clitanium_helmet",
+            new ArmorItem(ModArmorMaterials.CLITANIUM, EquipmentSlot.HEAD,
+                    new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
+    public static final Item CLITANIUM_CHESTPLATE = registerItem("clitanium_chestplate",
+            new ArmorItem(ModArmorMaterials.CLITANIUM, EquipmentSlot.CHEST,
+                    new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
+    public static final Item CLITANIUM_LEGGINGS = registerItem("clitanium_leggings",
+            new ArmorItem(ModArmorMaterials.CLITANIUM, EquipmentSlot.LEGS,
+                    new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
+    public static final Item CLITANIUM_BOOTS = registerItem("clitanium_boots",
+            new ArmorItem(ModArmorMaterials.CLITANIUM, EquipmentSlot.FEET,
+                    new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
 
     //Tools
     public static final Item ENDIMINTIUM_SWORD = registerItem("endimintium_sword",
@@ -73,6 +91,22 @@ public class ModItems {
     public static final Item ENDIMINTIUM_PICKAXE = registerItem("endimintium_pickaxe",
             new PickaxeItem(ModToolMaterial.ENDIMINTIUM, 2, -2.8f,
                     new FabricItemSettings().fireproof().group(ModItemGroup.ENHANCED_END_ITEMS)));
+
+    public static final Item CLITANIUM_SWORD = registerItem("clitanium_sword",
+            new SwordItem(ModToolMaterial.CLITANIUM, 3, -2.4f,
+                    new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
+    public static final Item CLITANIUM_AXE = registerItem("clitanium_axe",
+            new AxeItem(ModToolMaterial.CLITANIUM, 6.0f, -3f,
+                    new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
+    public static final Item CLITANIUM_HOE = registerItem("clitanium_hoe",
+            new ModHoeItem(ModToolMaterial.CLITANIUM, -2, 0f,
+                    new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
+    public static final Item CLITANIUM_SHOVEL = registerItem("clitanium_shovel",
+            new ShovelItem(ModToolMaterial.CLITANIUM, 1.5f, -3f,
+                    new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
+    public static final Item CLITANIUM_PICKAXE = registerItem("clitanium_pickaxe",
+            new PickaxeItem(ModToolMaterial.CLITANIUM, 1, -2.8f,
+                    new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
 
     //Food Items
     public static final Item ENERIA_SPECK = registerItem("eneria_speck",
