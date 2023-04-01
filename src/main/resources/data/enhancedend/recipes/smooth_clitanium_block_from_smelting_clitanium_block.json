@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "group": "enhanced_end_blocks",
+  "ingredient": {
+    "item": "enhancedend:clitanium_block"
+  },
+  "result": "enhancedend:smooth_clitanium_block"
+}

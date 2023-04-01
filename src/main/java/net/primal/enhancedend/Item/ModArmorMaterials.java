@@ -13,7 +13,7 @@ import java.util.function.Supplier;
 public enum ModArmorMaterials implements ArmorMaterial {
     ENDIMINTIUM("endimintium", 45, new int[]{8, 10, 12, 8}, 100,
             SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 4f, 0.15f, () -> Ingredient.ofItems(ModItems.ENDIMINTIUM_INGOT)),
-    CLITANIUM("clitanium", 33, new int[]{3, 6, 8, 3}, 10,
+    CLITANIUM("clitanium", 25, new int[]{2, 5, 7, 2}, 10,
             SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0f, 0f, () -> Ingredient.ofItems(ModItems.CLITANIUM));
 
     private static final int[] BASE_DURABILITY;

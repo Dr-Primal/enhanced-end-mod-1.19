@@ -10,7 +10,7 @@ import java.util.function.Supplier;
 public enum ModToolMaterial implements ToolMaterial {
     ENDIMINTIUM(100000, 2031, 9.0f, 4.0f, 15,
             () -> Ingredient.ofItems(ModItems.ENDIMINTIUM_SCRAP)),
-    CLITANIUM(3, 500, 7.5f, 3.0f, 10,
+    CLITANIUM(3, 500, 8.0f, 3.0f, 10,
             () -> Ingredient.ofItems(ModItems.CLITANIUM));
 
     private final int miningLevel;

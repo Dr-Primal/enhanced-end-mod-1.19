@@ -49,13 +49,17 @@ public class ModBlocks {
                     .strength(3f).requiresTool().sounds(BlockSoundGroup.STONE)),
             ModItemGroup.ENHANCED_END_BLOCKS);
     public static final Block TANZANITE_LAMP = registerBlock("tanzanite_lamp",
-            new TanzaniteLampBlock(FabricBlockSettings.of(Material.REDSTONE_LAMP, MapColor.DARK_DULL_PINK)
+            new RedstoneLampBlock(FabricBlockSettings.of(Material.REDSTONE_LAMP, MapColor.DARK_DULL_PINK)
                     .strength(0.3f).sounds(BlockSoundGroup.GLASS)
-                    .luminance(state -> state.get(TanzaniteLampBlock.LIT) ? 0 : 15)),
+                    .luminance(state -> state.get(RedstoneLampBlock.LIT) ? 15 : 0)),
             ModItemGroup.ENHANCED_END_BLOCKS);
 
 //Clitanium Variants
     public static final Block CLITANIUM_BLOCK = registerBlock("clitanium_block",
+            new Block(FabricBlockSettings.of(Material.METAL, MapColor.GRAY)
+                    .strength(3f).requiresTool().sounds(BlockSoundGroup.COPPER)),
+            ModItemGroup.ENHANCED_END_BLOCKS);
+    public static final Block SMOOTH_CLITANIUM_BLOCK = registerBlock("smooth_clitanium_block",
             new Block(FabricBlockSettings.of(Material.METAL, MapColor.GRAY)
                     .strength(3f).requiresTool().sounds(BlockSoundGroup.COPPER)),
             ModItemGroup.ENHANCED_END_BLOCKS);
