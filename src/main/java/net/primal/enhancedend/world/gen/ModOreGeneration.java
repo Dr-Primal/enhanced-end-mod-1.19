@@ -16,5 +16,9 @@ public class ModOreGeneration {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey
                         (BiomeKeys.END_BARRENS, BiomeKeys.END_HIGHLANDS, BiomeKeys.END_MIDLANDS, BiomeKeys.END_BARRENS, BiomeKeys.SMALL_END_ISLANDS),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.CLITANIUM_ORE_PLACED.getKey().get());
+
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey
+                        (BiomeKeys.END_BARRENS, BiomeKeys.END_HIGHLANDS, BiomeKeys.END_MIDLANDS, BiomeKeys.END_BARRENS, BiomeKeys.SMALL_END_ISLANDS),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.KIMBERLITE_ORE_PLACED.getKey().get());
     }
 }

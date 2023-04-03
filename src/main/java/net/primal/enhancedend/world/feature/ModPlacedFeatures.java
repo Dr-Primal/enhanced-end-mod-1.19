@@ -15,6 +15,10 @@ public class ModPlacedFeatures {
             VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(1, 0.1f, 1)));
 
 
+    public static final RegistryEntry<PlacedFeature> KIMBERLITE_ORE_PLACED = PlacedFeatures.register("kimberlite_ore_placed",
+            ModConfiguredFeatures.KIMBERLITE_ORE, modifiersWithCount(48,
+                    HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(100))));
+
     public static final RegistryEntry<PlacedFeature> TANZANITE_ORE_PLACED = PlacedFeatures.register("tanzanite_ore_placed",
             ModConfiguredFeatures.TANZANITE_ORE, modifiersWithCount(8,
                     HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(120))));
