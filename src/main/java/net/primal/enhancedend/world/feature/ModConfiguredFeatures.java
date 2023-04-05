@@ -2,8 +2,12 @@ package net.primal.enhancedend.world.feature;
 
 import net.minecraft.block.Blocks;
 import net.minecraft.structure.rule.BlockMatchRuleTest;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.gen.feature.size.ThreeLayersFeatureSize;
 import net.minecraft.world.gen.foliage.JungleFoliagePlacer;
+import net.minecraft.world.gen.foliage.RandomSpreadFoliagePlacer;
+import net.minecraft.world.gen.trunk.BendingTrunkPlacer;
+import net.minecraft.world.gen.trunk.GiantTrunkPlacer;
 import net.minecraft.world.gen.trunk.MegaJungleTrunkPlacer;
 import net.primal.enhancedend.EnhancedEnd;
 import net.primal.enhancedend.block.ModBlocks;
@@ -19,7 +23,7 @@ import java.util.OptionalInt;
 
 public class ModConfiguredFeatures {
 
-    //Template for Endium Mushrooms
+//Template for Endium Mushrooms
     public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> ENDIUM_MUSHROOM =
             ConfiguredFeatures.register("endium_mushroom", Feature.TREE, new TreeFeatureConfig.Builder(
                     BlockStateProvider.of(Blocks.MUSHROOM_STEM),
@@ -28,21 +32,39 @@ public class ModConfiguredFeatures {
                     new JungleFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(0), 0),
                     new TwoLayersFeatureSize(0, 0, 0)).dirtProvider(BlockStateProvider.of(Blocks.END_STONE)).forceDirt().build());
 
-//Template for Corlite and Midnighht Trees
+//Basic Corlite and Midnight Trees
     public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> CORLITE_TREE =
-            ConfiguredFeatures.register("corlite_tree", Feature.TREE, new TreeFeatureConfig.Builder(
-                    BlockStateProvider.of(ModBlocks.CORLITE_STEM),
-                    new MegaJungleTrunkPlacer(12, 4, 2),
-                    BlockStateProvider.of(ModBlocks.CORLITE_BLOTS),
-                    new JungleFoliagePlacer(ConstantIntProvider.create(0), ConstantIntProvider.create(0), 3),
-                    new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty()))
-                    .dirtProvider(BlockStateProvider.of(Blocks.END_STONE)).forceDirt().build());
+        ConfiguredFeatures.register("corlite_tree", Feature.TREE, new TreeFeatureConfig.Builder(
+                BlockStateProvider.of(ModBlocks.CORLITE_STEM),
+                new BendingTrunkPlacer(10, 4, 6, 8, UniformIntProvider.create(1, 2)),
+                BlockStateProvider.of(ModBlocks.CORLITE_BLOTS),
+                new RandomSpreadFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(2), ConstantIntProvider.create(2), 50),
+                new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty()))
+                .dirtProvider(BlockStateProvider.of(Blocks.END_STONE)).forceDirt().build());
     public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> MIDNIGHT_TREE =
             ConfiguredFeatures.register("midnight_tree", Feature.TREE, new TreeFeatureConfig.Builder(
                     BlockStateProvider.of(ModBlocks.MIDNIGHT_STEM),
-                    new MegaJungleTrunkPlacer(12, 4, 2),
+                    new BendingTrunkPlacer(10, 4, 6, 8, UniformIntProvider.create(1, 2)),
                     BlockStateProvider.of(ModBlocks.MIDNIGHT_BLOTS),
-                    new JungleFoliagePlacer(ConstantIntProvider.create(0), ConstantIntProvider.create(0), 3),
+                    new RandomSpreadFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(2), ConstantIntProvider.create(2), 50),
+                    new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty()))
+                    .dirtProvider(BlockStateProvider.of(Blocks.END_STONE)).forceDirt().build());
+    //Tall Corlite and Midnight Trees
+    public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> TALL_MIDNIGHT_TREE =
+            ConfiguredFeatures.register("tall_midnight_tree", Feature.TREE, new TreeFeatureConfig.Builder(
+                    BlockStateProvider.of(ModBlocks.MIDNIGHT_STEM),
+                    new GiantTrunkPlacer(20, 5, 10),
+                    BlockStateProvider.of(ModBlocks.MIDNIGHT_BLOTS),
+                    new RandomSpreadFoliagePlacer(ConstantIntProvider.create(6), ConstantIntProvider.create(4), ConstantIntProvider.create(5), 50),
+                    new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty()))
+                    .dirtProvider(BlockStateProvider.of(Blocks.END_STONE)).forceDirt().build());
+
+    public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> TALL_CORLITE_TREE =
+            ConfiguredFeatures.register("tall_corlite_tree", Feature.TREE, new TreeFeatureConfig.Builder(
+                    BlockStateProvider.of(ModBlocks.CORLITE_STEM),
+                    new GiantTrunkPlacer(20, 5, 10),
+                    BlockStateProvider.of(ModBlocks.CORLITE_BLOTS),
+                    new RandomSpreadFoliagePlacer(ConstantIntProvider.create(6), ConstantIntProvider.create(4), ConstantIntProvider.create(5), 50),
                     new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty()))
                     .dirtProvider(BlockStateProvider.of(Blocks.END_STONE)).forceDirt().build());
 
@@ -53,6 +75,35 @@ public class ModConfiguredFeatures {
             ConfiguredFeatures.register("endium_spawn", Feature.RANDOM_SELECTOR,
                     new RandomFeatureConfig(List.of(new RandomFeatureEntry(ENDIUM_CHECKED, 0.8f)),
                             ENDIUM_CHECKED));
+//Basic Trees
+    public static final RegistryEntry<PlacedFeature> MIDNIGHT_CHECKED = PlacedFeatures.register("midnight_checked",
+        ModConfiguredFeatures.MIDNIGHT_TREE, List.of(PlacedFeatures.wouldSurvive(ModBlocks.MIDNIGHT_MUSHROOM)));
+    public static final RegistryEntry<ConfiguredFeature<RandomFeatureConfig, ?>> MIDNIGHT_SPAWN =
+            ConfiguredFeatures.register("midnight_spawn", Feature.RANDOM_SELECTOR,
+                    new RandomFeatureConfig(List.of(new RandomFeatureEntry(MIDNIGHT_CHECKED, 0.6f)),
+                            MIDNIGHT_CHECKED));
+
+    public static final RegistryEntry<PlacedFeature> CORLITE_CHECKED = PlacedFeatures.register("corlite_checked",
+            ModConfiguredFeatures.CORLITE_TREE, List.of(PlacedFeatures.wouldSurvive(ModBlocks.CORLITE_MUSHROOM)));
+    public static final RegistryEntry<ConfiguredFeature<RandomFeatureConfig, ?>> CORLITE_SPAWN =
+            ConfiguredFeatures.register("corlite_spawn", Feature.RANDOM_SELECTOR,
+                    new RandomFeatureConfig(List.of(new RandomFeatureEntry(CORLITE_CHECKED, 0.6f)),
+                            CORLITE_CHECKED));
+
+//Tall Trees
+    public static final RegistryEntry<PlacedFeature> TALL_MIDNIGHT_CHECKED = PlacedFeatures.register("tall_midnight_checked",
+            ModConfiguredFeatures.TALL_MIDNIGHT_TREE, List.of(PlacedFeatures.wouldSurvive(ModBlocks.MIDNIGHT_MUSHROOM)));
+    public static final RegistryEntry<ConfiguredFeature<RandomFeatureConfig, ?>> TALL_MIDNIGHT_SPAWN =
+            ConfiguredFeatures.register("tall_midnight_spawn", Feature.RANDOM_SELECTOR,
+                    new RandomFeatureConfig(List.of(new RandomFeatureEntry(TALL_MIDNIGHT_CHECKED, 0.2f)),
+                            TALL_MIDNIGHT_CHECKED));
+
+    public static final RegistryEntry<PlacedFeature> TALL_CORLITE_CHECKED = PlacedFeatures.register("tall_corlite_checked",
+            ModConfiguredFeatures.TALL_CORLITE_TREE, List.of(PlacedFeatures.wouldSurvive(ModBlocks.CORLITE_MUSHROOM)));
+    public static final RegistryEntry<ConfiguredFeature<RandomFeatureConfig, ?>> TALL_CORLITE_SPAWN =
+            ConfiguredFeatures.register("tall_corlite_spawn", Feature.RANDOM_SELECTOR,
+                    new RandomFeatureConfig(List.of(new RandomFeatureEntry(TALL_CORLITE_CHECKED, 0.2f)),
+                            TALL_CORLITE_CHECKED));
 
 
     public static final List<OreFeatureConfig.Target> KIMBERLITE_ORES = List.of(
