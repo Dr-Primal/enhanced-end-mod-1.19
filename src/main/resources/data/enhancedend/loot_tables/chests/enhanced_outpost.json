@@ -82,7 +82,7 @@
         {
           "type": "minecraft:item",
           "name": "enhancedend:mysterious_lights_music_disc",
-          "weight": 4
+          "weight": 3
         },
         {
           "type": "minecraft:item",
@@ -172,6 +172,38 @@
         },
         {
           "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 4.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:ender_pearl",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 2.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "enhancedend:enhanced_pearl",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
           "name": "minecraft:beetroot",
           "weight": 20
         },
@@ -222,48 +254,6 @@
           ],
           "name": "enhancedend:clitanium",
           "weight": 20
-        }
-      ],
-      "rolls": {
-        "type": "minecraft:uniform",
-        "max": 3.0,
-        "min": 1.0
-      }
-    },
-    {
-      "bonus_rolls": 0.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 4.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "minecraft:ender_pearl",
-          "weight": 20
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 2.0,
-                "min": 1.0
-              },
-              "function": "minecraft:set_count"
-            }
-          ],
-          "name": "enhancedend:enhanced_pearl",
-          "weight": 5
         },
         {
           "type": "minecraft:item",
@@ -280,7 +270,17 @@
           ],
           "name": "minecraft:string",
           "weight": 10
-        },
+        }
+      ],
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 5.0,
+        "min": 2.0
+      }
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
         {
           "type": "minecraft:item",
           "functions": [
@@ -450,7 +450,11 @@
           "weight": 3
         }
       ],
-      "rolls": 4
+      "rolls": {
+        "type": "minecraft:uniform",
+        "max": 2.0,
+        "min": 0.0
+      }
     }
   ]
 }

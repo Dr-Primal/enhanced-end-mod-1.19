@@ -1,12 +1,12 @@
 {
   "type": "minecraft:jigsaw",
-  "start_pool": "enhancedend:enhanced_outpost/start_pool",
+  "start_pool": "enhancedend:arc_portal_incomplete_2/start_pool",
   "size": 1,
-  "max_distance_from_center": 20,
-  "biomes": "#enhancedend:has_structure/enhanced_outpost",
+  "max_distance_from_center": 50,
+  "biomes": "#enhancedend:has_structure/arc_portal_incomplete_2",
   "step": "surface_structures",
   "start_height": {
-    "absolute": -1
+    "absolute": 0
   },
   "project_start_to_heightmap": "WORLD_SURFACE_WG",
   "use_expansion_hack": false,
@@ -15,10 +15,10 @@
       "bounding_box": "piece",
       "spawns": [
         {
-          "type": "enhancedend:enhanced_enderman",
-          "weight": 100,
-          "minCount": 500,
-          "maxCount": 1000
+          "type": "enhancedend:seaspray",
+          "weight": 1,
+          "minCount": 0,
+          "maxCount": 0
         }
       ]
     }
