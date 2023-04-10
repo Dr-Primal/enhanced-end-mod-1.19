@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#@#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "enhancedend:reinforced_shard"
+    },
+    "@": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "result": {
+    "item": "enhancedend:reinforced_nether_star"
+  }
+}

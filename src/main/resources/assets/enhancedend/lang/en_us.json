@@ -62,11 +62,25 @@
   "item.enhancedend.eneria_speck": "Eneria Speck",
 
   "item.enhancedend.reinforced_shard": "Reinforced Shard",
+  "item.enhancedend.reinforced_nether_star": "Reinforced Nether Star",
   "item.enhancedend.allamite_hide": "Allamite Hide",
   "item.enhancedend.sentry_disk": "Sentry Disk",
+  "item.enhancedend.shadow_shard": "Shadow Shard",
   "item.enhancedend.carnacus_leg": "Carnacus Leg",
   "item.enhancedend.enhanced_pearl": "Enhanced Pearl",
   "item.enhancedend.phantom_pearl": "Phantom Pearl",
+
+  "item.enhancedend.shadow_rune": "Shadow Rune",
+  "item.enhancedend.fire_rune": "Fire Rune",
+  "item.enhancedend.strength_rune": "Strength Rune",
+  "item.enhancedend.resistance_rune": "Resistance Rune",
+  "item.enhancedend.agility_rune": "Agility Rune",
+  "item.enhancedend.hunger_rune": "Hunger Rune",
+  "item.enhancedend.heart_rune": "Heart Rune",
+  "item.enhancedend.vision_rune": "Vision Rune",
+  "item.enhancedend.intoxication_rune": "Intoxication Rune",
+  "item.enhancedend.rune_of_runes": "Rune of Runes",
+
 
   "item.enhancedend.tanzanite_beetroot": "Tanzanite Beetroot",
   "item.enhancedend.enhanced_beetroot": "Enhanced Beetroot",
@@ -80,11 +94,8 @@
   "item.enhancedend.sanctity_music_disc": "Music Disc",
   "item.enhancedend.sanctity_music_disc.desc": "Konac - Sanctity",
 
-  "enchantment.enhancedend.tainted_magic": "Tainted Magic",
   "enchantment.enhancedend.enhanced_magic": "Enhanced Magic",
   "enchantment.enhancedend.blinding_aspect": "Blinding Aspect",
-  "enchantment.enhancedend.frostburn": "Frostburn",
-  "enchantment.enhancedend.frostshot": "Frostshot",
 
 
 

@@ -18,8 +18,8 @@ public class ModEnderPearlItem extends Item {
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
-        world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_ENDER_PEARL_THROW, SoundCategory.NEUTRAL, 1.5f, 2.5f / (world.getRandom().nextFloat() * 1f + 1f));
-        user.getItemCooldownManager().set(this, 0);
+        world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_ENDER_PEARL_THROW, SoundCategory.NEUTRAL, 1.5f, 2.5f / (world.getRandom().nextFloat() + 1f));
+        user.getItemCooldownManager().set(this, 10);
         if (!world.isClient) {
             ModEnderPearlEntity modEnderPearlEntity = new ModEnderPearlEntity(world, user);
             modEnderPearlEntity.setItem(itemStack);

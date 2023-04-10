@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "aba",
+    "c@c",
+    "aba"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:dragon_breath"
+    },
+    "b": {
+      "item": "minecraft:golden_apple"
+    },
+    "c": {
+      "item": "enhancedend:enhanced_beetroot"
+    },
+    "@": {
+      "item": "enhancedend:shadow_rune"
+    }
+  },
+  "result": {
+    "item": "enhancedend:hunger_rune"
+  }
+}

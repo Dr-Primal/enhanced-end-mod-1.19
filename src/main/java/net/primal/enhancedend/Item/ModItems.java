@@ -124,7 +124,7 @@ public class ModItems {
             new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)
                     .maxCount(16)
                     .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.8f)
-                            .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 2000, 0), 1f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 2000, 1), 1f)
                             .alwaysEdible().build())));
     public static final Item GOLDEN_BEETROOT = registerItem("golden_beetroot",
             new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)
@@ -134,7 +134,7 @@ public class ModItems {
                             .alwaysEdible().build())));
     public static final Item ENHANCED_BEETROOT = registerItem("enhanced_beetroot",
             new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)
-                    .maxCount(16)
+                    .maxCount(16).rarity(Rarity.RARE)
                     .food(new FoodComponent.Builder().hunger(2).saturationModifier(1f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 500, 2), 1f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 500, 1), 0.8f)
@@ -144,7 +144,7 @@ public class ModItems {
                             .alwaysEdible().build())));
     public static final Item ENCHANTED_ENHANCED_BEETROOT = registerItem("enchanted_enhanced_beetroot",
             new ModEnchantedFoodItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)
-                    .maxCount(16)
+                    .maxCount(16).rarity(Rarity.EPIC)
                     .food(new FoodComponent.Builder().hunger(2).saturationModifier(1f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 1000, 2), 1f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 1000, 2), 0.6f)
@@ -154,7 +154,7 @@ public class ModItems {
                             .alwaysEdible().build())));
     public static final Item CORRUPTED_BEETROOT = registerItem("corrupted_beetroot",
             new ModEnchantedFoodItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_DECORATIONS)
-                    .maxCount(16)
+                    .maxCount(16).rarity(Rarity.RARE)
                     .food(new FoodComponent.Builder().hunger(2).saturationModifier(1.5f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 1000, 0), 0.6f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 1000, 0), 0.6f)
@@ -181,6 +181,8 @@ public class ModItems {
     public static final Item REINFORCED_SHARD = registerItem("reinforced_shard",
             new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
     //Drops from Reinforced Obsidian Golems^
+    public static final Item REINFORCED_NETHER_STAR = registerItem("reinforced_nether_star",
+            new NetherStarItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
 
     public static final Item ENHANCED_PEARL = registerItem("enhanced_pearl",
             new ModEnderPearlItem(new FabricItemSettings().maxCount(16).group(ModItemGroup.ENHANCED_END_ITEMS)));
@@ -188,16 +190,53 @@ public class ModItems {
 
     //Crafted from Enhanced Pearl, Phantom Membranes, Eneria Speck
     public static final Item PHANTOM_PEARL = registerItem("phantom_pearl",
-            new ModPhantomPearlItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.ENHANCED_END_ITEMS)));
+            new ModPhantomPearlItem(new FabricItemSettings().maxCount(1).maxDamage(50).group(ModItemGroup.ENHANCED_END_ITEMS)));
     //Loot drop from Bulwark Sentry
     public static final Item SENTRY_DISK = registerItem("sentry_disk",
             new ModDiskItem(new FabricItemSettings().maxCount(16).group(ModItemGroup.ENHANCED_END_ITEMS)));
+    //Loot drop from Bulwark Shadow and Sentinel
+    public static final Item SHADOW_SHARD = registerItem("shadow_shard",
+            new Item(new FabricItemSettings().maxCount(16).group(ModItemGroup.ENHANCED_END_ITEMS)));
 
     public static final Item CARNACUS_LEG = registerItem("carnacus_leg",
             new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
     //Drops from Carnacuses^
     public static final Item ALLAMITE_HIDE = registerItem("allamite_hide",
             new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
+
+    //Runes
+    public static final Item SHADOW_RUNE = registerItem("shadow_rune",
+            new ModRuneItem(new FabricItemSettings().maxCount(1).group(ModItemGroup.ENHANCED_END_ITEMS)));
+
+    public static final Item FIRE_RUNE = registerItem("fire_rune",
+            new ModFireRuneItem(new FabricItemSettings().maxCount(1).maxDamage(75).rarity(Rarity.RARE).fireproof().group(ModItemGroup.ENHANCED_END_ITEMS)));
+
+    public static final Item STRENGTH_RUNE = registerItem("strength_rune",
+            new ModStrengthRuneItem(new FabricItemSettings().maxCount(1).maxDamage(75).rarity(Rarity.RARE).group(ModItemGroup.ENHANCED_END_ITEMS)));
+
+    public static final Item RESISTANCE_RUNE = registerItem("resistance_rune",
+            new ModResistanceRuneItem(new FabricItemSettings().maxCount(1).maxDamage(75).rarity(Rarity.RARE).group(ModItemGroup.ENHANCED_END_ITEMS)));
+
+    public static final Item AGILITY_RUNE = registerItem("agility_rune",
+            new ModAgilityRuneItem(new FabricItemSettings().maxCount(1).maxDamage(75).rarity(Rarity.RARE).group(ModItemGroup.ENHANCED_END_ITEMS)));
+
+    public static final Item HEART_RUNE = registerItem("heart_rune",
+            new ModHeartRuneItem(new FabricItemSettings().maxCount(1).maxDamage(75).rarity(Rarity.RARE).group(ModItemGroup.ENHANCED_END_ITEMS)));
+
+    public static final Item HUNGER_RUNE = registerItem("hunger_rune",
+            new ModHungerRuneItem(new FabricItemSettings().maxCount(1).maxDamage(75).rarity(Rarity.RARE).group(ModItemGroup.ENHANCED_END_ITEMS)));
+
+    public static final Item INTOXICATION_RUNE = registerItem("intoxication_rune",
+            new ModIntoxicationRuneItem(new FabricItemSettings().maxCount(1).maxDamage(175).rarity(Rarity.RARE).group(ModItemGroup.ENHANCED_END_ITEMS)));
+
+    public static final Item VISION_RUNE = registerItem("vision_rune",
+            new ModVisionRuneItem(new FabricItemSettings().maxCount(1).maxDamage(175).rarity(Rarity.RARE).group(ModItemGroup.ENHANCED_END_ITEMS)));
+
+
+
+    public static final Item RUNE_OF_RUNES = registerItem("rune_of_runes",
+            new ModRuneOfRunesItem(new FabricItemSettings().maxCount(1).maxDamage(500).rarity(Rarity.EPIC).fireproof().group(ModItemGroup.ENHANCED_END_ITEMS)));
+
 
     //Music Discs
     public static final Item MYSTERIOUS_LIGHTS_MUSIC_DISC = registerItem("mysterious_lights_music_disc",

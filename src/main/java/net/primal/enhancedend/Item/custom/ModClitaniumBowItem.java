@@ -17,7 +17,7 @@ import net.minecraft.world.World;
 import java.util.function.Predicate;
 
 public class ModClitaniumBowItem
-        extends RangedWeaponItem
+        extends BowItem
         implements Vanishable {
 
     public ModClitaniumBowItem(Settings settings) {

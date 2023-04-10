@@ -16,7 +16,7 @@ import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 
 public class ModBowItem
-        extends RangedWeaponItem
+        extends BowItem
         implements Vanishable {
 
     public ModBowItem(Item.Settings settings) {

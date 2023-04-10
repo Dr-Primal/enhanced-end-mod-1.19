@@ -19,13 +19,13 @@ public class ModDiskItem extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ITEM_TRIDENT_THROW, SoundCategory.NEUTRAL, 0.5f, 5.0f);
-		user.getItemCooldownManager().set(this, 7);
+		user.getItemCooldownManager().set(this, 10);
 
         if (!world.isClient) {
-            BlindDiskEntity snowballEntity = new BlindDiskEntity(world, user);
-            snowballEntity.setItem(itemStack);
-            snowballEntity.setVelocity(user, user.prevPitch, user.prevYaw, 0.0f, 3.7f, 0f);
-            world.spawnEntity(snowballEntity);
+            BlindDiskEntity blindDiskEntity = new BlindDiskEntity(world, user);
+            blindDiskEntity.setItem(itemStack);
+            blindDiskEntity.setVelocity(user, user.prevPitch, user.prevYaw, 0.0f, 3.7f, 0f);
+            world.spawnEntity(blindDiskEntity);
         }
 
         user.incrementStat(Stats.USED.getOrCreateStat(this));

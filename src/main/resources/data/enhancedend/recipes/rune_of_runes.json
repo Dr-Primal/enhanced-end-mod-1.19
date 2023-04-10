@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "abc",
+    "d@e",
+    "fgh"
+  ],
+  "key": {
+    "a": {
+      "item": "enhancedend:fire_rune"
+    },
+    "b": {
+      "item": "enhancedend:strength_rune"
+    },
+    "c": {
+      "item": "enhancedend:resistance_rune"
+    },
+    "d": {
+      "item": "enhancedend:heart_rune"
+    },
+    "@": {
+      "item": "enhancedend:reinforced_nether_star"
+    },
+    "e": {
+      "item": "enhancedend:agility_rune"
+    },
+    "f": {
+      "item": "enhancedend:vision_rune"
+    },
+    "g": {
+      "item": "enhancedend:hunger_rune"
+    },
+    "h": {
+      "item": "enhancedend:intoxication_rune"
+    }
+  },
+  "result": {
+    "item": "enhancedend:rune_of_runes"
+  }
+}

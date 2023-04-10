@@ -52,6 +52,16 @@
       },
       "trigger": "minecraft:consume_item"
     },
+    "enchanted_enhanced_beetroot": {
+      "conditions": {
+        "item": {
+          "items": [
+            "enhancedend:enchanted_enhanced_beetroot"
+          ]
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
     "tanzanite_beetroot": {
       "conditions": {
         "item": {
