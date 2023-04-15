@@ -1,0 +1,18 @@
+{
+  "structures": [
+    {
+      "structure": "enhancedend:bulwark_garrison",
+      "weight": 1
+    }
+  ],
+  "placement": {
+
+    "salt": 1942636500,
+
+    "spacing": 48,
+
+    "separation": 24,
+
+    "type": "minecraft:random_spread"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "enhancedend:bulwark_garrison/side_pool_tower_outer",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "enhancedend:bulwark_garrison_tower_top_outer",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
