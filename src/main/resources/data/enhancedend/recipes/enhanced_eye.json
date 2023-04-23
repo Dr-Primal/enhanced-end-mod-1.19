@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "a#a",
+    "#@#",
+    "a#a"
+  ],
+  "key": {
+    "#": {
+      "item": "enhancedend:enhanced_pearl"
+    },
+    "@": {
+      "item": "minecraft:ender_eye"
+    },
+    "a": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "result": {
+    "item": "enhancedend:enhanced_eye"
+  }
+}

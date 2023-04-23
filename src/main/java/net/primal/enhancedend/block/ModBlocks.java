@@ -3,18 +3,16 @@ package net.primal.enhancedend.block;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.SignType;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.registry.Registry;
 import net.primal.enhancedend.EnhancedEnd;
-import net.primal.enhancedend.Item.ModItemGroup;
+import net.primal.enhancedend.item.ModItemGroup;
 import net.primal.enhancedend.block.custom.*;
 import net.primal.enhancedend.block.entity.ModSignTypes;
 import net.primal.enhancedend.world.feature.tree.CorliteSaplingGenerator;
@@ -315,12 +313,12 @@ public class ModBlocks {
             ModItemGroup.ENHANCED_END_BLOCKS);
     //Blots and Mushrooms
     public static final Block MIDNIGHT_MUSHROOM = registerBlock("midnight_mushroom",
-            new ModMagicMushroomBlock(new MidnightSaplingGenerator(),
+            new MidnightMushroomBlock(new MidnightSaplingGenerator(),
                     FabricBlockSettings.of(Material.PLANT)
                             .breakInstantly().noCollision().sounds(BlockSoundGroup.FUNGUS)),
             ModItemGroup.ENHANCED_END_DECORATIONS);
     public static final Block CORLITE_MUSHROOM = registerBlock("corlite_mushroom",
-            new ModMagicMushroomBlock(new CorliteSaplingGenerator(),
+            new CorliteMushroomBlock(new CorliteSaplingGenerator(),
                     FabricBlockSettings.of(Material.PLANT, MapColor.OFF_WHITE)
                             .breakInstantly().noCollision().sounds(BlockSoundGroup.FUNGUS)),
             ModItemGroup.ENHANCED_END_DECORATIONS);
@@ -350,7 +348,7 @@ public class ModBlocks {
             ModItemGroup.ENHANCED_END_DECORATIONS);
     //Endium and End Matter
     public static final Block ENDIUM_MUSHROOM = registerBlock("endium_mushroom",
-            new ModMagicMushroomBlock(new EndiumMushroomGenerator(),
+            new EndiumMushroomBlock(new EndiumMushroomGenerator(),
                     FabricBlockSettings.of(Material.PLANT, MapColor.LIME)
                             .breakInstantly().noCollision().sounds(BlockSoundGroup.GRASS)),
             ModItemGroup.ENHANCED_END_DECORATIONS);

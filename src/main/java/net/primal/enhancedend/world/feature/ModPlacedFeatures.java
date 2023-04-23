@@ -2,39 +2,42 @@ package net.primal.enhancedend.world.feature;
 
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.YOffset;
-import net.minecraft.world.gen.feature.PlacedFeature;
-import net.minecraft.world.gen.feature.PlacedFeatures;
-import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
+import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.heightprovider.VeryBiasedToBottomHeightProvider;
 import net.minecraft.world.gen.placementmodifier.*;
 
 import java.util.List;
 
 public class ModPlacedFeatures {
     public static final RegistryEntry<PlacedFeature> ENDIUM_PLACED = PlacedFeatures.register("endium_placed",
-            ModConfiguredFeatures.ENDIUM_SPAWN,
-            VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(1, 0.1f, 1)));
+            ModConfiguredFeatures.ENDIUM_SPAWN, RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(),
+            PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
 //Basic Trees
 public static final RegistryEntry<PlacedFeature> MIDNIGHT_PLACED = PlacedFeatures.register("midnight_placed",
-        ModConfiguredFeatures.MIDNIGHT_SPAWN,
-        VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(5, 0.5f, 2)));
+        ModConfiguredFeatures.MIDNIGHT_SPAWN, RarityFilterPlacementModifier.of(7), SquarePlacementModifier.of(),
+        PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
 
     public static final RegistryEntry<PlacedFeature> CORLITE_PLACED = PlacedFeatures.register("corlite_placed",
-            ModConfiguredFeatures.CORLITE_SPAWN,
-            VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(5, 0.5f, 2)));
+            ModConfiguredFeatures.CORLITE_SPAWN, RarityFilterPlacementModifier.of(7), SquarePlacementModifier.of(),
+            PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
 //Tall Trees
     public static final RegistryEntry<PlacedFeature> TALL_MIDNIGHT_PLACED = PlacedFeatures.register("tall_midnight_placed",
-            ModConfiguredFeatures.TALL_MIDNIGHT_SPAWN,
-            VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(0, 0.2f, 1)));
+            ModConfiguredFeatures.TALL_MIDNIGHT_SPAWN, RarityFilterPlacementModifier.of(10), SquarePlacementModifier.of(),
+        PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
 
     public static final RegistryEntry<PlacedFeature> TALL_CORLITE_PLACED = PlacedFeatures.register("tall_corlite_placed",
-            ModConfiguredFeatures.TALL_CORLITE_SPAWN,
-            VegetationPlacedFeatures.modifiers(PlacedFeatures.createCountExtraModifier(0, 0.2f, 1)));
+            ModConfiguredFeatures.TALL_CORLITE_SPAWN, RarityFilterPlacementModifier.of(10), SquarePlacementModifier.of(),
+            PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
 
 
 
 
     public static final RegistryEntry<PlacedFeature> KIMBERLITE_ORE_PLACED = PlacedFeatures.register("kimberlite_ore_placed",
             ModConfiguredFeatures.KIMBERLITE_ORE, modifiersWithCount(48,
+                    HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(100))));
+
+    public static final RegistryEntry<PlacedFeature> SILSTONE_ORE_PLACED = PlacedFeatures.register("silstone_ore_placed",
+            ModConfiguredFeatures.SILSTONE_ORE, modifiersWithCount(48,
                     HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(100))));
 
     public static final RegistryEntry<PlacedFeature> TANZANITE_ORE_PLACED = PlacedFeatures.register("tanzanite_ore_placed",
@@ -48,6 +51,39 @@ public static final RegistryEntry<PlacedFeature> MIDNIGHT_PLACED = PlacedFeature
     public static final RegistryEntry<PlacedFeature> ENDIUM_RHIZOME = PlacedFeatures.register("endium_rhizome_placed",
             ModConfiguredFeatures.ENDIUM_RHIZOME, RarityFilterPlacementModifier.of(4), SquarePlacementModifier.of(),
             PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+
+    public static final RegistryEntry<PlacedFeature> MIDNIGHT_FESCUS = PlacedFeatures.register("midnight_fescus_placed",
+            ModConfiguredFeatures.MIDNIGHT_FESCUS, RarityFilterPlacementModifier.of(24), SquarePlacementModifier.of(),
+            PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+
+    public static final RegistryEntry<PlacedFeature> MIDNIGHT_MUSHROOM = PlacedFeatures.register("midnight_mushroom_placed",
+            ModConfiguredFeatures.MIDNIGHT_MUSHROOM, RarityFilterPlacementModifier.of(10), SquarePlacementModifier.of(),
+            PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+
+    public static final RegistryEntry<PlacedFeature> SHADED_OCULIT = PlacedFeatures.register("shaded_oculit_placed",
+            ModConfiguredFeatures.SHADED_OCULIT, RarityFilterPlacementModifier.of(16), SquarePlacementModifier.of(),
+            PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+
+    public static final RegistryEntry<PlacedFeature> ENDIUM_ISLAND_PLACED = PlacedFeatures.register("endium_island_placed",
+            ModConfiguredFeatures.ENDIUM_ISLAND,
+            RarityFilterPlacementModifier.of(20),
+            PlacedFeatures.createCountExtraModifier(1, 0.1f, 1),
+            SquarePlacementModifier.of(),
+            HeightRangePlacementModifier.uniform(YOffset.fixed(75), YOffset.fixed(90)),
+            BiomePlacementModifier.of());
+
+    public static final RegistryEntry<PlacedFeature> KIMBERLITE_SPIKE_PLACED = PlacedFeatures.register("kimberlite_spike_placed",
+            ModConfiguredFeatures.KIMBERLITE_SPIKE, RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(),
+            PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, HeightRangePlacementModifier.uniform(YOffset.fixed(65), YOffset.fixed(70)));
+
+    public static final RegistryEntry<PlacedFeature> SPRING_ENDER_MATTER_PLACED = PlacedFeatures.register("spring_ender_matter_placed",
+            ModConfiguredFeatures.SPRING_ENDER_MATTER, RarityFilterPlacementModifier.of(12), SquarePlacementModifier.of(),
+            PlacedFeatures.WORLD_SURFACE_WG_HEIGHTMAP, BiomePlacementModifier.of());
+
+    public static final RegistryEntry<PlacedFeature> PATCH_ENERIA_CANE_PLACED = PlacedFeatures.register("patch_eneria_cane_placed",
+            ModConfiguredFeatures.PATCH_ENERIA_CANE, RarityFilterPlacementModifier.of(1), SquarePlacementModifier.of(),
+            PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+
 
 
 

@@ -10,13 +10,11 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.Angerable;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsage;
 import net.minecraft.item.Items;
-import net.minecraft.recipe.Ingredient;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -25,8 +23,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TimeHelper;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
-import net.minecraft.world.World;
-import net.primal.enhancedend.block.ModBlocks;
+import net.minecraft.world.*;
 import net.primal.enhancedend.entity.ModEntities;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.AnimationState;
@@ -39,11 +36,11 @@ import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 import java.util.UUID;
 
-public class AllamiteEntity extends AnimalEntity implements IAnimatable, Angerable {
+public class AllamiteEntity extends PassiveEntity implements IAnimatable, Angerable{
 
     private final AnimationFactory factory = new AnimationFactory(this);
 
-    public AllamiteEntity(EntityType<? extends AnimalEntity> entityType, World world) {
+    public AllamiteEntity(EntityType<? extends PassiveEntity> entityType, World world) {
         super(entityType, world);
     }
     private UUID angryAt;
@@ -55,8 +52,6 @@ public class AllamiteEntity extends AnimalEntity implements IAnimatable, Angerab
         this.goalSelector.add(0, new SwimGoal(this));
         this.targetSelector.add(1, new RevengeGoal(this));
         this.goalSelector.add(1, new MeleeAttackGoal(this, 1.5, false));
-        this.targetSelector.add(2, new AnimalMateGoal(this, 1));
-        this.goalSelector.add(3, new TemptGoal(this, 1.25, Ingredient.ofItems(ModBlocks.MIDNIGHT_MUSHROOM.asItem()), false));
         this.goalSelector.add(3, new WanderAroundFarGoal(this, 1.0, 1.0f));
         this.goalSelector.add(4, new LookAtEntityGoal(this, PlayerEntity.class, 6.0f));
         this.goalSelector.add(5, new LookAroundGoal(this));
@@ -93,7 +88,7 @@ public class AllamiteEntity extends AnimalEntity implements IAnimatable, Angerab
     @Override
     public float getSoundPitch() {
         if (this.isBaby()) {
-            return 0.5f;
+            return 2.0f;
         }
         return 0.1f;
     }
@@ -176,11 +171,6 @@ public class AllamiteEntity extends AnimalEntity implements IAnimatable, Angerab
     @Override
     public PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
         return ModEntities.ALLAMITE.create(world);
-    }
-
-    @Override
-    public boolean isBreedingItem(ItemStack stack) {
-        return stack.getItem() == ModBlocks.MIDNIGHT_MUSHROOM.asItem();
     }
 
     @Override

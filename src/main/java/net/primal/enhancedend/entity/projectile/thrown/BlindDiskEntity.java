@@ -12,7 +12,7 @@ import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.World;
-import net.primal.enhancedend.Item.ModItems;
+import net.primal.enhancedend.item.ModItems;
 import net.primal.enhancedend.entity.ModEntities;
 
 public class BlindDiskEntity extends ThrownItemEntity {
@@ -33,8 +33,7 @@ public class BlindDiskEntity extends ThrownItemEntity {
         }
         Entity entity = entityHitResult.getEntity();
         Entity entity2 = this.getOwner();
-        if (entity2 instanceof LivingEntity) {
-            LivingEntity livingEntity = (LivingEntity)entity2;
+        if (entity2 instanceof LivingEntity livingEntity) {
             bl = entity.damage(DamageSource.magic(this, livingEntity), 10.0f);
             if (bl) {
                 if (entity.isAlive()) {

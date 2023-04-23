@@ -1,6 +1,6 @@
 {
   "type": "minecraft:smoking",
-  "cookingtime": 200,
+  "cookingtime": 100,
   "experience": 0.7,
   "group": "enhanced_end_items",
   "ingredient": {

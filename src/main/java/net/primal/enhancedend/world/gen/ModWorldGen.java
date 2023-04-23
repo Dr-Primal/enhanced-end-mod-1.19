@@ -4,5 +4,8 @@ public class ModWorldGen {
     public static void generateWorldGen() {
         ModTreeGeneration.generateTrees();
         ModEndPlantGeneration.generateEndPlants();
+        ModOreGeneration.generateOres();
+        ModEntitySpawn.addEntitySpawn();
+        ModFeatureGeneration.registerFeatures();
     }
 }

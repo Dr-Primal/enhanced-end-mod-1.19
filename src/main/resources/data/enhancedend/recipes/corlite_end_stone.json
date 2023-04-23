@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#@"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:end_stone"
+    },
+    "@": {
+      "item": "enhancedend:corlite_mushroom"
+    }
+  },
+  "result": {
+    "item": "enhancedend:corlite_end_stone"
+  }
+}

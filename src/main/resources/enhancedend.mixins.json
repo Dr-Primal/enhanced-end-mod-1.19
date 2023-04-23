@@ -7,7 +7,6 @@
     "ModCrossbowItemMixin"
   ],
   "client": [
-    "ExampleMixin",
     "SignTypeAccessor",
     "BlockEntityTypeMixin",
     "PlayerEntityRendererMixin",

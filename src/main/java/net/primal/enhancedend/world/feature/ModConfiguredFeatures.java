@@ -1,11 +1,21 @@
 package net.primal.enhancedend.world.feature;
 
+import com.google.common.collect.ImmutableList;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.structure.rule.BlockMatchRuleTest;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3i;
+import net.minecraft.util.math.intprovider.BiasedToBottomIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.util.registry.RegistryEntryList;
+import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.size.ThreeLayersFeatureSize;
 import net.minecraft.world.gen.foliage.JungleFoliagePlacer;
 import net.minecraft.world.gen.foliage.RandomSpreadFoliagePlacer;
+import net.minecraft.world.gen.placementmodifier.BlockFilterPlacementModifier;
+import net.minecraft.world.gen.treedecorator.AlterGroundTreeDecorator;
 import net.minecraft.world.gen.trunk.BendingTrunkPlacer;
 import net.minecraft.world.gen.trunk.GiantTrunkPlacer;
 import net.minecraft.world.gen.trunk.MegaJungleTrunkPlacer;
@@ -17,6 +27,9 @@ import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
+import net.primal.enhancedend.fluid.ModFluids;
+import net.primal.enhancedend.world.gen.feature.EEFeatures;
+import net.primal.enhancedend.world.gen.feature.EndiumIslandFeature;
 
 import java.util.List;
 import java.util.OptionalInt;
@@ -30,7 +43,7 @@ public class ModConfiguredFeatures {
                     new StraightTrunkPlacer(5, 6, 3),
                     BlockStateProvider.of(ModBlocks.ENDIUM_MUSHROOM_BLOCK),
                     new JungleFoliagePlacer(ConstantIntProvider.create(1), ConstantIntProvider.create(0), 0),
-                    new TwoLayersFeatureSize(0, 0, 0)).dirtProvider(BlockStateProvider.of(Blocks.END_STONE)).forceDirt().build());
+                    new TwoLayersFeatureSize(0, 0, 0)).dirtProvider(BlockStateProvider.of(ModBlocks.ENDIUM_SOIL)).forceDirt().build());
 
 //Basic Corlite and Midnight Trees
     public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> CORLITE_TREE =
@@ -40,7 +53,7 @@ public class ModConfiguredFeatures {
                 BlockStateProvider.of(ModBlocks.CORLITE_BLOTS),
                 new RandomSpreadFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(2), ConstantIntProvider.create(2), 50),
                 new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty()))
-                .dirtProvider(BlockStateProvider.of(Blocks.END_STONE)).forceDirt().build());
+                .decorators(ImmutableList.of(new AlterGroundTreeDecorator(BlockStateProvider.of(ModBlocks.CORLITE_END_STONE)))).build());
     public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> MIDNIGHT_TREE =
             ConfiguredFeatures.register("midnight_tree", Feature.TREE, new TreeFeatureConfig.Builder(
                     BlockStateProvider.of(ModBlocks.MIDNIGHT_STEM),
@@ -48,7 +61,7 @@ public class ModConfiguredFeatures {
                     BlockStateProvider.of(ModBlocks.MIDNIGHT_BLOTS),
                     new RandomSpreadFoliagePlacer(ConstantIntProvider.create(4), ConstantIntProvider.create(2), ConstantIntProvider.create(2), 50),
                     new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty()))
-                    .dirtProvider(BlockStateProvider.of(Blocks.END_STONE)).forceDirt().build());
+                    .decorators(ImmutableList.of(new AlterGroundTreeDecorator(BlockStateProvider.of(ModBlocks.MIDNIGHT_END_STONE)))).build());
     //Tall Corlite and Midnight Trees
     public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> TALL_MIDNIGHT_TREE =
             ConfiguredFeatures.register("tall_midnight_tree", Feature.TREE, new TreeFeatureConfig.Builder(
@@ -57,7 +70,7 @@ public class ModConfiguredFeatures {
                     BlockStateProvider.of(ModBlocks.MIDNIGHT_BLOTS),
                     new RandomSpreadFoliagePlacer(ConstantIntProvider.create(6), ConstantIntProvider.create(4), ConstantIntProvider.create(5), 50),
                     new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty()))
-                    .dirtProvider(BlockStateProvider.of(Blocks.END_STONE)).forceDirt().build());
+                    .decorators(ImmutableList.of(new AlterGroundTreeDecorator(BlockStateProvider.of(ModBlocks.MIDNIGHT_END_STONE)))).build());
 
     public static final RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> TALL_CORLITE_TREE =
             ConfiguredFeatures.register("tall_corlite_tree", Feature.TREE, new TreeFeatureConfig.Builder(
@@ -66,7 +79,7 @@ public class ModConfiguredFeatures {
                     BlockStateProvider.of(ModBlocks.CORLITE_BLOTS),
                     new RandomSpreadFoliagePlacer(ConstantIntProvider.create(6), ConstantIntProvider.create(4), ConstantIntProvider.create(5), 50),
                     new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty()))
-                    .dirtProvider(BlockStateProvider.of(Blocks.END_STONE)).forceDirt().build());
+                    .decorators(ImmutableList.of(new AlterGroundTreeDecorator(BlockStateProvider.of(ModBlocks.CORLITE_END_STONE)))).build());
 
     public static final RegistryEntry<PlacedFeature> ENDIUM_CHECKED = PlacedFeatures.register("endium_checked",
             ModConfiguredFeatures.ENDIUM_MUSHROOM, List.of(PlacedFeatures.wouldSurvive(ModBlocks.ENDIUM_MUSHROOM)));
@@ -111,6 +124,12 @@ public class ModConfiguredFeatures {
 
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> KIMBERLITE_ORE =
             ConfiguredFeatures.register("kimberlite_ore", Feature.ORE, new OreFeatureConfig(KIMBERLITE_ORES, 48));
+
+    public static final List<OreFeatureConfig.Target> SILSTONE_ORES = List.of(
+            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE), ModBlocks.SILSTONE.getDefaultState()));
+
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> SILSTONE_ORE =
+            ConfiguredFeatures.register("silstone_ore", Feature.ORE, new OreFeatureConfig(SILSTONE_ORES, 48));
 
     public static final List<OreFeatureConfig.Target> END_TANZANITE_ORES = List.of(
             OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE), ModBlocks.END_TANZANITE_ORE.getDefaultState()));
@@ -169,6 +188,29 @@ public class ModConfiguredFeatures {
             ConfiguredFeatures.register("midnight_fescus", Feature.RANDOM_PATCH,
                     ConfiguredFeatures.createRandomPatchFeatureConfig(64, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.MIDNIGHT_FESCUS)))));
+
+    public static final RegistryEntry<ConfiguredFeature<DefaultFeatureConfig,?>> ENDIUM_ISLAND =
+            ConfiguredFeatures.register("endium_island", EEFeatures.ENDIUM_ISLAND);
+
+    public static final RegistryEntry<ConfiguredFeature<DefaultFeatureConfig,?>> KIMBERLITE_SPIKE =
+            ConfiguredFeatures.register("kimberlite_spike", EEFeatures.KIMBERLITE_SPIKE);
+
+    public static final RegistryEntry<ConfiguredFeature<LakeFeature.Config, ?>> SPRING_ENDER_MATTER =
+            ConfiguredFeatures.register("spring_ender_matter", Feature.LAKE,
+                    new LakeFeature.Config(BlockStateProvider.of(ModFluids.ENDER_MATTER_BLOCK.getDefaultState()), BlockStateProvider.of(ModBlocks.ENDIUM_SOIL.getDefaultState())));
+
+    public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> PATCH_ENERIA_CANE =
+            ConfiguredFeatures.register("patch_eneria_cane", Feature.RANDOM_PATCH,
+                    new RandomPatchFeatureConfig(20, 4, 0,
+                            PlacedFeatures.createEntry(Feature.BLOCK_COLUMN,
+                                    BlockColumnFeatureConfig.create(BiasedToBottomIntProvider.create(2, 4),
+                                    BlockStateProvider.of(ModBlocks.ENERIA_CANE)),
+                                    BlockFilterPlacementModifier.of(BlockPredicate.allOf(BlockPredicate.IS_AIR,
+                                    BlockPredicate.wouldSurvive(ModBlocks.ENERIA_CANE.getDefaultState(), BlockPos.ORIGIN),
+                                    BlockPredicate.anyOf(BlockPredicate.matchingFluids(new BlockPos(1, -1, 0), ModFluids.STILL_ENDER_MATTER, ModFluids.FLOWING_ENDER_MATTER),
+                                    BlockPredicate.matchingFluids(new BlockPos(-1, -1, 0), ModFluids.STILL_ENDER_MATTER, ModFluids.FLOWING_ENDER_MATTER),
+                                    BlockPredicate.matchingFluids(new BlockPos(0, -1, 1), ModFluids.STILL_ENDER_MATTER, ModFluids.FLOWING_ENDER_MATTER),
+                                    BlockPredicate.matchingFluids(new BlockPos(0, -1, -1), ModFluids.STILL_ENDER_MATTER, ModFluids.FLOWING_ENDER_MATTER)))))));
 
 
 

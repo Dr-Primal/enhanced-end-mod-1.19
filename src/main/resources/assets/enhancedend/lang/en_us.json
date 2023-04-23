@@ -66,9 +66,9 @@
   "item.enhancedend.allamite_hide": "Allamite Hide",
   "item.enhancedend.sentry_disk": "Sentry Disk",
   "item.enhancedend.shadow_shard": "Shadow Shard",
-  "item.enhancedend.carnacus_leg": "Carnacus Leg",
   "item.enhancedend.enhanced_pearl": "Enhanced Pearl",
   "item.enhancedend.phantom_pearl": "Phantom Pearl",
+  "item.enhancedend.enhanced_eye": "Enhanced Eye",
 
   "item.enhancedend.shadow_rune": "Shadow Rune",
   "item.enhancedend.fire_rune": "Fire Rune",
@@ -225,7 +225,7 @@
   "block.enhancedend.end_floria": "End Floria",
   "block.enhancedend.potted_end_floria": "Potted End Floria",
 
-  "filled_map.bulwark_garrison": "Bulwark Garrison Map",
+  "Bulwark Garrison Map": "Bulwark Garrison Map",
 
 
   "itemGroup.enhancedend.end_tanzanite_ore": "Enhanced End Blocks",

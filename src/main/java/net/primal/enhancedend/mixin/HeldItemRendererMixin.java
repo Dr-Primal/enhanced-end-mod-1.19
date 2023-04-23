@@ -1,6 +1,6 @@
 package net.primal.enhancedend.mixin;
 
-import net.primal.enhancedend.Item.ModItems;
+import net.primal.enhancedend.item.ModItems;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.Inject;

@@ -52,6 +52,10 @@ public class BulwarkSentryEntity extends HostileEntity implements IAnimatable, R
         return air;
     }
 
+    public boolean isFireImmune() {
+        return true;
+    }
+
     @Override
     public boolean handleFallDamage(float fallDistance, float damageMultiplier, DamageSource damageSource) {
         return false;

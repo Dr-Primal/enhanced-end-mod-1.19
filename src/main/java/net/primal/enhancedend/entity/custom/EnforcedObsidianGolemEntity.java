@@ -66,6 +66,10 @@ public class EnforcedObsidianGolemEntity extends HostileEntity implements IAnima
         return false;
     }
 
+    public boolean isFireImmune() {
+        return true;
+    }
+
     @Override
     public boolean isImmuneToExplosion() {
         return true;

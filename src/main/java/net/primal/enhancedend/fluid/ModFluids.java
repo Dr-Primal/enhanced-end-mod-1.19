@@ -2,7 +2,7 @@ package net.primal.enhancedend.fluid;
 
 import net.minecraft.block.FluidBlock;
 import net.primal.enhancedend.EnhancedEnd;
-import net.primal.enhancedend.Item.ModItemGroup;
+import net.primal.enhancedend.item.ModItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;

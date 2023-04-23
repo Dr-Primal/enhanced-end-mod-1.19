@@ -3,7 +3,7 @@ package net.primal.enhancedend;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
-import net.primal.enhancedend.Item.ModItems;
+import net.primal.enhancedend.item.ModItems;
 import net.primal.enhancedend.block.ModBlocks;
 import net.primal.enhancedend.enchantment.ModEnchantments;
 import net.primal.enhancedend.entity.ModEntities;
@@ -12,7 +12,6 @@ import net.primal.enhancedend.entity.custom.*;
 import net.primal.enhancedend.fluid.ModFluids;
 import net.primal.enhancedend.util.ModRegistries;
 import net.primal.enhancedend.world.feature.ModConfiguredFeatures;
-import net.primal.enhancedend.world.gen.ModOreGeneration;
 import net.primal.enhancedend.world.gen.ModWorldGen;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,7 +33,6 @@ public class EnhancedEnd implements ModInitializer {
 		ModWorldGen.generateWorldGen();
 		ModConfiguredFeatures.registerConfiguredFeatures();
 		ModEnchantments.registerModEnchantments();
-		ModOreGeneration.generateOres();
 
 		GeckoLib.initialize();
 //registering entities:

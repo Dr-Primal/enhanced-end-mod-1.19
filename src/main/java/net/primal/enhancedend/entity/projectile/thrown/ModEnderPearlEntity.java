@@ -4,7 +4,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.mob.EndermiteEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.thrown.ThrownItemEntity;
 import net.minecraft.item.Item;
@@ -14,16 +13,11 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
-import net.minecraft.world.GameRules;
 import net.minecraft.world.World;
-import net.primal.enhancedend.Item.ModItems;
 import org.jetbrains.annotations.Nullable;
 
 public class ModEnderPearlEntity
         extends ThrownItemEntity {
-    public ModEnderPearlEntity(EntityType<? extends net.minecraft.entity.projectile.thrown.EnderPearlEntity> entityType, World world) {
-        super(entityType, world);
-    }
 
     public ModEnderPearlEntity(World world, LivingEntity owner) {
         super(EntityType.ENDER_PEARL, owner, world);
@@ -48,8 +42,7 @@ public class ModEnderPearlEntity
         }
         if (!this.world.isClient && !this.isRemoved()) {
             Entity entity = this.getOwner();
-            if (entity instanceof ServerPlayerEntity) {
-                ServerPlayerEntity serverPlayerEntity = (ServerPlayerEntity)entity;
+            if (entity instanceof ServerPlayerEntity serverPlayerEntity) {
                 if (serverPlayerEntity.networkHandler.getConnection().isOpen() && serverPlayerEntity.world == this.world && !serverPlayerEntity.isSleeping()) {
                     if (entity.hasVehicle()) {
                         serverPlayerEntity.requestTeleportAndDismount(this.getX(), this.getY(), this.getZ());

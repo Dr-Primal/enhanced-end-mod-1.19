@@ -1,13 +1,10 @@
 package net.primal.enhancedend.util;
 
-import net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry;
 import net.minecraft.client.item.ModelPredicateProviderRegistry;
-import net.minecraft.item.CrossbowItem;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
-import net.primal.enhancedend.Item.ModItems;
-import net.primal.enhancedend.Item.custom.ModCrossbowItem;
+import net.primal.enhancedend.item.ModItems;
+import net.primal.enhancedend.item.custom.ModCrossbowItem;
 
 public class ModModelPredicateProvider {
     public static void registerModModels() {

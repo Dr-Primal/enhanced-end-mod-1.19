@@ -1,0 +1,18 @@
+{
+  "structures": [
+    {
+      "structure": "enhancedend:feature_endium_lake_island",
+      "weight": 1
+    }
+  ],
+  "placement": {
+
+    "salt": 1942636502,
+
+    "spacing": 4,
+
+    "separation": 2,
+
+    "type": "minecraft:random_spread"
+  }
+}

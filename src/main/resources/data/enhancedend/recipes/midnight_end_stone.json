@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#@"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:end_stone"
+    },
+    "@": {
+      "item": "enhancedend:midnight_mushroom"
+    }
+  },
+  "result": {
+    "item": "enhancedend:midnight_end_stone"
+  }
+}
