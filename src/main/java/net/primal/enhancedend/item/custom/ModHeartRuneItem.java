@@ -1,5 +1,8 @@
 package net.primal.enhancedend.item.custom;
 
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.AttributeContainer;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
@@ -23,9 +26,9 @@ public class ModHeartRuneItem extends Item {
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.NEUTRAL, 1.0f, world.random.nextFloat() * 0.1f + 0.9f);
         user.getItemCooldownManager().set(this, 800);
         if (!world.isClient) {
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 600, 4));
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100, 4));
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 100, 10));
+           (user).addStatusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 600, 4));
+           (user).addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 100, 4));
+           (user).addStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 100, 10));
             itemStack.damage(1, user, p -> p.sendToolBreakStatus(hand));
         }
         user.incrementStat(Stats.USED.getOrCreateStat(this));

@@ -196,17 +196,23 @@ public class ModItems {
             new ModPhantomPearlItem(new FabricItemSettings().maxCount(1).maxDamage(50).group(ModItemGroup.ENHANCED_END_ITEMS)));
     //Loot drop from Bulwark Sentry
     public static final Item SENTRY_DISK = registerItem("sentry_disk",
-            new ModDiskItem(new FabricItemSettings().maxCount(16).group(ModItemGroup.ENHANCED_END_ITEMS)));
+            new ModDiskItem(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
     //Loot drop from Bulwark Shadow and Sentinel
     public static final Item SHADOW_SHARD = registerItem("shadow_shard",
-            new Item(new FabricItemSettings().maxCount(16).group(ModItemGroup.ENHANCED_END_ITEMS)));
+            new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
 
     public static final Item ALLAMITE_HIDE = registerItem("allamite_hide",
             new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
 
     //Runes
-    public static final Item SHADOW_RUNE = registerItem("shadow_rune",
+    public static final Item INACTIVE_SHADOW_RUNE = registerItem("inactive_shadow_rune",
             new Item(new FabricItemSettings().maxCount(16).group(ModItemGroup.ENHANCED_END_ITEMS)));
+
+    public static final Item ACTIVE_SHADOW_RUNE = registerItem("active_shadow_rune",
+            new Item(new FabricItemSettings().maxCount(16).group(ModItemGroup.ENHANCED_END_ITEMS)));
+
+    public static final Item SHADOW_RUNE_FRAGMENT = registerItem("shadow_rune_fragment",
+            new Item(new FabricItemSettings().group(ModItemGroup.ENHANCED_END_ITEMS)));
 
     public static final Item FIRE_RUNE = registerItem("fire_rune",
             new ModFireRuneItem(new FabricItemSettings().maxCount(1).maxDamage(75).rarity(Rarity.RARE).fireproof().group(ModItemGroup.ENHANCED_END_ITEMS)));

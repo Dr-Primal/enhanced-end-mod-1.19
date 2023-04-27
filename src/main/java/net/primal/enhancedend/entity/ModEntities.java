@@ -24,7 +24,7 @@ public class ModEntities {
 
     public static final EntityType<SeasprayEntity> SEASPRAY = Registry.register(
             Registry.ENTITY_TYPE, new Identifier(EnhancedEnd.MOD_ID, "seaspray"),
-            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, SeasprayEntity::new)
+            FabricEntityTypeBuilder.create(SpawnGroup.AMBIENT, SeasprayEntity::new)
                     .dimensions(EntityDimensions.changing(1f, 0.6f)).build());
 
     public static final EntityType<EnforcedObsidianGolemEntity> ENFORCED_OBSIDIAN_GOLEM = Registry.register(

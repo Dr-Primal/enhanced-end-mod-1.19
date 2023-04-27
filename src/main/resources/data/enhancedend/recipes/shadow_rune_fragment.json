@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "enhancedend:shadow_shard"
+    }
+  },
+  "result": {
+    "item": "enhancedend:shadow_rune_fragment"
+  }
+}

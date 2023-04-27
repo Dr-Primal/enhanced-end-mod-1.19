@@ -35,13 +35,13 @@ public class ModNyliumBlock extends Block implements Fertilizable {
         BlockPos blockPos = pos.up();
         ChunkGenerator chunkGenerator = world.getChunkManager().getChunkGenerator();
         if
-        (blockState.isOf(ModBlocks.CORLITE_END_STONE)) {
+        (blockState.isOf(ModBlocks.CORLITE_END_STONE) || blockState.isOf(Blocks.END_STONE)) {
             ModConfiguredFeatures.CORLITE_MUSHROOM.value().generate(world, chunkGenerator, random, blockPos);
             ModConfiguredFeatures.CORLITE_FESCUS.value().generate(world, chunkGenerator, random, blockPos);
             ModConfiguredFeatures.TINTED_OCULIT.value().generate(world, chunkGenerator, random, blockPos);
         }
         else if
-        (blockState.isOf(ModBlocks.MIDNIGHT_END_STONE)) {
+        (blockState.isOf(ModBlocks.MIDNIGHT_END_STONE) || blockState.isOf(Blocks.END_STONE)) {
             ModConfiguredFeatures.MIDNIGHT_MUSHROOM.value().generate(world, chunkGenerator, random, blockPos);
             ModConfiguredFeatures.MIDNIGHT_FESCUS.value().generate(world, chunkGenerator, random, blockPos);
             ModConfiguredFeatures.SHADED_OCULIT.value().generate(world, chunkGenerator, random, blockPos);

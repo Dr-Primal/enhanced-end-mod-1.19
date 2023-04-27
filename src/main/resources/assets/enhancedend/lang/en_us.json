@@ -70,7 +70,10 @@
   "item.enhancedend.phantom_pearl": "Phantom Pearl",
   "item.enhancedend.enhanced_eye": "Enhanced Eye",
 
-  "item.enhancedend.shadow_rune": "Shadow Rune",
+  "item.enhancedend.inactive_shadow_rune": "Inactive Shadow Rune",
+  "item.enhancedend.active_shadow_rune": "Active Shadow Rune",
+  "item.enhancedend.shadow_rune_fragment": "Shadow Rune Fragment",
+
   "item.enhancedend.fire_rune": "Fire Rune",
   "item.enhancedend.strength_rune": "Strength Rune",
   "item.enhancedend.resistance_rune": "Resistance Rune",

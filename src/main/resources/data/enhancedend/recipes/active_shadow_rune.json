@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#@#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "enhancedend:eneria_speck"
+    },
+    "@": {
+      "item": "enhancedend:inactive_shadow_rune"
+    }
+  },
+  "result": {
+    "item": "enhancedend:active_shadow_rune"
+  }
+}

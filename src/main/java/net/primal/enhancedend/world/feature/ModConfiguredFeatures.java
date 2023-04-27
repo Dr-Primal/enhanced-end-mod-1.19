@@ -123,13 +123,19 @@ public class ModConfiguredFeatures {
             OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE), ModBlocks.KIMBERLITE.getDefaultState()));
 
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> KIMBERLITE_ORE =
-            ConfiguredFeatures.register("kimberlite_ore", Feature.ORE, new OreFeatureConfig(KIMBERLITE_ORES, 48));
+            ConfiguredFeatures.register("kimberlite_ore", Feature.ORE, new OreFeatureConfig(KIMBERLITE_ORES, 64));
 
     public static final List<OreFeatureConfig.Target> SILSTONE_ORES = List.of(
             OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE), ModBlocks.SILSTONE.getDefaultState()));
 
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> SILSTONE_ORE =
-            ConfiguredFeatures.register("silstone_ore", Feature.ORE, new OreFeatureConfig(SILSTONE_ORES, 48));
+            ConfiguredFeatures.register("silstone_ore", Feature.ORE, new OreFeatureConfig(SILSTONE_ORES, 64));
+
+    public static final List<OreFeatureConfig.Target> INFUSED_KIMBERLITE_ORES = List.of(
+            OreFeatureConfig.createTarget(new BlockMatchRuleTest(ModBlocks.KIMBERLITE), ModBlocks.INFUSED_KIMBERLITE.getDefaultState()));
+
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> INFUSED_KIMBERLITE_ORE =
+            ConfiguredFeatures.register("infused_kimberlite_ore", Feature.ORE, new OreFeatureConfig(INFUSED_KIMBERLITE_ORES, 6));
 
     public static final List<OreFeatureConfig.Target> END_TANZANITE_ORES = List.of(
             OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE), ModBlocks.END_TANZANITE_ORE.getDefaultState()));
@@ -151,42 +157,42 @@ public class ModConfiguredFeatures {
 
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> ENDIUM_MUSHROOM_SAPLING =
             ConfiguredFeatures.register("endium_mushroom_sapling", Feature.RANDOM_PATCH,
-                    ConfiguredFeatures.createRandomPatchFeatureConfig(8, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                    ConfiguredFeatures.createRandomPatchFeatureConfig(16, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.ENDIUM_MUSHROOM)))));
 
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> END_FLORIA =
             ConfiguredFeatures.register("end_floria", Feature.RANDOM_PATCH,
-                    ConfiguredFeatures.createRandomPatchFeatureConfig(8, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                    ConfiguredFeatures.createRandomPatchFeatureConfig(32, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.END_FLORIA)))));
 
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> CORLITE_MUSHROOM =
             ConfiguredFeatures.register("corlite_mushroom", Feature.RANDOM_PATCH,
-                    ConfiguredFeatures.createRandomPatchFeatureConfig(8, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                    ConfiguredFeatures.createRandomPatchFeatureConfig(32, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.CORLITE_MUSHROOM)))));
 
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> MIDNIGHT_MUSHROOM =
             ConfiguredFeatures.register("midnight_mushroom", Feature.RANDOM_PATCH,
-                    ConfiguredFeatures.createRandomPatchFeatureConfig(8, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                    ConfiguredFeatures.createRandomPatchFeatureConfig(32, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.MIDNIGHT_MUSHROOM)))));
 
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> TINTED_OCULIT =
             ConfiguredFeatures.register("tinted_oculit", Feature.RANDOM_PATCH,
-                    ConfiguredFeatures.createRandomPatchFeatureConfig(8, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                    ConfiguredFeatures.createRandomPatchFeatureConfig(64, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.TINTED_OCULIT)))));
 
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> SHADED_OCULIT =
             ConfiguredFeatures.register("shaded_oculit", Feature.RANDOM_PATCH,
-                    ConfiguredFeatures.createRandomPatchFeatureConfig(8, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                    ConfiguredFeatures.createRandomPatchFeatureConfig(64, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.SHADED_OCULIT)))));
 
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> CORLITE_FESCUS =
             ConfiguredFeatures.register("corlite_fescus", Feature.RANDOM_PATCH,
-                    ConfiguredFeatures.createRandomPatchFeatureConfig(64, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                    ConfiguredFeatures.createRandomPatchFeatureConfig(128, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.CORLITE_FESCUS)))));
 
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> MIDNIGHT_FESCUS =
             ConfiguredFeatures.register("midnight_fescus", Feature.RANDOM_PATCH,
-                    ConfiguredFeatures.createRandomPatchFeatureConfig(64, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                    ConfiguredFeatures.createRandomPatchFeatureConfig(128, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                             new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.MIDNIGHT_FESCUS)))));
 
     public static final RegistryEntry<ConfiguredFeature<DefaultFeatureConfig,?>> ENDIUM_ISLAND =
@@ -194,10 +200,6 @@ public class ModConfiguredFeatures {
 
     public static final RegistryEntry<ConfiguredFeature<DefaultFeatureConfig,?>> KIMBERLITE_SPIKE =
             ConfiguredFeatures.register("kimberlite_spike", EEFeatures.KIMBERLITE_SPIKE);
-
-    public static final RegistryEntry<ConfiguredFeature<LakeFeature.Config, ?>> SPRING_ENDER_MATTER =
-            ConfiguredFeatures.register("spring_ender_matter", Feature.LAKE,
-                    new LakeFeature.Config(BlockStateProvider.of(ModFluids.ENDER_MATTER_BLOCK.getDefaultState()), BlockStateProvider.of(ModBlocks.ENDIUM_SOIL.getDefaultState())));
 
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> PATCH_ENERIA_CANE =
             ConfiguredFeatures.register("patch_eneria_cane", Feature.RANDOM_PATCH,

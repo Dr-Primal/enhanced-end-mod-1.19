@@ -15,18 +15,12 @@ public class ModFeatureGeneration {
                 GenerationStep.Feature.RAW_GENERATION, ModPlacedFeatures.ENDIUM_ISLAND_PLACED.getKey().get());
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey
-                        (BiomeKeys.END_HIGHLANDS),
+                        (BiomeKeys.END_BARRENS,
+                         BiomeKeys.END_MIDLANDS),
                 GenerationStep.Feature.SURFACE_STRUCTURES, ModPlacedFeatures.KIMBERLITE_SPIKE_PLACED.getKey().get());
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey
-                        (BiomeKeys.END_HIGHLANDS,
-                         BiomeKeys.END_MIDLANDS),
-                GenerationStep.Feature.FLUID_SPRINGS, ModPlacedFeatures.SPRING_ENDER_MATTER_PLACED.getKey().get());
-
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey
-                        (BiomeKeys.END_HIGHLANDS,
-                         BiomeKeys.END_MIDLANDS,
-                         BiomeKeys.SMALL_END_ISLANDS),
+                        (BiomeKeys.SMALL_END_ISLANDS),
                 GenerationStep.Feature.VEGETAL_DECORATION, ModPlacedFeatures.PATCH_ENERIA_CANE_PLACED.getKey().get());
     }
 }

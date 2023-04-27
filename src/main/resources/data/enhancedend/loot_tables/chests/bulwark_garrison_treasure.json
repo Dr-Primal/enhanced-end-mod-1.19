@@ -32,6 +32,27 @@
         },
         {
           "type": "minecraft:item",
+          "name": "minecraft:enchanted_golden_apple",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 8.0,
+                "min": 3.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "minecraft:golden_apple",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
           "name": "enhancedend:corrupted_beetroot",
           "weight": 2
         },
@@ -75,8 +96,8 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 8.0,
-                "min": 3.0
+                "max": 15.0,
+                "min": 5.0
               },
               "function": "minecraft:set_count"
             }
@@ -97,8 +118,8 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 4.0,
-                "min": 1.0
+                "max": 6.0,
+                "min": 3.0
               },
               "function": "minecraft:set_count"
             }

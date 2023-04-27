@@ -21,8 +21,7 @@ public class RhizomeBlock extends FernBlock {
 
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isOf(ModBlocks.ENDIUM_SOIL) ||
-                floor.isOf(Blocks.END_STONE) || super.canPlantOnTop(floor, world, pos);
+        return floor.isOf(ModBlocks.ENDIUM_SOIL) || super.canPlantOnTop(floor, world, pos);
     }
 
     @Override

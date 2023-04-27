@@ -7,10 +7,10 @@
   ],
   "key": {
     "#": {
-      "item": "enhancedend:shadow_shard"
+      "item": "enhancedend:shadow_rune_fragment"
     }
   },
   "result": {
-    "item": "enhancedend:shadow_rune"
+    "item": "enhancedend:inactive_shadow_rune"
   }
 }

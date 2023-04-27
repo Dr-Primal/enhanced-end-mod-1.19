@@ -16,11 +16,6 @@
         },
         {
           "type": "minecraft:item",
-          "name": "enhancedend:mysterious_lights_music_disc",
-          "weight": 1
-        },
-        {
-          "type": "minecraft:item",
           "functions": [
             {
               "function": "minecraft:enchant_randomly"
@@ -30,11 +25,7 @@
           "weight": 5
         }
       ],
-      "rolls":  {
-        "type": "minecraft:uniform",
-        "max": 1.0,
-        "min": 0.0
-      }
+      "rolls":  1
     },
     {
       "bonus_rolls": 0.0,
