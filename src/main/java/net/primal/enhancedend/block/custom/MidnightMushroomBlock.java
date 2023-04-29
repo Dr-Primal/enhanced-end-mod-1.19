@@ -4,7 +4,7 @@ import net.minecraft.block.*;
 import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
-import net.primal.enhancedend.block.ModBlocks;
+import net.primal.enhancedend.block.EEBlocks;
 
 public class MidnightMushroomBlock
         extends SaplingBlock {
@@ -14,7 +14,7 @@ public class MidnightMushroomBlock
 
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isOf(ModBlocks.MIDNIGHT_END_STONE) || floor.isOf(Blocks.END_STONE);
+        return floor.isOf(EEBlocks.MIDNIGHT_END_STONE) || floor.isOf(Blocks.END_STONE);
     }
 
 }

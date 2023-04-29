@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "enhancedend:inactive_shadow_rune"
+    },
+    "title": "Shadow Expansion",
+    "description": "Forge a Shadow Rune from the Remains of Bulwark Shadows and Sentinels",
+    "frame": "task",
+    "hidden": true,
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "enhancedend:bulwark_garrison",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhancedend:inactive_shadow_rune"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

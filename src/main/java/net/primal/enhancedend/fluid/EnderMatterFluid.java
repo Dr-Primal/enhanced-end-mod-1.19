@@ -73,22 +73,22 @@ public abstract class EnderMatterFluid extends FlowableFluid {
 
     @Override
     public Fluid getStill() {
-        return ModFluids.STILL_ENDER_MATTER;
+        return EEFluids.STILL_ENDER_MATTER;
     }
 
     @Override
     public Fluid getFlowing() {
-        return ModFluids.FLOWING_ENDER_MATTER;
+        return EEFluids.FLOWING_ENDER_MATTER;
     }
 
     @Override
     public Item getBucketItem() {
-        return ModFluids.ENDER_MATTER_BUCKET;
+        return EEFluids.ENDER_MATTER_BUCKET;
     }
 
     @Override
     protected BlockState toBlockState(FluidState state) {
-        return ModFluids.ENDER_MATTER_BLOCK.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(state));
+        return EEFluids.ENDER_MATTER_BLOCK.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(state));
     }
 
     @Override

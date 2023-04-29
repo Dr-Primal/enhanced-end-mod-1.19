@@ -6,7 +6,7 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.primal.enhancedend.block.ModBlocks;
+import net.primal.enhancedend.block.EEBlocks;
 
 public class RhizomeBlock extends FernBlock {
     public RhizomeBlock(Settings settings) {
@@ -21,7 +21,7 @@ public class RhizomeBlock extends FernBlock {
 
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isOf(ModBlocks.ENDIUM_SOIL) || super.canPlantOnTop(floor, world, pos);
+        return floor.isOf(EEBlocks.ENDIUM_SOIL) || super.canPlantOnTop(floor, world, pos);
     }
 
     @Override

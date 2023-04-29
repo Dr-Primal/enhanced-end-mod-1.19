@@ -1,0 +1,51 @@
+{
+  "display": {
+    "icon": {
+      "item": "enhancedend:endimintium_ingot"
+    },
+    "title": "Cover me in Shiny Stuff",
+    "description": "To Endimintium, and Beyond!",
+    "frame": "challenge",
+    "hidden": true,
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "enhancedend:endimintium_scrap",
+  "criteria": {
+    "endimintium_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhancedend:endimintium_helmet"
+            ]
+          },
+          {
+            "items": [
+              "enhancedend:endimintium_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "enhancedend:endimintium_leggings"
+            ]
+          },
+          {
+            "items": [
+              "enhancedend:endimintium_boots"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "endimintium_armor"
+    ]
+  ],
+  "rewards": {
+    "experience": 500
+  }
+}

@@ -1,6 +1,8 @@
 package net.primal.enhancedend.entity.custom;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.ai.pathing.PathNodeType;
@@ -8,11 +10,15 @@ import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffectUtil;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.HostileEntity;
-import net.minecraft.entity.mob.WardenEntity;
 import net.minecraft.entity.passive.GolemEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.network.packet.s2c.play.GameStateChangeS2CPacket;
+import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.math.BlockPos;
@@ -26,7 +32,10 @@ import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
 import software.bernie.geckolib3.core.manager.AnimationData;
 import software.bernie.geckolib3.core.manager.AnimationFactory;
 
-public class EnforcedObsidianGolemEntity extends HostileEntity implements IAnimatable {
+import java.util.List;
+
+public class EnforcedObsidianGolemEntity extends HostileEntity implements IAnimatable{
+
     public EnforcedObsidianGolemEntity(EntityType<? extends HostileEntity> entityType, World world) {
         super(entityType, world);
         this.getNavigation().setCanSwim(true);
@@ -46,7 +55,7 @@ public class EnforcedObsidianGolemEntity extends HostileEntity implements IAnima
         this.goalSelector.add(2, new MeleeAttackGoal(this, 1.0, false));
         this.goalSelector.add(2, new LookAtEntityGoal(this, PlayerEntity.class, 6.0f));
         this.targetSelector.add(2, new ActiveTargetGoal<>(this, GolemEntity.class, true));
-        this.targetSelector.add(3, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
+        this.targetSelector.add(3, new ActiveTargetGoal<>(this, PlayerEntity.class, false));
     }
 
     public static DefaultAttributeContainer.Builder setAttributes() {
@@ -172,6 +181,20 @@ public class EnforcedObsidianGolemEntity extends HostileEntity implements IAnima
             return false;
         }
         return super.canHaveStatusEffect(effect);
+    }
+    protected void mobTick() {
+        super.mobTick();
+        if ((this.age + this.getId()) % 1200 == 0) {
+            StatusEffectInstance statusEffectInstance = new StatusEffectInstance(StatusEffects.MINING_FATIGUE, 18000, 2);
+                List<ServerPlayerEntity> list = StatusEffectUtil.addEffectToPlayersWithinDistance
+                ((ServerWorld)this.world, this, this.getPos(), 128.0, statusEffectInstance, 1200);
+                    list.forEach(serverPlayerEntity -> serverPlayerEntity.networkHandler.sendPacket
+                    (new GameStateChangeS2CPacket(GameStateChangeS2CPacket.PROJECTILE_HIT_PLAYER,
+                    this.isSilent() ? GameStateChangeS2CPacket.DEMO_OPEN_SCREEN : (int)1.0f)));
+        }
+        if (!this.hasPositionTarget()) {
+            this.setPositionTarget(this.getBlockPos(), 128);
+        }
     }
 
     @Override

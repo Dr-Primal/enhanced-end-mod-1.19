@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "enhancedend:allamite_hide"
+    }
+  },
+  "result": {
+    "item": "minecraft:leather",
+    "count": 2
+  }
+}

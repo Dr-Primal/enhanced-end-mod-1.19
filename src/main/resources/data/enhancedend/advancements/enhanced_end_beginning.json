@@ -11,24 +11,16 @@
     "background": "enhancedend:textures/block/silstone.png"
   },
   "criteria": {
-    "killed_dragon": {
+    "entered_end_gateway": {
       "conditions": {
-        "entity": [
-          {
-            "condition": "minecraft:entity_properties",
-            "entity": "this",
-            "predicate": {
-              "type": "minecraft:ender_dragon"
-            }
-          }
-        ]
+        "block": "minecraft:end_gateway"
       },
-      "trigger": "minecraft:player_killed_entity"
+      "trigger": "minecraft:enter_block"
     }
-    },
+  },
   "requirements": [
     [
-      "killed_dragon"
+      "entered_end_gateway"
     ]
   ]
 }

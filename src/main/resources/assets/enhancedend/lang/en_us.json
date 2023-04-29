@@ -145,16 +145,6 @@
 
 
 
-  "block.enhancedend.arc_stone": "Arc",
-  "block.enhancedend.arc_stairs": "Arc Stairs",
-  "block.enhancedend.arc_slab": "Arc Slab",
-
-  "block.enhancedend.arc_bricks": "Arc Bricks",
-  "block.enhancedend.arc_brick_stairs": "Arc Brick Stairs",
-  "block.enhancedend.arc_brick_slab": "Arc Brick Slab",
-  "block.enhancedend.arc_brick_wall": "Arc Brick Wall",
-
-
   "block.enhancedend.laristone": "Laristone",
   "block.enhancedend.laristone_stairs": "Laristone Stairs",
   "block.enhancedend.laristone_slab": "Laristone Slab",
@@ -215,7 +205,6 @@
   "block.enhancedend.endium_mushroom_block": "Endium Mushroom Block",
   "block.enhancedend.endium_mushroom": "Endium Mushroom",
   "block.enhancedend.potted_endium_mushroom": "Potted Endium Mushroom",
-  "block.enhancedend.scoria": "Scoria",
   "block.enhancedend.hardened_ender_matter": "Hardened Ender Matter",
 
   "block.enhancedend.shaded_oculit": "Shaded Oculit",
@@ -228,7 +217,6 @@
   "block.enhancedend.end_floria": "End Floria",
   "block.enhancedend.potted_end_floria": "Potted End Floria",
 
-  "Bulwark Garrison Map": "Bulwark Garrison Map",
 
 
   "itemGroup.enhancedend.end_tanzanite_ore": "Enhanced End Blocks",

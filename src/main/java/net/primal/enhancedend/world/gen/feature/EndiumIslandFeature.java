@@ -8,7 +8,7 @@ import net.minecraft.world.StructureWorldAccess;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.EndIslandFeature;
 import net.minecraft.world.gen.feature.util.FeatureContext;
-import net.primal.enhancedend.block.ModBlocks;
+import net.primal.enhancedend.block.EEBlocks;
 
 public class EndiumIslandFeature extends EndIslandFeature {
     public EndiumIslandFeature(Codec < DefaultFeatureConfig > codec) {
@@ -26,7 +26,7 @@ public class EndiumIslandFeature extends EndIslandFeature {
             for (int j = MathHelper.floor(-f); j <= MathHelper.ceil(f); ++j) {
                 for (int k = MathHelper.floor(-f); k <= MathHelper.ceil(f); ++k) {
                     if (!((float) (j * j + k * k) <= (f + 1.0f) * (f + 1.0f))) continue;
-                    this.setBlockState(structureWorldAccess, blockPos.add(j, i, k), ModBlocks.ENDIUM_SOIL.getDefaultState());
+                    this.setBlockState(structureWorldAccess, blockPos.add(j, i, k), EEBlocks.ENDIUM_SOIL.getDefaultState());
                 }
             }
             f -= (float) random.nextInt(2) + 0.5f;

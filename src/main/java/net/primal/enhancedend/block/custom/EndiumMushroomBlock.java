@@ -5,7 +5,7 @@ import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
-import net.primal.enhancedend.block.ModBlocks;
+import net.primal.enhancedend.block.EEBlocks;
 
 public class EndiumMushroomBlock
         extends SaplingBlock {
@@ -15,7 +15,7 @@ public class EndiumMushroomBlock
 
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isOf(ModBlocks.ENDIUM_SOIL);
+        return floor.isOf(EEBlocks.ENDIUM_SOIL);
     }
 
 }

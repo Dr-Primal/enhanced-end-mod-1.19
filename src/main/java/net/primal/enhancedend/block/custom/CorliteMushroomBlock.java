@@ -6,7 +6,7 @@ import net.minecraft.block.SaplingBlock;
 import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
-import net.primal.enhancedend.block.ModBlocks;
+import net.primal.enhancedend.block.EEBlocks;
 
 public class CorliteMushroomBlock
         extends SaplingBlock {
@@ -16,7 +16,7 @@ public class CorliteMushroomBlock
 
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isOf(ModBlocks.CORLITE_END_STONE) || floor.isOf(Blocks.END_STONE);
+        return floor.isOf(EEBlocks.CORLITE_END_STONE) || floor.isOf(Blocks.END_STONE);
     }
 
 }

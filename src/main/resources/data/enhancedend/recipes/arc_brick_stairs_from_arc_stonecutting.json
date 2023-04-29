@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "enhancedend:arc_stone"
-  },
-  "result": "enhancedend:arc_brick_stairs"
-}

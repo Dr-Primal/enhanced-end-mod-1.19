@@ -12,8 +12,8 @@ import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.World;
-import net.primal.enhancedend.item.ModItems;
-import net.primal.enhancedend.entity.ModEntities;
+import net.primal.enhancedend.item.EEItems;
+import net.primal.enhancedend.entity.EEEntities;
 
 public class BlindDiskEntity extends ThrownItemEntity {
     public BlindDiskEntity(EntityType<? extends ThrownItemEntity> entityType, World world) {
@@ -21,7 +21,7 @@ public class BlindDiskEntity extends ThrownItemEntity {
     }
 
     public BlindDiskEntity(World world, LivingEntity owner) {
-        super(ModEntities.BlindDiskEntityEntityType, owner, world);
+        super(EEEntities.BlindDiskEntityEntityType, owner, world);
     }
 
     @Override
@@ -70,6 +70,6 @@ public class BlindDiskEntity extends ThrownItemEntity {
 
     @Override
     protected Item getDefaultItem() {
-        return ModItems.SENTRY_DISK;
+        return EEItems.SENTRY_DISK;
     }
 }

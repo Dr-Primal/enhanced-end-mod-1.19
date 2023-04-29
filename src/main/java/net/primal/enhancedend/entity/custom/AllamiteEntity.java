@@ -24,7 +24,7 @@ import net.minecraft.util.TimeHelper;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.*;
-import net.primal.enhancedend.entity.ModEntities;
+import net.primal.enhancedend.entity.EEEntities;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.AnimationState;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -170,7 +170,7 @@ public class AllamiteEntity extends PassiveEntity implements IAnimatable, Angera
     @Nullable
     @Override
     public PassiveEntity createChild(ServerWorld world, PassiveEntity entity) {
-        return ModEntities.ALLAMITE.create(world);
+        return EEEntities.ALLAMITE.create(world);
     }
 
     @Override

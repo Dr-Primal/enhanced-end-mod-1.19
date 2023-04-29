@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "enhancedend:endimintium_scrap"
+    },
+    "title": "The Treasures of the Garrison",
+    "description": "Find an Endimintium Scrap in the Bulwark Garrison",
+    "frame": "task",
+    "hidden": true,
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "enhancedend:bulwark_garrison",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhancedend:endimintium_scrap"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 package net.primal.enhancedend.mixin;
 
-import net.primal.enhancedend.item.ModItems;
+import net.primal.enhancedend.item.EEItems;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -37,7 +37,7 @@ public class HeldItemRendererMixin {
     @Inject(method = "renderFirstPersonItem", at = @At(value = "HEAD"), cancellable = true)
     private void renderFirstPersonItemMixin(AbstractClientPlayerEntity player, float tickDelta, float pitch, Hand hand, float swingProgress, ItemStack item, float equipProgress, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, CallbackInfo info) {
 
-        if (item.getItem() == ModItems.ENDIMINTIUM_CROSSBOW || item.getItem() == ModItems.CLITANIUM_CROSSBOW) {
+        if (item.getItem() == EEItems.ENDIMINTIUM_CROSSBOW || item.getItem() == EEItems.CLITANIUM_CROSSBOW) {
             matrices.push();
 
             boolean bl = hand == Hand.MAIN_HAND;

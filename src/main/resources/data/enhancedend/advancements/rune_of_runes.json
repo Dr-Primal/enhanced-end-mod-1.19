@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "enhancedend:rune_of_runes"
+    },
+    "title": "The Rune Master",
+    "description": "Combine all 8 Runes to create the strongest Rune of them all",
+    "frame": "challenge",
+    "hidden": true,
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "enhancedend:active_shadow_rune",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "enhancedend:rune_of_runes"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

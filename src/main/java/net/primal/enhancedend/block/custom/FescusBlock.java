@@ -6,7 +6,7 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
-import net.primal.enhancedend.block.ModBlocks;
+import net.primal.enhancedend.block.EEBlocks;
 
 public class FescusBlock extends FernBlock {
     public FescusBlock(Settings settings) {
@@ -21,8 +21,8 @@ public class FescusBlock extends FernBlock {
 
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isOf(ModBlocks.MIDNIGHT_END_STONE) ||
-                floor.isOf(ModBlocks.CORLITE_END_STONE)||
+        return floor.isOf(EEBlocks.MIDNIGHT_END_STONE) ||
+                floor.isOf(EEBlocks.CORLITE_END_STONE)||
                 floor.isOf(Blocks.END_STONE) ||
                 super.canPlantOnTop(floor, world, pos);
     }

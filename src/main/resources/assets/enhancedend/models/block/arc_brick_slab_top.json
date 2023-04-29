@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "enhancedend:block/arc_bricks",
-    "top": "enhancedend:block/arc_bricks",
-    "side": "enhancedend:block/arc_bricks"
-  }
-}
