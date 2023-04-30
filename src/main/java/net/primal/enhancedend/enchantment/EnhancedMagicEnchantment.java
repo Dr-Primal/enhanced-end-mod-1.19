@@ -26,21 +26,23 @@ public class EnhancedMagicEnchantment extends Enchantment {
     @Override
     public void onUserDamaged(LivingEntity user, Entity target, int level) {
         if (target instanceof LivingEntity) {
-            ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 50, 0));
-        }
-        if (target instanceof LivingEntity) {
-            ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 50, 2));
-        }
-        if (target instanceof LivingEntity) {
-            ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 100, 0));
-        }
-        if (user != null) {
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 60, 0));
-        }
-        if (user != null) {
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 30, 2));
+            ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 150, 1));
+            ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 200, 0));
+            ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 150, 0));
         }
         super.onUserDamaged(user, target, level);
+    }
+
+    @Override
+    public void onTargetDamaged(LivingEntity user, Entity target, int level) {
+        if(!user.world.isClient()) {
+            if (target instanceof LivingEntity) {
+                ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 150, 1));
+                ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 200, 0));
+                ((LivingEntity) target).addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 150, 0));
+            }
+        }
+        super.onTargetDamaged(user, target, level);
     }
     @Override
     public boolean canAccept(Enchantment other) {

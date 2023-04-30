@@ -1,11 +1,12 @@
 package net.primal.enhancedend.entity.custom;
 
-import net.minecraft.entity.EntityType;
-import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.*;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -97,6 +98,16 @@ public class BulwarkSentinelEntity extends HostileEntity implements IAnimatable 
             this.playSound(SoundEvents.ENTITY_SKELETON_HURT, 1.0f, 0.1f);
         }
         return super.damage(source, amount);
+    }
+    @Override
+    public boolean tryAttack(Entity target) {
+        if (!super.tryAttack(target)) {
+            return false;
+        }
+        if (target instanceof LivingEntity) {
+            ((LivingEntity)target).addStatusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 60), this);
+        }
+        return true;
     }
 
     @Override

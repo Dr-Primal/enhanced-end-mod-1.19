@@ -4,13 +4,13 @@
   "package": "net.primal.enhancedend.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "EECrossbowItemMixin"
+    "SignTypeAccessor",
+    "BlockEntityTypeMixin"
   ],
   "client": [
-    "SignTypeAccessor",
-    "BlockEntityTypeMixin",
+    "HeldItemRendererMixin",
     "PlayerEntityRendererMixin",
-    "HeldItemRendererMixin"
+    "EECrossbowItemMixin"
   ],
   "injectors": {
     "defaultRequire": 1

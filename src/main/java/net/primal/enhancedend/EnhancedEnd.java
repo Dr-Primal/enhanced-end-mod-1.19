@@ -37,24 +37,12 @@ public class EnhancedEnd implements ModInitializer {
 		GeckoLib.initialize();
 //registering entities:
 		FabricDefaultAttributeRegistry.register(EEEntities.ENHANCED_ENDERMAN, EnhancedEndermanEntity.setAttributes());
-		EntityRendererRegistry.register(EEEntities.ENHANCED_ENDERMAN, EnhancedEndermanRenderer::new);
-
 		FabricDefaultAttributeRegistry.register(EEEntities.ALLAMITE, AllamiteEntity.setAttributes());
-		EntityRendererRegistry.register(EEEntities.ALLAMITE, AllamiteRenderer::new);
-
 		FabricDefaultAttributeRegistry.register(EEEntities.SEASPRAY, SeasprayEntity.setAttributes());
-		EntityRendererRegistry.register(EEEntities.SEASPRAY, SeasprayRenderer::new);
-
 		FabricDefaultAttributeRegistry.register(EEEntities.ENFORCED_OBSIDIAN_GOLEM, EnforcedObsidianGolemEntity.setAttributes());
-		EntityRendererRegistry.register(EEEntities.ENFORCED_OBSIDIAN_GOLEM, EnforcedObsidianGolemRenderer::new);
-
 		FabricDefaultAttributeRegistry.register(EEEntities.BULWARK_SENTRY, BulwarkSentryEntity.setAttributes());
-		EntityRendererRegistry.register(EEEntities.BULWARK_SENTRY, BulwarkSentryRenderer::new);
-
 		FabricDefaultAttributeRegistry.register(EEEntities.BULWARK_SHADOW, BulwarkShadowEntity.setAttributes());
-		EntityRendererRegistry.register(EEEntities.BULWARK_SHADOW, BulwarkShadowRenderer::new);
-
 		FabricDefaultAttributeRegistry.register(EEEntities.BULWARK_SENTINEL, BulwarkSentinelEntity.setAttributes());
-		EntityRendererRegistry.register(EEEntities.BULWARK_SENTINEL, BulwarkSentinelRenderer::new);
+
 	}
 }

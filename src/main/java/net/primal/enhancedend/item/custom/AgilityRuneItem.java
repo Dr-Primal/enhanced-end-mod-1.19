@@ -21,10 +21,11 @@ public class AgilityRuneItem extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.NEUTRAL, 1.0f, world.random.nextFloat() * 0.1f + 0.9f);
-        user.getItemCooldownManager().set(this, 800);
+        user.getItemCooldownManager().set(this, 600);
         if (!world.isClient) {
             (user).addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 600, 1));
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 100, 4));
+            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 15, 49));
+            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 600, 0));
             itemStack.damage(1, user, p -> p.sendToolBreakStatus(hand));
         }
         user.incrementStat(Stats.USED.getOrCreateStat(this));
