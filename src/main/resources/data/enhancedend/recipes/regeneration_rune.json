@@ -1,19 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
-    "#@#",
-    "###"
+    "#!#",
+    "!@!",
+    "#!#"
   ],
   "key": {
     "#": {
-      "item": "enhancedend:celerity_orb"
+      "item": "enhancedend:evoker_orb"
+    },
+    "!": {
+      "item": "minecraft:totem_of_undying"
     },
     "@": {
       "item": "enhancedend:active_shadow_rune"
     }
   },
   "result": {
-    "item": "enhancedend:agility_rune"
+    "item": "enhancedend:regeneration_rune"
   }
 }

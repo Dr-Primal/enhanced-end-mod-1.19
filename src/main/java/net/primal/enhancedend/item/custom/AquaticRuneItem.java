@@ -13,8 +13,8 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
 import net.primal.enhancedend.item.EEItems;
 
-public class AgilityRuneItem extends Item {
-    public AgilityRuneItem(Settings settings) {
+public class AquaticRuneItem extends Item {
+    public AquaticRuneItem(Settings settings) {
         super(settings);
     }
     @Override
@@ -23,9 +23,9 @@ public class AgilityRuneItem extends Item {
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.NEUTRAL, 1.0f, world.random.nextFloat() * 0.1f + 0.9f);
         user.getItemCooldownManager().set(this, 4800);
         if (!world.isClient) {
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 4800, 1));
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 15, 49));
-            (user).removeStatusEffect(StatusEffects.LEVITATION);
+            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 4800, 0));
+            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.CONDUIT_POWER, 4800, 0));
+            (user).removeStatusEffect(StatusEffects.MINING_FATIGUE);
             itemStack.damage(1, user, p -> p.sendToolBreakStatus(hand));
         }
         user.incrementStat(Stats.USED.getOrCreateStat(this));

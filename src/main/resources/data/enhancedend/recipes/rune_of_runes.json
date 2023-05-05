@@ -1,37 +1,34 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "abc",
-    "d@e",
-    "fgh"
+    "axb",
+    "c@d",
+    "exf"
   ],
   "key": {
     "a": {
-      "item": "enhancedend:fire_rune"
+      "item": "enhancedend:hellbent_rune"
     },
     "b": {
-      "item": "enhancedend:strength_rune"
+      "item": "enhancedend:regeneration_rune"
     },
     "c": {
-      "item": "enhancedend:resistance_rune"
-    },
-    "d": {
-      "item": "enhancedend:heart_rune"
+      "item": "enhancedend:negation_rune"
     },
     "@": {
       "item": "enhancedend:reinforced_nether_star"
     },
-    "e": {
+    "d": {
       "item": "enhancedend:agility_rune"
     },
+    "e": {
+      "item": "enhancedend:aquatic_rune"
+    },
     "f": {
-      "item": "enhancedend:vision_rune"
+      "item": "enhancedend:phantom_rune"
     },
-    "g": {
-      "item": "enhancedend:hunger_rune"
-    },
-    "h": {
-      "item": "enhancedend:intoxication_rune"
+    "x": {
+      "item": "enhancedend:enhanced_orb"
     }
   },
   "result": {

@@ -10,6 +10,7 @@ import net.primal.enhancedend.enchantment.EEEnchantments;
 import net.primal.enhancedend.entity.client.*;
 import net.primal.enhancedend.entity.custom.*;
 import net.primal.enhancedend.fluid.EEFluids;
+import net.primal.enhancedend.util.EELootTableModifier;
 import net.primal.enhancedend.util.EERegistries;
 import net.primal.enhancedend.world.feature.EEConfiguredFeatures;
 import net.primal.enhancedend.world.gen.EEWorldGen;
@@ -33,6 +34,7 @@ public class EnhancedEnd implements ModInitializer {
 		EEWorldGen.generateWorldGen();
 		EEConfiguredFeatures.registerConfiguredFeatures();
 		EEEnchantments.registerEEEnchantments();
+		EELootTableModifier.modifyLootTables();
 
 		GeckoLib.initialize();
 //registering entities:

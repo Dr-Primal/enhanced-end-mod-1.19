@@ -35,7 +35,7 @@ import java.util.EnumSet;
 public class SeasprayEntity extends FlyingEntity implements IAnimatable {
 
     private AnimationFactory factory = new AnimationFactory(this);
-    public static final int field_28641 = MathHelper.ceil(24.166098f);
+    public static final int math_var = MathHelper.ceil(24.166098f);
     private static final TrackedData<Integer> SIZE = DataTracker.registerData(SeasprayEntity.class, TrackedDataHandlerRegistry.INTEGER);
     Vec3d targetPosition = Vec3d.ZERO;
     BlockPos circlingCenter = BlockPos.ORIGIN;
@@ -66,12 +66,9 @@ public class SeasprayEntity extends FlyingEntity implements IAnimatable {
     }
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {
-        if (event.isMoving()) {
-            event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.seaspray.fly", true));
-            return PlayState.CONTINUE;
-        }
+        event.isMoving();
 
-        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.seaspray.idle", true));
+        event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.seaspray.fly", true));
         return PlayState.CONTINUE;
     }
 
@@ -82,7 +79,7 @@ public class SeasprayEntity extends FlyingEntity implements IAnimatable {
 
     @Override
     public boolean hasWings() {
-        return (this.method_33588() + this.age) % field_28641 == 0;
+        return (this.method_33588() + this.age) % math_var == 0;
     }
 
     @Override

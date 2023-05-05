@@ -10,10 +10,10 @@
       "item": "enhancedend:enhanced_pearl"
     },
     "@": {
-      "item": "minecraft:ender_eye"
+      "item": "enhancedend:enhanced_orb"
     },
     "a": {
-      "item": "minecraft:obsidian"
+      "item": "enhancedend:enderfied_orb"
     }
   },
   "result": {

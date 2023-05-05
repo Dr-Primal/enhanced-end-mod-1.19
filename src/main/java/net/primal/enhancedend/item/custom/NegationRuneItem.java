@@ -11,32 +11,19 @@ import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldEvents;
 import net.primal.enhancedend.item.EEItems;
 
-public class RuneOfRunesItem extends Item {
-    public RuneOfRunesItem(Settings settings) {
+public class NegationRuneItem extends Item {
+    public NegationRuneItem(Settings settings) {
         super(settings);
     }
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.BLOCK_ENCHANTMENT_TABLE_USE, SoundCategory.NEUTRAL, 1.0f, world.random.nextFloat() * 0.1f + 0.9f);
-        user.getItemCooldownManager().set(this, 1200);
+        user.getItemCooldownManager().set(this, 4800);
         if (!world.isClient) {
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.WATER_BREATHING, 1200, 0));
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 1200, 0));
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.CONDUIT_POWER, 1200, 0));
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 1200, 1));
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 15, 49));
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 1200, 0));
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 1200, 0));
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 1200, 0));
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 45, 2));
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.INSTANT_HEALTH, 1, 9));
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.HEALTH_BOOST, 1600, 4));
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 45, 0));
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 1200, 0));
-            (user).addStatusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 1200, 0));
             (user).removeStatusEffect(StatusEffects.MINING_FATIGUE);
             (user).removeStatusEffect(StatusEffects.GLOWING);
             (user).removeStatusEffect(StatusEffects.LEVITATION);
@@ -46,6 +33,7 @@ public class RuneOfRunesItem extends Item {
             (user).removeStatusEffect(StatusEffects.BLINDNESS);
             (user).removeStatusEffect(StatusEffects.DARKNESS);
             (user).removeStatusEffect(StatusEffects.WEAKNESS);
+            (user).setFireTicks(0);
             itemStack.damage(1, user, p -> p.sendToolBreakStatus(hand));
         }
         user.incrementStat(Stats.USED.getOrCreateStat(this));

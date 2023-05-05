@@ -74,15 +74,25 @@
   "item.enhancedend.active_shadow_rune": "Active Shadow Rune",
   "item.enhancedend.shadow_rune_fragment": "Shadow Rune Fragment",
 
-  "item.enhancedend.fire_rune": "Fire Rune",
-  "item.enhancedend.strength_rune": "Strength Rune",
-  "item.enhancedend.resistance_rune": "Resistance Rune",
+  "item.enhancedend.negation_rune": "Negation Rune",
+  "item.enhancedend.hellbent_rune": "Hellbent Rune",
   "item.enhancedend.agility_rune": "Agility Rune",
-  "item.enhancedend.hunger_rune": "Hunger Rune",
-  "item.enhancedend.heart_rune": "Heart Rune",
-  "item.enhancedend.vision_rune": "Vision Rune",
-  "item.enhancedend.intoxication_rune": "Intoxication Rune",
+  "item.enhancedend.regeneration_rune": "Regeneration Rune",
+  "item.enhancedend.phantom_rune": "Phantom Rune",
+  "item.enhancedend.aquatic_rune": "Aquatic Rune",
+
   "item.enhancedend.rune_of_runes": "Rune of Runes",
+
+  "item.enhancedend.blazing_orb": "Blazing Orb",
+  "item.enhancedend.hellfire_orb": "Hellfire Orb",
+  "item.enhancedend.immersed_orb": "Immersed Orb",
+  "item.enhancedend.corrupted_orb": "Corrupted Orb",
+  "item.enhancedend.enderfied_orb": "Enderfied Orb",
+  "item.enhancedend.evoker_orb": "Evoker's Orb",
+  "item.enhancedend.spirit_orb": "Spirit Orb",
+  "item.enhancedend.celerity_orb": "Celerity Orb",
+
+  "item.enhancedend.enhanced_orb": "Enhanced Orb",
 
 
   "item.enhancedend.tanzanite_beetroot": "Tanzanite Beetroot",

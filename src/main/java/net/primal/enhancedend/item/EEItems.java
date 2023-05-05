@@ -117,7 +117,7 @@ public class EEItems {
                     .maxCount(16)
                     .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.8f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.NIGHT_VISION, 6000, 0), 1.0f)
-                            .statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 300, 0), 1.0f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 300, 1), 1.0f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 6000, 0), 0.5f)
                             .alwaysEdible().build())));
     public static final Item DIAMOND_BEETROOT = registerItem("diamond_beetroot",
@@ -130,15 +130,15 @@ public class EEItems {
             new Item(new FabricItemSettings().group(EEItemGroup.ENHANCED_END_DECORATIONS)
                     .maxCount(16)
                     .food(new FoodComponent.Builder().hunger(2).saturationModifier(0.8f)
-                            .statusEffect(new StatusEffectInstance(StatusEffects.HASTE, 2400, 0), 1f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.HASTE, 2400, 1), 1f)
                             .alwaysEdible().build())));
     public static final Item ENHANCED_BEETROOT = registerItem("enhanced_beetroot",
             new Item(new FabricItemSettings().group(EEItemGroup.ENHANCED_END_DECORATIONS)
                     .maxCount(16).rarity(Rarity.RARE)
                     .food(new FoodComponent.Builder().hunger(2).saturationModifier(1f)
-                            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 500, 2), 1f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 500, 1), 1f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 500, 1), 0.8f)
-                            .statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 500, 1), 0.8f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 500, 9), 0.8f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.INVISIBILITY, 500, 0), 0.6f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 500, 0), 0.6f)
                             .alwaysEdible().build())));
@@ -146,8 +146,8 @@ public class EEItems {
             new EEEnchantedFoodItem(new FabricItemSettings().group(EEItemGroup.ENHANCED_END_DECORATIONS)
                     .maxCount(16).rarity(Rarity.EPIC)
                     .food(new FoodComponent.Builder().hunger(2).saturationModifier(1f)
-                            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 1000, 2), 1f)
-                            .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 1000, 2), 0.6f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 1000, 1), 1f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.SPEED, 1000, 1), 0.6f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.STRENGTH, 1000, 1), 0.6f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 1000, 0), 0.6f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.SLOW_FALLING, 1000, 0), 0.8f)
@@ -158,22 +158,22 @@ public class EEItems {
                     .food(new FoodComponent.Builder().hunger(2).saturationModifier(1.5f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.SATURATION, 1000, 0), 0.6f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 1000, 0), 0.6f)
-                            .statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 1000, 0), 0.6f)
-                            .statusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 500, 0), 0.6f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 1000, 1), 0.6f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 500, 1), 0.6f)
                             .statusEffect(new StatusEffectInstance(StatusEffects.WITHER, 50, 5), 0.4f)
-                            .statusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 500, 0), 0.6f)
-                            .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 500, 0), 0.6f)
-                            .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 50, 3), 0.4f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.BLINDNESS, 500, 1), 0.6f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 500, 1), 0.6f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.POISON, 50, 4), 0.4f)
                             .alwaysEdible().build())));
 
     public static final Item RAW_ALLAM = registerItem("raw_allam",
             new Item(new FabricItemSettings().group(EEItemGroup.ENHANCED_END_DECORATIONS)
-                    .food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f)
+                    .food(new FoodComponent.Builder().hunger(4).saturationModifier(0.4f).meat()
                             .statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 50, 0), 0.6f)
                             .build())));
     public static final Item COOKED_ALLAM = registerItem("cooked_allam",
             new Item(new FabricItemSettings().group(EEItemGroup.ENHANCED_END_DECORATIONS)
-                    .food(new FoodComponent.Builder().hunger(9).saturationModifier(0.8f)
+                    .food(new FoodComponent.Builder().hunger(9).saturationModifier(0.8f).meat()
                             .statusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 50, 0), 0.2f)
                             .build())));
 
@@ -204,7 +204,7 @@ public class EEItems {
     public static final Item ALLAMITE_HIDE = registerItem("allamite_hide",
             new Item(new FabricItemSettings().group(EEItemGroup.ENHANCED_END_ITEMS)));
 
-    //Runes
+    //Shadow Fragments
     public static final Item INACTIVE_SHADOW_RUNE = registerItem("inactive_shadow_rune",
             new Item(new FabricItemSettings().maxCount(16).group(EEItemGroup.ENHANCED_END_ITEMS)));
 
@@ -213,35 +213,69 @@ public class EEItems {
 
     public static final Item SHADOW_RUNE_FRAGMENT = registerItem("shadow_rune_fragment",
             new Item(new FabricItemSettings().group(EEItemGroup.ENHANCED_END_ITEMS)));
+    //Orbs
+        //Hellbent Rune Ingredients
+    public static final Item BLAZING_ORB = registerItem("blazing_orb",
+            new Item(new FabricItemSettings().group(EEItemGroup.ENHANCED_END_ITEMS)));
 
-    public static final Item FIRE_RUNE = registerItem("fire_rune",
-            new FireRuneItem(new FabricItemSettings().maxCount(1).maxDamage(75).rarity(Rarity.RARE).fireproof().group(EEItemGroup.ENHANCED_END_ITEMS)));
+    public static final Item HELLFIRE_ORB = registerItem("hellfire_orb",
+            new Item(new FabricItemSettings().group(EEItemGroup.ENHANCED_END_ITEMS)));
 
-    public static final Item STRENGTH_RUNE = registerItem("strength_rune",
-            new StrengthRuneItem(new FabricItemSettings().maxCount(1).maxDamage(75).rarity(Rarity.RARE).group(EEItemGroup.ENHANCED_END_ITEMS)));
 
-    public static final Item RESISTANCE_RUNE = registerItem("resistance_rune",
-            new ResistanceRuneItem(new FabricItemSettings().maxCount(1).maxDamage(75).rarity(Rarity.RARE).group(EEItemGroup.ENHANCED_END_ITEMS)));
+        //Aquatic Rune Ingredients
+    public static final Item IMMERSED_ORB = registerItem("immersed_orb",
+            new Item(new FabricItemSettings().group(EEItemGroup.ENHANCED_END_ITEMS)));
+
+
+        //Negation Rune Ingredients
+    public static final Item CORRUPTED_ORB = registerItem("corrupted_orb",
+            new Item(new FabricItemSettings().group(EEItemGroup.ENHANCED_END_ITEMS)));
+
+    public static final Item ENDERFIED_ORB = registerItem("enderfied_orb",
+            new Item(new FabricItemSettings().group(EEItemGroup.ENHANCED_END_ITEMS)));
+
+
+        //Regeneration Rune Ingredients
+    public static final Item EVOKER_ORB = registerItem("evoker_orb",
+            new Item(new FabricItemSettings().group(EEItemGroup.ENHANCED_END_ITEMS)));
+
+
+        //Phantom Rune Ingredients
+    public static final Item SPIRIT_ORB = registerItem("spirit_orb",
+            new Item(new FabricItemSettings().group(EEItemGroup.ENHANCED_END_ITEMS)));
+
+
+        //Agility Rune Ingredients
+    public static final Item CELERITY_ORB = registerItem("celerity_orb",
+            new Item(new FabricItemSettings().group(EEItemGroup.ENHANCED_END_ITEMS)));
+
+        //RoR, Enhanced Eye, and Phantom Pearl Ingredient
+    public static final Item ENHANCED_ORB = registerItem("enhanced_orb",
+            new Item(new FabricItemSettings().group(EEItemGroup.ENHANCED_END_ITEMS)));
+
+
+
+    //Runes
+    public static final Item HELLBENT_RUNE = registerItem("hellbent_rune",
+            new HellbentRuneItem(new FabricItemSettings().maxCount(1).maxDamage(75).rarity(Rarity.RARE).fireproof().group(EEItemGroup.ENHANCED_END_ITEMS)));
+
+    public static final Item REGENERATION_RUNE = registerItem("regeneration_rune",
+            new RegenerationRuneItem(new FabricItemSettings().maxCount(1).maxDamage(75).rarity(Rarity.RARE).group(EEItemGroup.ENHANCED_END_ITEMS)));
+
+    public static final Item NEGATION_RUNE = registerItem("negation_rune",
+            new NegationRuneItem(new FabricItemSettings().maxCount(1).maxDamage(75).rarity(Rarity.RARE).group(EEItemGroup.ENHANCED_END_ITEMS)));
 
     public static final Item AGILITY_RUNE = registerItem("agility_rune",
             new AgilityRuneItem(new FabricItemSettings().maxCount(1).maxDamage(75).rarity(Rarity.RARE).group(EEItemGroup.ENHANCED_END_ITEMS)));
 
-    public static final Item HEART_RUNE = registerItem("heart_rune",
-            new HeartRuneItem(new FabricItemSettings().maxCount(1).maxDamage(75).rarity(Rarity.RARE).group(EEItemGroup.ENHANCED_END_ITEMS)));
+    public static final Item AQUATIC_RUNE = registerItem("aquatic_rune",
+            new AquaticRuneItem(new FabricItemSettings().maxCount(1).maxDamage(75).rarity(Rarity.RARE).group(EEItemGroup.ENHANCED_END_ITEMS)));
 
-    public static final Item HUNGER_RUNE = registerItem("hunger_rune",
-            new HungerRuneItem(new FabricItemSettings().maxCount(1).maxDamage(75).rarity(Rarity.RARE).group(EEItemGroup.ENHANCED_END_ITEMS)));
-
-    public static final Item INTOXICATION_RUNE = registerItem("intoxication_rune",
-            new IntoxicationRuneItem(new FabricItemSettings().maxCount(1).maxDamage(175).rarity(Rarity.RARE).group(EEItemGroup.ENHANCED_END_ITEMS)));
-
-    public static final Item VISION_RUNE = registerItem("vision_rune",
-            new VisionRuneItem(new FabricItemSettings().maxCount(1).maxDamage(175).rarity(Rarity.RARE).group(EEItemGroup.ENHANCED_END_ITEMS)));
-
-
+    public static final Item PHANTOM_RUNE = registerItem("phantom_rune",
+            new PhantomRuneItem(new FabricItemSettings().maxCount(1).maxDamage(75).rarity(Rarity.RARE).group(EEItemGroup.ENHANCED_END_ITEMS)));
 
     public static final Item RUNE_OF_RUNES = registerItem("rune_of_runes",
-            new RuneOfRunesItem(new FabricItemSettings().maxCount(1).maxDamage(500).rarity(Rarity.EPIC).fireproof().group(EEItemGroup.ENHANCED_END_ITEMS)));
+            new RuneOfRunesItem(new FabricItemSettings().maxCount(1).maxDamage(150).rarity(Rarity.EPIC).fireproof().group(EEItemGroup.ENHANCED_END_ITEMS)));
 
 
     //Music Discs

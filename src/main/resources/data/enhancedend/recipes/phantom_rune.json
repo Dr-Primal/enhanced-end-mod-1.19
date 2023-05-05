@@ -7,13 +7,13 @@
   ],
   "key": {
     "#": {
-      "item": "enhancedend:celerity_orb"
+      "item": "enhancedend:spirit_orb"
     },
     "@": {
       "item": "enhancedend:active_shadow_rune"
     }
   },
   "result": {
-    "item": "enhancedend:agility_rune"
+    "item": "enhancedend:phantom_rune"
   }
 }

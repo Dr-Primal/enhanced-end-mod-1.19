@@ -1,19 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
+    "#!#",
     "#@#",
-    "###"
+    "#!#"
   ],
   "key": {
     "#": {
-      "item": "enhancedend:celerity_orb"
+      "item": "enhancedend:immersed_orb"
+    },
+    "!": {
+      "item": "minecraft:heart_of_the_sea"
     },
     "@": {
       "item": "enhancedend:active_shadow_rune"
     }
   },
   "result": {
-    "item": "enhancedend:agility_rune"
+    "item": "enhancedend:aquatic_rune"
   }
 }

@@ -19,7 +19,7 @@ public class EnhancedEyeItem extends Item {
     public EnhancedEyeItem(Settings settings) {
         super(settings);
     }
-    private static final Text CONTAINER_NAME = Text.translatable("container.enderchest");
+    private static final Text CONTAINER = Text.translatable("container.enderchest");
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
@@ -27,7 +27,8 @@ public class EnhancedEyeItem extends Item {
         ItemStack itemStack = user.getStackInHand(hand);
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_ENDER_EYE_DEATH, SoundCategory.NEUTRAL, 1f, 0.1f);
         if (!world.isClient) {
-            user.openHandledScreen(new SimpleNamedScreenHandlerFactory((syncId, inventory, player) -> GenericContainerScreenHandler.createGeneric9x3(syncId, inventory, enderChestInventory), CONTAINER_NAME));
+            user.swingHand(hand, false);
+            user.openHandledScreen(new SimpleNamedScreenHandlerFactory((syncId, inventory, player) -> GenericContainerScreenHandler.createGeneric9x3(syncId, inventory, enderChestInventory), CONTAINER));
             user.incrementStat(Stats.OPEN_ENDERCHEST);
             PiglinBrain.onGuardedBlockInteracted(user, true);
         }

@@ -1,19 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
-    "#@#",
-    "###"
+    "#!#",
+    "!@!",
+    "#!#"
   ],
   "key": {
     "#": {
-      "item": "enhancedend:celerity_orb"
+      "item": "enhancedend:corrupted_orb"
+    },
+    "!": {
+      "item": "enhancedend:enderfied_orb"
     },
     "@": {
       "item": "enhancedend:active_shadow_rune"
     }
   },
   "result": {
-    "item": "enhancedend:agility_rune"
+    "item": "enhancedend:negation_rune"
   }
 }
