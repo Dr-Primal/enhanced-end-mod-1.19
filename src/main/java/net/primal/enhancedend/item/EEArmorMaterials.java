@@ -9,8 +9,8 @@ import net.minecraft.sound.SoundEvents;
 import java.util.function.Supplier;
 
 public enum EEArmorMaterials implements ArmorMaterial {
-    ENDIMINTIUM("endimintium", 45, new int[]{8, 10, 12, 8}, 100,
-            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 4f, 0.15f, () -> Ingredient.ofItems(EEItems.ENDIMINTIUM_INGOT)),
+    ENDIMINTIUM("endimintium", 1000, new int[]{8, 10, 12, 8}, 100,
+            SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 4f, 0.15f, () -> Ingredient.ofItems(EEItems.ENDIMINTIUM_SCRAP)),
     CLITANIUM("clitanium", 25, new int[]{2, 5, 7, 2}, 10,
             SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0f, 0f, () -> Ingredient.ofItems(EEItems.CLITANIUM));
 

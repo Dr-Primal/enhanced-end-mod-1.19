@@ -64,49 +64,49 @@ public class EEItems {
 
     public static final Item CLITANIUM_HELMET = registerItem("clitanium_helmet",
             new ArmorItem(EEArmorMaterials.CLITANIUM, EquipmentSlot.HEAD,
-                    new FabricItemSettings().group(EEItemGroup.ENHANCED_END_ITEMS)));
+                    new FabricItemSettings().fireproof().group(EEItemGroup.ENHANCED_END_ITEMS)));
     public static final Item CLITANIUM_CHESTPLATE = registerItem("clitanium_chestplate",
             new ArmorItem(EEArmorMaterials.CLITANIUM, EquipmentSlot.CHEST,
-                    new FabricItemSettings().group(EEItemGroup.ENHANCED_END_ITEMS)));
+                    new FabricItemSettings().fireproof().group(EEItemGroup.ENHANCED_END_ITEMS)));
     public static final Item CLITANIUM_LEGGINGS = registerItem("clitanium_leggings",
             new ArmorItem(EEArmorMaterials.CLITANIUM, EquipmentSlot.LEGS,
-                    new FabricItemSettings().group(EEItemGroup.ENHANCED_END_ITEMS)));
+                    new FabricItemSettings().fireproof().group(EEItemGroup.ENHANCED_END_ITEMS)));
     public static final Item CLITANIUM_BOOTS = registerItem("clitanium_boots",
             new ArmorItem(EEArmorMaterials.CLITANIUM, EquipmentSlot.FEET,
-                    new FabricItemSettings().group(EEItemGroup.ENHANCED_END_ITEMS)));
+                    new FabricItemSettings().fireproof().group(EEItemGroup.ENHANCED_END_ITEMS)));
 
     //Tools
     public static final Item ENDIMINTIUM_SWORD = registerItem("endimintium_sword",
-            new SwordItem(EEToolMaterial.ENDIMINTIUM, 4, -2.4f,
+            new SwordItem(EEToolMaterials.ENDIMINTIUM, 4, -2.4f,
                     new FabricItemSettings().fireproof().group(EEItemGroup.ENHANCED_END_ITEMS)));
     public static final Item ENDIMINTIUM_AXE = registerItem("endimintium_axe",
-            new AxeItem(EEToolMaterial.ENDIMINTIUM, 6f, -3f,
+            new AxeItem(EEToolMaterials.ENDIMINTIUM, 6f, -3f,
                     new FabricItemSettings().fireproof().group(EEItemGroup.ENHANCED_END_ITEMS)));
     public static final Item ENDIMINTIUM_HOE = registerItem("endimintium_hoe",
-            new EEHoeItem(EEToolMaterial.ENDIMINTIUM, -5, 0f,
+            new EEHoeItem(EEToolMaterials.ENDIMINTIUM, -5, 0f,
                     new FabricItemSettings().fireproof().group(EEItemGroup.ENHANCED_END_ITEMS)));
     public static final Item ENDIMINTIUM_SHOVEL = registerItem("endimintium_shovel",
-            new ShovelItem(EEToolMaterial.ENDIMINTIUM, 2.5f, -3f,
+            new ShovelItem(EEToolMaterials.ENDIMINTIUM, 2.5f, -3f,
                     new FabricItemSettings().fireproof().group(EEItemGroup.ENHANCED_END_ITEMS)));
     public static final Item ENDIMINTIUM_PICKAXE = registerItem("endimintium_pickaxe",
-            new PickaxeItem(EEToolMaterial.ENDIMINTIUM, 2, -2.8f,
+            new PickaxeItem(EEToolMaterials.ENDIMINTIUM, 2, -2.8f,
                     new FabricItemSettings().fireproof().group(EEItemGroup.ENHANCED_END_ITEMS)));
 
     public static final Item CLITANIUM_SWORD = registerItem("clitanium_sword",
-            new SwordItem(EEToolMaterial.CLITANIUM, 3, -2.4f,
-                    new FabricItemSettings().group(EEItemGroup.ENHANCED_END_ITEMS)));
+            new SwordItem(EEToolMaterials.CLITANIUM, 3, -2.4f,
+                    new FabricItemSettings().fireproof().group(EEItemGroup.ENHANCED_END_ITEMS)));
     public static final Item CLITANIUM_AXE = registerItem("clitanium_axe",
-            new AxeItem(EEToolMaterial.CLITANIUM, 6.0f, -3f,
-                    new FabricItemSettings().group(EEItemGroup.ENHANCED_END_ITEMS)));
+            new AxeItem(EEToolMaterials.CLITANIUM, 6.0f, -3f,
+                    new FabricItemSettings().fireproof().group(EEItemGroup.ENHANCED_END_ITEMS)));
     public static final Item CLITANIUM_HOE = registerItem("clitanium_hoe",
-            new EEHoeItem(EEToolMaterial.CLITANIUM, -2, 0f,
-                    new FabricItemSettings().group(EEItemGroup.ENHANCED_END_ITEMS)));
+            new EEHoeItem(EEToolMaterials.CLITANIUM, -2, 0f,
+                    new FabricItemSettings().fireproof().group(EEItemGroup.ENHANCED_END_ITEMS)));
     public static final Item CLITANIUM_SHOVEL = registerItem("clitanium_shovel",
-            new ShovelItem(EEToolMaterial.CLITANIUM, 1.5f, -3f,
-                    new FabricItemSettings().group(EEItemGroup.ENHANCED_END_ITEMS)));
+            new ShovelItem(EEToolMaterials.CLITANIUM, 1.5f, -3f,
+                    new FabricItemSettings().fireproof().group(EEItemGroup.ENHANCED_END_ITEMS)));
     public static final Item CLITANIUM_PICKAXE = registerItem("clitanium_pickaxe",
-            new PickaxeItem(EEToolMaterial.CLITANIUM, 1, -2.8f,
-                    new FabricItemSettings().group(EEItemGroup.ENHANCED_END_ITEMS)));
+            new PickaxeItem(EEToolMaterials.CLITANIUM, 1, -2.8f,
+                    new FabricItemSettings().fireproof().group(EEItemGroup.ENHANCED_END_ITEMS)));
 
     //Food Items
     public static final Item ENERIA_SPECK = registerItem("eneria_speck",

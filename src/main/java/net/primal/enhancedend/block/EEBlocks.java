@@ -24,17 +24,17 @@ public class EEBlocks {
     public static final Block END_TANZANITE_ORE = registerBlock("end_tanzanite_ore",
             new OreBlock(FabricBlockSettings.of(Material.STONE, MapColor.PALE_YELLOW)
                     .strength(4f).requiresTool().sounds(BlockSoundGroup.STONE),
-                    UniformIntProvider.create(0, 0)),
+                    UniformIntProvider.create(3, 7)),
             EEItemGroup.ENHANCED_END_BLOCKS);
     public static final Block END_CLITANIUM_ORE = registerBlock("end_clitanium_ore",
             new OreBlock(FabricBlockSettings.of(Material.STONE, MapColor.PALE_YELLOW)
                     .strength(4f).requiresTool().sounds(BlockSoundGroup.STONE),
-                    UniformIntProvider.create(3, 7)),
+                    UniformIntProvider.create(0, 0)),
             EEItemGroup.ENHANCED_END_BLOCKS);
 
     public static final Block ENDIMINTIUM_BLOCK = registerBlock("endimintium_block",
             new Block(FabricBlockSettings.of(Material.METAL, MapColor.TERRACOTTA_WHITE)
-                    .strength(80000f, 800000f).requiresTool().sounds(BlockSoundGroup.NETHERITE)),
+                    .strength(100f, 2000f).requiresTool().sounds(BlockSoundGroup.NETHERITE)),
             EEItemGroup.ENHANCED_END_BLOCKS);
 
 //Tanzanite Variants
