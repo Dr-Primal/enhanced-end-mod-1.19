@@ -5,10 +5,10 @@ import net.minecraft.recipe.Ingredient;
 
 import java.util.function.Supplier;
 
-public enum EEToolMaterial implements ToolMaterial {
-    ENDIMINTIUM(100000, 2031, 9.0f, 4.0f, 15,
+public enum EEToolMaterials implements ToolMaterial {
+    ENDIMINTIUM(107, 10000, 225.0f, 8.0f, 100,
             () -> Ingredient.ofItems(EEItems.ENDIMINTIUM_SCRAP)),
-    CLITANIUM(3, 500, 8.0f, 3.0f, 10,
+    CLITANIUM(3, 500, 12.0f, 3.0f, 10,
             () -> Ingredient.ofItems(EEItems.CLITANIUM));
 
     private final int miningLevel;
@@ -18,8 +18,8 @@ public enum EEToolMaterial implements ToolMaterial {
     private final int enchantability;
     private final Supplier<Ingredient> repairIngredient;
 
-    EEToolMaterial(int miningLevel, int itemDurability, float miningSpeed, float attackDamage,
-                   int enchantability, Supplier<Ingredient> repairIngredient) {
+    EEToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage,
+                    int enchantability, Supplier<Ingredient> repairIngredient) {
         this.miningLevel = miningLevel;
         this.itemDurability = itemDurability;
         this.miningSpeed = miningSpeed;

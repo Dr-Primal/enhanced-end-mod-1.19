@@ -34,7 +34,7 @@ public class EEBlocks {
 
     public static final Block ENDIMINTIUM_BLOCK = registerBlock("endimintium_block",
             new Block(FabricBlockSettings.of(Material.METAL, MapColor.TERRACOTTA_WHITE)
-                    .strength(80000f, 800000f).requiresTool().sounds(BlockSoundGroup.NETHERITE)),
+                    .strength(100f, 2000f).requiresTool().sounds(BlockSoundGroup.NETHERITE)),
             EEItemGroup.ENHANCED_END_BLOCKS);
 
 //Tanzanite Variants
