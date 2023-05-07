@@ -269,12 +269,12 @@
         {
           "type": "minecraft:item",
           "name": "enhancedend:endimintium_scrap",
-          "weight": 1
+          "weight": 2
         },
         {
           "type": "minecraft:item",
           "name": "enhancedend:sanctity_music_disc",
-          "weight": 2
+          "weight": 1
         },
         {
           "type": "minecraft:item",

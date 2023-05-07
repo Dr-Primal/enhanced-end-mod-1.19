@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "addition": {
+    "item": "enhancedend:endimintium_ingot"
+  },
+  "base": {
+    "item": "enhancedend:clitanium_bow"
+  },
+  "result": {
+    "item": "enhancedend:endimintium_bow"
+  }
+}
