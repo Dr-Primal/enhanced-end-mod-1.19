@@ -424,30 +424,6 @@
           ],
           "name": "enhancedend:clitanium_bow",
           "weight": 4
-        },
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "damage": {
-                "type": "minecraft:uniform",
-                "max": 0.9,
-                "min": 0.1
-              },
-              "function": "minecraft:set_damage"
-            },
-            {
-              "add": false,
-              "count": 1.0,
-              "function": "minecraft:set_count"
-            },
-            {
-              "function": "minecraft:enchant_randomly"
-            }
-          ],
-          "name": "enhancedend:clitanium_crossbow",
-          "weight": 3
         }
       ],
       "rolls": {
