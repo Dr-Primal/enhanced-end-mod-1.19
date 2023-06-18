@@ -1,0 +1,16 @@
+{
+  "values": [
+    "minecraft:chest",
+    "minecraft:spawner",
+    "minecraft:end_stone_bricks",
+    "minecraft:end_stone_brick_stairs",
+    "minecraft:end_stone_brick_slab",
+    "enhancedend:end_clitanium_ore",
+    "enhancedend:end_tanzanite_ore",
+    "#enhancedend:is_clitanium",
+    "enhancedend:hardened_ender_matter",
+    "enhancedend:silstone",
+    "enhancedend:kimberlite",
+    "enhancedend:infused_kimberlite"
+  ]
+}

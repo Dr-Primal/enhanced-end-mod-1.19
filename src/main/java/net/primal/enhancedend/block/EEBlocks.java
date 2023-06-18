@@ -411,7 +411,7 @@ public class EEBlocks {
             EEItemGroup.ENHANCED_END_DECORATIONS);
     public static final Block TINTED_OCULIT = registerBlock("tinted_oculit",
             new EEFlowerBlock(StatusEffects.LEVITATION, 8,
-                    FabricBlockSettings.of(Material.NETHER_SHOOTS, MapColor.WHITE_GRAY)
+                    FabricBlockSettings.of(Material.NETHER_SHOOTS, MapColor.PINK)
                             .noCollision().breakInstantly()
                             .offsetType(AbstractBlock.OffsetType.XZ)
                             .sounds(BlockSoundGroup.GRASS)),

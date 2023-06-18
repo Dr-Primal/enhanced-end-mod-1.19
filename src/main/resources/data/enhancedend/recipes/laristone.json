@@ -6,15 +6,14 @@
     "aaa"
   ],
   "key": {
-    "a": {
+    "@": {
       "item": "enhancedend:silstone"
     },
-    "@": {
-      "item": "enhancedend:enhanced_pearl"
+    "a": {
+      "item": "minecraft:ender_pearl"
     }
   },
   "result": {
-    "item": "enhancedend:laristone",
-    "count": 8
+    "item": "enhancedend:laristone"
   }
 }

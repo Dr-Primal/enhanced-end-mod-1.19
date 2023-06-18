@@ -1,18 +1,6 @@
 {
   "values": [
     "enhancedend:midnight_planks",
-    "enhancedend:midnight_button",
-    "enhancedend:midnight_pressure_plate",
-    "enhancedend:midnight_slab",
-    "enhancedend:midnight_stairs",
-    "enhancedend:midnight_fence",
-    "enhancedend:midnight_fence_gate",
-    "enhancedend:corlite_planks",
-    "enhancedend:corlite_button",
-    "enhancedend:corlite_pressure_plate",
-    "enhancedend:corlite_slab",
-    "enhancedend:corlite_stairs",
-    "enhancedend:corlite_fence",
-    "enhancedend:corlite_fence_gate"
+    "enhancedend:corlite_planks"
   ]
 }

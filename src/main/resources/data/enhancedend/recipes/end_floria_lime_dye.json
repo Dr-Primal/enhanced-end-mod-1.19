@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "enhancedend:end_floria"
+    }
+  },
+  "result": {
+    "item": "minecraft:lime_dye"
+  }
+}
