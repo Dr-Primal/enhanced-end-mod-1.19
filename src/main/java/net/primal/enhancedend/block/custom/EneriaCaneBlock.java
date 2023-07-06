@@ -1,6 +1,10 @@
 package net.primal.enhancedend.block.custom;
 
 import net.minecraft.block.*;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
@@ -8,9 +12,11 @@ import net.minecraft.state.property.IntProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import net.primal.enhancedend.block.EEBlocks;
@@ -19,10 +25,9 @@ import net.primal.enhancedend.fluid.EEFluids;
 public class EneriaCaneBlock extends SugarCaneBlock {
     public EneriaCaneBlock(Settings settings) {
         super(settings);
-        this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(AGE, 0));
+        this.setDefaultState(this.stateManager.getDefaultState().with(AGE, 0));
     }
     public static final IntProperty AGE = Properties.AGE_15;
-    protected static final float field_31258 = 6.0f;
     protected static final VoxelShape SHAPE = Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 16.0, 14.0);
 
     @Override
@@ -48,9 +53,9 @@ public class EneriaCaneBlock extends SugarCaneBlock {
                 int j = state.get(AGE);
                 if (j == 15) {
                     world.setBlockState(pos.up(), this.getDefaultState());
-                    world.setBlockState(pos, (BlockState)state.with(AGE, 0), Block.NO_REDRAW);
+                    world.setBlockState(pos, state.with(AGE, 0), Block.NO_REDRAW);
                 } else {
-                    world.setBlockState(pos, (BlockState)state.with(AGE, j + 1), Block.NO_REDRAW);
+                    world.setBlockState(pos, state.with(AGE, j + 1), Block.NO_REDRAW);
                 }
             }
         }

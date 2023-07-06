@@ -16,7 +16,7 @@ public class CorliteMushroomBlock
 
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isOf(EEBlocks.CORLITE_END_STONE) || floor.isOf(Blocks.END_STONE);
+        return floor.isOf(EEBlocks.CORLITE_END_STONE) || floor.isOf(Blocks.END_STONE) || floor.isOf(EEBlocks.MIDNIGHT_END_STONE);
     }
 
 }

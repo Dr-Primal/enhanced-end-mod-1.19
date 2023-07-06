@@ -18,13 +18,10 @@ public class EELootTableModifier {
             = new Identifier("minecraft", "chests/nether_bridge");
     //Treasure Bastion
     private static final Identifier BASTION_TREASURE_CHEST_ID
-            = new Identifier("minecraft", "chests/bastion_treasure");
+            = new Identifier("minecraft", "chests/bastion_other");
     //Evoker
     private static final Identifier EVOKER_ID
             = new Identifier("minecraft", "entities/evoker");
-    //Shipwreck Treasure
-    private static final Identifier SHIPWRECK_TREASURE_ID
-            = new Identifier("minecraft", "chests/shipwreck_treasure");
     //Buried Treasure
     private static final Identifier TREASURE_ID
             = new Identifier("minecraft", "chests/buried_treasure");
@@ -56,11 +53,11 @@ public class EELootTableModifier {
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
-            //Treasure Bastions containing Hellfire Orbs
+            //Bastions containing Hellfire Orbs
             if(BASTION_TREASURE_CHEST_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(1f))
+                        .conditionally(RandomChanceLootCondition.builder(0.15f))
                         .with(ItemEntry.builder(EEItems.HELLFIRE_ORB))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
@@ -69,25 +66,16 @@ public class EELootTableModifier {
             if(EVOKER_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(1f))
+                        .conditionally(RandomChanceLootCondition.builder(0.08f))
                         .with(ItemEntry.builder(EEItems.EVOKER_ORB))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
-                tableBuilder.pool(poolBuilder.build());
-            }
-            //Shipwrecks containing Immersed Orbs
-            if(SHIPWRECK_TREASURE_ID.equals(id)) {
-                LootPool.Builder poolBuilder = LootPool.builder()
-                        .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.5f))
-                        .with(ItemEntry.builder(EEItems.IMMERSED_ORB))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
             //Buried Treasure containing Immersed Orbs
             if(TREASURE_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(1f))
+                        .conditionally(RandomChanceLootCondition.builder(0.25f))
                         .with(ItemEntry.builder(EEItems.IMMERSED_ORB))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
@@ -96,7 +84,7 @@ public class EELootTableModifier {
             if(END_CITY_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.3f))
+                        .conditionally(RandomChanceLootCondition.builder(0.15f))
                         .with(ItemEntry.builder(EEItems.ENDERFIED_ORB))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
@@ -105,7 +93,7 @@ public class EELootTableModifier {
             if(ANCIENT_CITY_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.3f))
+                        .conditionally(RandomChanceLootCondition.builder(0.25f))
                         .with(ItemEntry.builder(EEItems.CORRUPTED_ORB))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
@@ -114,9 +102,9 @@ public class EELootTableModifier {
             if(MINESHAFT_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.25f))
+                        .conditionally(RandomChanceLootCondition.builder(0.2f))
                         .with(ItemEntry.builder(EEItems.SPIRIT_ORB))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
             //Dungeons containing Spirit Orb
@@ -125,14 +113,14 @@ public class EELootTableModifier {
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.15f))
                         .with(ItemEntry.builder(EEItems.SPIRIT_ORB))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 2.0f)).build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
             //Igloos containing Celerity Orb
             if(IGLOO_ID.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
-                        .conditionally(RandomChanceLootCondition.builder(0.5f))
+                        .conditionally(RandomChanceLootCondition.builder(0.8f))
                         .with(ItemEntry.builder(EEItems.CELERITY_ORB))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());

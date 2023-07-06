@@ -3,8 +3,15 @@
   "values": [
     "#enhancedend:modded_logs",
     "#enhancedend:modded_planks",
-    "#enhancedend:modded_doors",
-    "#enhancedend:modded_trapdoors",
-    "enhancedend:endium_mushroom_block"
+    "#enhancedend:modded_slabs",
+    "#enhancedend:modded_stairs",
+    "#enhancedend:modded_wooden_trapdoors",
+    "#enhancedend:modded_fences",
+    "#enhancedend:modded_fence_gates",
+    "#enhancedend:modded_wooden_doors",
+    "#enhancedend:modded_standing_signs",
+    "#enhancedend:modded_wall_signs",
+    "#enhancedend:modded_wooden_pressure_plates",
+    "#enhancedend:modded_wooden_buttons"
   ]
 }
