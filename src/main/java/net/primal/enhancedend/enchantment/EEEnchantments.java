@@ -11,8 +11,8 @@ public class EEEnchantments {
 
     public static final Enchantment ENHANCED_MAGIC = register("enhanced_magic",
             new EnhancedMagicEnchantment(Enchantment.Rarity.VERY_RARE, EquipmentSlot.CHEST));
-    public static Enchantment BLINDING_ASPECT = register("blinding_aspect",
-            new BlindingAspectEnchantment(Enchantment.Rarity.RARE,
+    public static Enchantment BLINDSIGHTING = register("blindsighting",
+            new BlindsightingEnchantment(Enchantment.Rarity.RARE,
                     EnchantmentTarget.WEAPON, EquipmentSlot.MAINHAND));
     private static Enchantment register(String name, Enchantment enchantment) {
         return Registry.register(Registry.ENCHANTMENT, new Identifier(EnhancedEnd.MOD_ID, name), enchantment);

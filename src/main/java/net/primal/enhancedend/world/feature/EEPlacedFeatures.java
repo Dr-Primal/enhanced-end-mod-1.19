@@ -39,6 +39,10 @@ public static final RegistryEntry<PlacedFeature> MIDNIGHT_PLACED = PlacedFeature
             EEConfiguredFeatures.SILSTONE_ORE, modifiersWithCount(64,
                     HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(100))));
 
+    public static final RegistryEntry<PlacedFeature> LARISTONE_ORE_PLACED = PlacedFeatures.register("laristone_ore_placed",
+            EEConfiguredFeatures.LARISTONE_ORE, modifiersWithCount(32,
+                    HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(100))));
+
     public static final RegistryEntry<PlacedFeature> INFUSED_KIMBERLITE_ORE_PLACED = PlacedFeatures.register("infused_kimberlite_ore_placed",
             EEConfiguredFeatures.INFUSED_KIMBERLITE_ORE, modifiersWithCount(8,
                     HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(120))));

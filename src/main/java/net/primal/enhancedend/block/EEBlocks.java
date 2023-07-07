@@ -40,11 +40,11 @@ public class EEBlocks {
 //Tanzanite Variants
     public static final Block TANZANITE_BLOCK = registerBlock("tanzanite_block",
             new Block(FabricBlockSettings.of(Material.METAL, MapColor.MAGENTA)
-                    .strength(3f).requiresTool().sounds(BlockSoundGroup.METAL)),
+                    .strength(3f).requiresTool().sounds(BlockSoundGroup.METAL).luminance(state -> 4)),
             EEItemGroup.ENHANCED_END_BLOCKS);
     public static final Block RAW_TANZANITE_BLOCK = registerBlock("raw_tanzanite_block",
             new Block(FabricBlockSettings.of(Material.METAL, MapColor.TERRACOTTA_MAGENTA)
-                    .strength(3f).requiresTool().sounds(BlockSoundGroup.STONE)),
+                    .strength(3f).requiresTool().sounds(BlockSoundGroup.STONE).luminance(state -> 2)),
             EEItemGroup.ENHANCED_END_BLOCKS);
     public static final Block TANZANITE_LAMP = registerBlock("tanzanite_lamp",
             new RedstoneLampBlock(FabricBlockSettings.of(Material.REDSTONE_LAMP, MapColor.DARK_DULL_PINK)

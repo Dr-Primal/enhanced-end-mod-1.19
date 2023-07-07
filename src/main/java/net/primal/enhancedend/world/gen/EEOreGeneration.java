@@ -28,5 +28,9 @@ public class EEOreGeneration {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey
                         (BiomeKeys.END_MIDLANDS, BiomeKeys.END_BARRENS),
                 GenerationStep.Feature.UNDERGROUND_ORES, EEPlacedFeatures.SILSTONE_ORE_PLACED.getKey().get());
+
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey
+                        (BiomeKeys.THE_END, BiomeKeys.END_HIGHLANDS),
+                GenerationStep.Feature.UNDERGROUND_ORES, EEPlacedFeatures.LARISTONE_ORE_PLACED.getKey().get());
     }
 }

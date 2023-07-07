@@ -122,8 +122,14 @@ public class EEConfiguredFeatures {
     public static final List<OreFeatureConfig.Target> SILSTONE_ORES = List.of(
             OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE), EEBlocks.SILSTONE.getDefaultState()));
 
+    public static final List<OreFeatureConfig.Target> LARISTONE_ORES = List.of(
+            OreFeatureConfig.createTarget(new BlockMatchRuleTest(Blocks.END_STONE), EEBlocks.LARISTONE.getDefaultState()));
+
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> SILSTONE_ORE =
             ConfiguredFeatures.register("silstone_ore", Feature.ORE, new OreFeatureConfig(SILSTONE_ORES, 64));
+
+    public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> LARISTONE_ORE =
+            ConfiguredFeatures.register("laristone_ore", Feature.ORE, new OreFeatureConfig(LARISTONE_ORES, 32));
 
     public static final List<OreFeatureConfig.Target> INFUSED_KIMBERLITE_ORES = List.of(
             OreFeatureConfig.createTarget(new BlockMatchRuleTest(EEBlocks.KIMBERLITE), EEBlocks.INFUSED_KIMBERLITE.getDefaultState()));

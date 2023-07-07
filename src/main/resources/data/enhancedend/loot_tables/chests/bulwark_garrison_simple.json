@@ -98,7 +98,7 @@
           "functions": [
             {
               "enchantments": [
-                "enhancedend:blinding_aspect"
+                "enhancedend:blindsighting"
               ],
               "function": "minecraft:enchant_randomly"
             }
