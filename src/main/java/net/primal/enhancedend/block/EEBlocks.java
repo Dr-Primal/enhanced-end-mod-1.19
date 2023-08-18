@@ -97,7 +97,7 @@ public class EEBlocks {
                     .strength(8f).requiresTool().noCollision().sounds(BlockSoundGroup.CALCITE)),
             EEItemGroup.ENHANCED_END_BLOCKS);
     public static final Block SILSTONE_PRESSURE_PLATE = registerBlock("silstone_pressure_plate",
-            new EEPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_YELLOW)
+            new EEPressurePlateBlock(PressurePlateBlock.ActivationRule.MOBS, FabricBlockSettings.of(Material.STONE, MapColor.TERRACOTTA_YELLOW)
                     .strength(8f).requiresTool().sounds(BlockSoundGroup.CALCITE)),
             EEItemGroup.ENHANCED_END_BLOCKS);
     //Silstone Variants

@@ -5,7 +5,7 @@
     },
     "title": "The Mighty Garrison",
     "description": "Find the Bulwark Garrison",
-    "frame": "task",
+    "frame": "goal",
     "hidden": true,
     "show_toast": true,
     "announce_to_chat": true

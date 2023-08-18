@@ -1,6 +1,6 @@
 {
-  "replace": false,
   "values": [
-    "#enhancedend:modded_wooden_trapdoors"
+    "enhancedend:midnight_trapdoor",
+    "enhancedend:corlite_trapdoor"
   ]
 }

@@ -1,5 +1,7 @@
 {
+  "replace": false,
   "values": [
-    "#enhancedend:modded_logs"
+    "#enhancedend:midnight_stems",
+    "#enhancedend:corlite_stems"
   ]
 }

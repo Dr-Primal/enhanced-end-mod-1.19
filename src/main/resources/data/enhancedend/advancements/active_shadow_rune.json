@@ -5,7 +5,7 @@
     },
     "title": "Shadow Activation",
     "description": "Initiate a Shadow Rune with the power of Eneria Specks",
-    "frame": "task",
+    "frame": "goal",
     "hidden": true,
     "show_toast": true,
     "announce_to_chat": true

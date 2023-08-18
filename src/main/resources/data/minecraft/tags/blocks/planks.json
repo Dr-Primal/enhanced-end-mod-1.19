@@ -1,6 +1,6 @@
 {
-  "replace": false,
   "values": [
-    "#enhancedend:modded_planks"
+    "enhancedend:midnight_planks",
+    "enhancedend:corlite_planks"
   ]
 }

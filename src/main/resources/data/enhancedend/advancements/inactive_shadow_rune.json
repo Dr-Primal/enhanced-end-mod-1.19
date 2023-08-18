@@ -5,7 +5,7 @@
     },
     "title": "Shadow Expansion",
     "description": "Forge a Shadow Rune from the Remains of Bulwark Shadows and Sentinels",
-    "frame": "task",
+    "frame": "goal",
     "hidden": true,
     "show_toast": true,
     "announce_to_chat": true

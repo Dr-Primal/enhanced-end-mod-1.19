@@ -1,16 +1,16 @@
 {
   "display": {
     "icon": {
-      "item": "enhancedend:rune_of_runes"
+      "item": "enhancedend:endimintium_hoe"
     },
-    "title": "The Rune Master",
-    "description": "Combine all 6 Runes to create the strongest Rune of them all",
+    "title": "The Ultimate Grinder",
+    "description": "Use an Endimintium Ingot to upgrade your Netherite Hoe for unquestionable reasoning",
     "frame": "challenge",
-    "hidden": true,
+    "hidden": false,
     "show_toast": true,
     "announce_to_chat": true
   },
-  "parent": "enhancedend:active_shadow_rune",
+  "parent": "enhancedend:endimintium_scrap",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",
@@ -18,7 +18,7 @@
         "items": [
           {
             "items": [
-              "enhancedend:rune_of_runes"
+              "enhancedend:endimintium_hoe"
             ]
           }
         ]

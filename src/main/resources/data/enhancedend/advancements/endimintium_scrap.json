@@ -5,7 +5,7 @@
     },
     "title": "The Treasures of the Garrison",
     "description": "Find an Endimintium Scrap in the Bulwark Garrison",
-    "frame": "task",
+    "frame": "goal",
     "hidden": true,
     "show_toast": true,
     "announce_to_chat": true
